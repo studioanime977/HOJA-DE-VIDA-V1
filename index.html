@@ -388,11 +388,13 @@
         <h3>📄 DOCUMENTOS</h3>
         <div class="documents-list">
           <div class="doc-item">
-            <div class="doc-link" onclick="downloadFile('H/Hoja de Vida Administrador Sencillo Blanco y Negro.docx', 'CV_Completo.docx')">
-              📋 CV Completo (Word)
+            <div class="doc-link" onclick="downloadFile('H/Hoja de vida 2025.pdf', 'CV_Completo.pdf')">
+              📋 CV Completo (PDF)
             </div>
             <div class="doc-actions">
-              <button class="doc-btn" onclick="downloadFile('H/Hoja de Vida Administrador Sencillo Blanco y Negro.docx', 'CV_Completo.docx')">📥</button>
+              <button class="doc-btn" onclick="downloadFile('H/Hoja de vida 2025.pdf', 'CV_Completo.pdf')">📥</button>
+              <button class="doc-btn" onclick="window.open('https://drive.google.com/file/d/1H5nCg2VX6byIaWvfmaQxifQJRj8TLpRi/view?usp=sharing', '_blank')">☁️</button>
+              <button class="doc-btn" onclick="window.open('https://drive.google.com/uc?export=download&id=1H5nCg2VX6byIaWvfmaQxifQJRj8TLpRi', '_blank')" title="Descarga directa desde Google Drive">🔗</button>
             </div>
           </div>
           <div class="doc-item">
@@ -483,7 +485,26 @@
     
     // Función para descargar CV
     function downloadCV() {
-      downloadFile('H/Hoja de Vida Administrador Sencillo Blanco y Negro.docx', 'CV_Completo.docx');
+      // Mostrar opciones de descarga
+      const downloadModal = document.createElement('div');
+      downloadModal.className = 'modal';
+      downloadModal.style.display = 'block';
+      downloadModal.innerHTML = `
+        <span class="close" onclick="this.parentElement.remove()">&times;</span>
+        <div style="position: relative; width: 90%; max-width: 500px; margin: 50px auto; background: white; border-radius: 10px; padding: 30px; text-align: center;">
+          <h2 style="color: #2d3748; margin-bottom: 20px;">📄 Descargar CV</h2>
+          <p style="color: #4a5568; margin-bottom: 25px;">Elige tu opción de descarga preferida:</p>
+          <div style="display: flex; flex-direction: column; gap: 15px;">
+            <button class="modal-btn" onclick="downloadFile('H/Hoja de vida 2025.pdf', 'CV_Completo.pdf'); this.parentElement.parentElement.parentElement.remove();" style="padding: 15px; font-size: 16px;">
+              💾 Descarga Directa (PDF)
+            </button>
+            <button class="modal-btn" onclick="window.open('https://drive.google.com/file/d/1H5nCg2VX6byIaWvfmaQxifQJRj8TLpRi/view?usp=sharing', '_blank'); this.parentElement.parentElement.parentElement.remove();" style="padding: 15px; font-size: 16px;">
+              ☁️ Google Drive
+            </button>
+          </div>
+        </div>
+      `;
+      document.body.appendChild(downloadModal);
     }
     
     // Función de contacto
