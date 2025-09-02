@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hoja de Vida - Esteban Manuel Lopez Rivero</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <div class="header">
+    <div class="logo">💼 Esteban Manuel Lopez Rivero</div>
+    <div class="header-spacer"></div>
+    <div class="user-actions">
+      <div class="dropdown">
+        <button class="auth-btn dropdown-toggle" onclick="toggleDropdown()">☰ Menú</button>
+        <div class="dropdown-menu" id="dropdownMenu">
+          <div class="dropdown-search">
+            <input type="text" placeholder="Buscar sección o palabra..." id="search-input" onkeyup="performSearch()" onkeypress="handleSearchEnter(event)">
+            <button onclick="performSearch()">🔍</button>
+          </div>
+          <div class="dropdown-divider"></div>
+          <a href="#" onclick="downloadCV(); closeDropdown()">📄 Descargar CV</a>
+          <a href="#" onclick="contactMe(); closeDropdown()">📧 Contacto</a>
+          <a href="#personal" onclick="scrollToSection('personal'); closeDropdown()">👤 Datos Personales</a>
+          <a href="#education" onclick="scrollToSection('education'); closeDropdown()">🎓 Formación Académica</a>
+          <a href="#experience" onclick="scrollToSection('experience'); closeDropdown()">💼 Experiencia</a>
+          <a href="#skills" onclick="scrollToSection('skills'); closeDropdown()">🛠️ Habilidades</a>
+          <a href="#certificates" onclick="scrollToSection('certificates'); closeDropdown()">🏆 Certificaciones</a>
+          <a href="#projects" onclick="scrollToSection('projects'); closeDropdown()">🌐 Proyectos Web</a>
+          <a href="#mobile-app" onclick="scrollToSection('mobile-app'); closeDropdown()">📱 Aplicación Móvil</a>
+          <a href="#objective" onclick="scrollToSection('objective'); closeDropdown()">🎯 Objetivo Profesional</a>
+          <a href="#current-studies" onclick="scrollToSection('current-studies'); closeDropdown()">📚 Estudios Actuales</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-container">
+    <!-- Sidebar izquierdo -->
+    <div class="left-sidebar">
+      <!-- Foto de perfil -->
+      <div class="profile-photo">
+        <img src="IMG/FOTO 3X4.jpg" alt="Foto de perfil" class="profile-img">
+        <h3>Esteban Manuel Lopez Rivero</h3>
+        <p>Técnico en Sistemas Informáticos</p>
+      </div>
+
+      <!-- Información de contacto -->
+      <div class="sidebar-section">
+        <h3>📞 CONTACTO</h3>
+        <div class="contact-info">
+          <p>📍 CR 11 6A-10, Barrio Altos del Noval</p>
+          <p style="margin-left: 20px;">Cereté, Córdoba</p>
+          <p>📧 love8012e@gmail.com</p>
+          <p>📱 3017400553</p>
+          <p>📱 3053574182</p>
+          <p>🆔 CC: 1062604753</p>
+          <a href="https://www.linkedin.com/in/esteban-manuel-lópez-rivero-3b5887370" target="_blank" style="display: block; padding: 8px; background: #0077b5; color: white; text-decoration: none; border-radius: 6px; text-align: center; margin-top: 10px; transition: all 0.3s ease;">
+            🔗 LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <!-- Menú hamburguesa para móviles -->
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+      <!-- Navegación -->
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#personal"><span class="emoji">👤</span> Datos Personales</a></li>
+        <li><a href="#education"><span class="emoji">🎓</span> Formación Académica</a></li>
+        <li><a href="#experience"><span class="emoji">💼</span> Experiencia</a></li>
+        <li><a href="#skills"><span class="emoji">🛠️</span> Habilidades</a></li>
+        <li><a href="#certificates"><span class="emoji">🏆</span> Certificaciones</a></li>
+        <li><a href="#projects"><span class="emoji">🌐</span> Proyectos Web</a></li>
+        <li><a href="#mobile-app"><span class="emoji">📱</span> Aplicación Móvil</a></li>
+        <li><a href="#objective"><span class="emoji">🎯</span> Objetivo Profesional</a></li>
+        <li><a href="#current-studies"><span class="emoji">📚</span> Estudios Actuales</a></li>
+      </ul>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="main-content">
+      <!-- Datos Personales -->
+      <section id="personal" class="cv-section">
+        <h2 class="section-title">👤 Datos Personales</h2>
+        <div class="info-grid">
+          <div class="info-card">
+            <h3>Información Básica</h3>
+            <p><strong>Nombre Completo:</strong> Esteban Manuel Lopez Rivero</p>
+            <p><strong>Profesión:</strong> Técnico en Sistemas Informáticos</p>
+            <p><strong>Identificación:</strong> 1062604753</p>
+            <p><strong>Ubicación:</strong> CR 11 6A-10, Barrio Altos del Noval, Cereté, Córdoba</p>
+            <p><strong>Estado:</strong> Prácticas empresariales completadas</p>
+          </div>
+          <div class="info-card">
+            <h3>Sobre Mí</h3>
+            <p>Soy técnico en sistemas informáticos con prácticas empresariales completadas, con conocimientos sólidos en el armado físico de equipos de cómputo, instalación de sistemas operativos y configuración básica de redes.</p>
+            <p>He aplicado mis conocimientos tanto en proyectos personales como en el entorno laboral durante mis prácticas, desarrollando habilidades como el ensamblaje de equipos, la resolución de problemas técnicos y la experiencia práctica en el sector tecnológico.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Formación Académica -->
+      <section id="education" class="cv-section">
+        <h2 class="section-title">🎓 Formación Académica</h2>
+        <div class="education-timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>Técnico en Sistemas Informáticos</h3>
+              <p><strong>Institución:</strong> Centro de Sistemas de Antioquia (CENSA)</p>
+              <p><strong>Ubicación:</strong> Montería, Córdoba</p>
+              <p><strong>Año:</strong> 2024 - Presente</p>
+              <p>Formación integral en sistemas informáticos, armado físico de equipos, instalación de sistemas operativos y configuración de redes.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>Calidad de Desarrollador de Software</h3>
+              <p><strong>Institución:</strong> SENA</p>
+              <p><strong>Año:</strong> 2023</p>
+              <p>Curso especializado en procesos y estándares necesarios para garantizar proyectos tecnológicos de alto nivel.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>Educación Media</h3>
+              <p><strong>Institución:</strong> Institución Educativa Dolores Garrido de Gonzáles</p>
+              <p><strong>Año:</strong> 2023</p>
+              <p>Bachillerato académico completado.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experiencia Profesional -->
+      <section id="experience" class="cv-section">
+        <h2 class="section-title">💼 Experiencia y Proyectos</h2>
+        <div class="experience-card">
+          <h3>Proyectos Personales</h3>
+          <p><strong>Descripción:</strong> Desarrollo de habilidades técnicas a través de proyectos personales</p>
+          <p><strong>Actividades:</strong></p>
+          <ul style="color: white; margin-left: 20px;">
+            <li>Ensamblaje y configuración de equipos de cómputo</li>
+            <li>Instalación y mantenimiento de sistemas operativos</li>
+            <li>Resolución de problemas técnicos</li>
+            <li>Configuración básica de redes y periféricos</li>
+          </ul>
+        </div>
+        <div class="experience-card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); margin-top: 20px;">
+          <h3>Prácticas Empresariales Completadas</h3>
+          <p><strong>Estado:</strong> Finalizadas exitosamente</p>
+          <p>Integré todo lo aprendido durante la etapa lectiva en un entorno laboral real, complementando competencias y perfeccionando habilidades para un desempeño profesional exitoso. Esta experiencia me permitió aplicar conocimientos teóricos en situaciones prácticas del sector tecnológico.</p>
+        </div>
+      </section>
+      
+      <!-- Proyectos Web Desarrollados -->
+      <section id="web-projects" class="cv-section">
+        <h2 class="section-title">🌐 Proyectos Web Desarrollados</h2>
+        <div class="projects-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px;">
+          
+          <!-- Proyecto Casa de Avivamiento -->
+          <div class="project-card" style="background: linear-gradient(135deg, #48bb78 0%, #38a169 100%); color: white; padding: 25px; border-radius: 15px; box-shadow: 0 8px 25px rgba(72, 187, 120, 0.3);">
+            <h3 style="margin-bottom: 15px; font-size: 20px;">⛪ Casa de Avivamiento y Reino</h3>
+            <p style="margin-bottom: 15px; line-height: 1.6;"><strong>Descripción:</strong> Página web para iglesia con diseño moderno y funcionalidades interactivas.</p>
+            <p style="margin-bottom: 15px;"><strong>Tecnologías:</strong> HTML, CSS, JavaScript</p>
+            <div class="project-links" style="display: flex; gap: 10px; margin-top: 15px;">
+              <a href="https://github.com/studioanime977/Casa-de-Avivamiento-y-Reino-cerete-" target="_blank" style="background: rgba(255,255,255,0.2); color: white; padding: 8px 15px; border-radius: 20px; text-decoration: none; font-size: 14px; transition: all 0.3s ease;">
+                💻 GitHub
+              </a>
+              <a href="https://casa-de-avivamiento-y-reino-cerete.vercel.app/" target="_blank" style="background: rgba(255,255,255,0.2); color: white; padding: 8px 15px; border-radius: 20px; text-decoration: none; font-size: 14px; transition: all 0.3s ease;">
+                🌍 Ver Sitio
+              </a>
+            </div>
+          </div>
+          
+          <!-- Proyecto Castillo Infinito -->
+          <div class="project-card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 25px; border-radius: 15px; box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);">
+            <h3 style="margin-bottom: 15px; font-size: 20px;">🏰 Castillo Infinito</h3>
+            <p style="margin-bottom: 15px; line-height: 1.6;"><strong>Descripción:</strong> Plataforma de entretenimiento para distribución de contenido anime con sistema de monetización por descargas.</p>
+            <p style="margin-bottom: 15px;"><strong>Tecnologías:</strong> HTML, CSS, JavaScript, Acortadores de enlaces</p>
+            <div class="project-links" style="display: flex; gap: 10px; margin-top: 15px;">
+              <a href="https://github.com/studioanime977/castillo-infinito" target="_blank" style="background: rgba(255,255,255,0.2); color: white; padding: 8px 15px; border-radius: 20px; text-decoration: none; font-size: 14px; transition: all 0.3s ease;">
+                💻 GitHub
+              </a>
+              <a href="https://castillo-infinito.vercel.app/" target="_blank" style="background: rgba(255,255,255,0.2); color: white; padding: 8px 15px; border-radius: 20px; text-decoration: none; font-size: 14px; transition: all 0.3s ease;">
+                🌍 Ver Sitio
+              </a>
+            </div>
+          </div>
+          
+          <!-- Proyecto EduClick -->
+          <div class="project-card" style="background: linear-gradient(135deg, #9f7aea 0%, #805ad5 100%); color: white; padding: 25px; border-radius: 15px; box-shadow: 0 8px 25px rgba(159, 122, 234, 0.3);">
+            <h3 style="margin-bottom: 15px; font-size: 20px;">📚 EduClick</h3>
+            <p style="margin-bottom: 15px; line-height: 1.6;"><strong>Descripción:</strong> Plataforma educativa interactiva con diseño moderno y funcionalidades para el aprendizaje digital.</p>
+            <p style="margin-bottom: 15px;"><strong>Tecnologías:</strong> HTML, CSS, JavaScript</p>
+            <div class="project-links" style="display: flex; gap: 10px; margin-top: 15px;">
+              <a href="https://github.com/studioanime977/EduClick" target="_blank" style="background: rgba(255,255,255,0.2); color: white; padding: 8px 15px; border-radius: 20px; text-decoration: none; font-size: 14px; transition: all 0.3s ease;">
+                💻 GitHub
+              </a>
+              <a href="https://edu-click.vercel.app/" target="_blank" style="background: rgba(255,255,255,0.2); color: white; padding: 8px 15px; border-radius: 20px; text-decoration: none; font-size: 14px; transition: all 0.3s ease;">
+                🌍 Ver Sitio
+              </a>
+            </div>
+          </div>
+          
+        </div>
+        
+        <!-- Aplicación Móvil -->
+        <div class="mobile-app-section" style="margin-top: 30px;">
+          <h3 style="color: #2d3748; margin-bottom: 20px;">📱 Aplicación Móvil</h3>
+          <div class="app-card" style="background: linear-gradient(135deg, #ed8936 0%, #dd6b20 100%); color: white; padding: 25px; border-radius: 15px; box-shadow: 0 8px 25px rgba(237, 137, 54, 0.3);">
+            <h4 style="margin-bottom: 15px; font-size: 18px;">🎬 Anime TV APK</h4>
+            <p style="margin-bottom: 15px; line-height: 1.6;">Aplicación móvil desarrollada para la visualización de contenido anime, implementando tecnologías de streaming y optimización para dispositivos móviles.</p>
+            <div class="app-features" style="margin: 15px 0;">
+              <p style="margin-bottom: 8px;"><strong>Características:</strong></p>
+              <ul style="margin-left: 20px; line-height: 1.5;">
+                <li>Interfaz optimizada para móviles</li>
+                <li>Sistema de streaming integrado</li>
+                <li>Implementación de IA para recomendaciones</li>
+                <li>Compatibilidad con redes móviles</li>
+              </ul>
+            </div>
+            <a href="https://drive.google.com/file/d/1akgXsn3JwhK9qD1RhXMv4dDXK8FQmGyV/view?usp=sharing" target="_blank" style="background: rgba(255,255,255,0.2); color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-size: 14px; display: inline-block; margin-top: 10px; transition: all 0.3s ease;">
+              📥 Descargar APK
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Habilidades -->
+      <section id="skills" class="cv-section">
+        <h2 class="section-title">🛠️ Habilidades Técnicas</h2>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h4>Armado Físico de Equipos</h4>
+            <p>Ensamblaje completo de computadoras, instalación de componentes y configuración de hardware.</p>
+          </div>
+          <div class="skill-card">
+            <h4>Mantenimiento de Computadoras</h4>
+            <p>Mantenimiento preventivo y correctivo de equipos, limpieza, actualización de componentes y optimización del rendimiento.</p>
+          </div>
+          <div class="skill-card">
+            <h4>Instalación y Configuración de Redes</h4>
+            <p>Instalación de redes locales, configuración de equipos de red, cableado estructurado y protocolos de comunicación.</p>
+          </div>
+          <div class="skill-card">
+            <h4>Optimización de Redes</h4>
+            <p>Análisis de rendimiento de red, optimización de ancho de banda y mejora de la conectividad.</p>
+          </div>
+          <div class="skill-card">
+            <h4>Monitoreo de Redes</h4>
+            <p>Monitoreo constante del comportamiento de la red, análisis de tráfico y supervisión a través de aplicaciones especializadas.</p>
+          </div>
+          <div class="skill-card">
+            <h4>Sistemas Operativos Windows</h4>
+            <p>Instalación y configuración de Windows y sistemas básicos de red.</p>
+          </div>
+          <div class="skill-card">
+            <h4>Modificación de Sistemas Operativos</h4>
+            <p>Optimización y personalización de Windows 10/11, eliminación de aplicaciones innecesarias, reducción de consumo de RAM (2.0-3.4GB) y mejora del rendimiento empresarial.</p>
+          </div>
+          <div class="skill-card">
+            <h4>Resolución de Problemas</h4>
+            <p>Diagnóstico y solución de problemas técnicos en hardware, software y conectividad de red.</p>
+          </div>
+          <div class="skill-card">
+            <h4>Desarrollo Web</h4>
+            <p>HTML, CSS, JavaScript, Python, bases de datos y frameworks modernos.</p>
+          </div>
+          <div class="skill-card">
+            <h4>Implementación de IA</h4>
+            <p>Integración de inteligencia artificial en aplicaciones web y móviles.</p>
+          </div>
+          <div class="skill-card">
+            <h4>Desarrollo Móvil</h4>
+            <p>Creación de aplicaciones móviles nativas y multiplataforma.</p>
+          </div>
+        </div>
+        
+        <div class="soft-skills-section" style="margin-top: 30px;">
+          <h3 style="color: #2d3748; margin-bottom: 20px;">🧠 Habilidades Blandas</h3>
+          <div class="soft-skills-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+            <div class="soft-skill-item" style="background: #e6fffa; padding: 15px; border-radius: 10px; text-align: center; border-left: 4px solid #38b2ac;">
+              <h4 style="color: #2d3748; margin-bottom: 5px;">👥 Liderazgo</h4>
+            </div>
+            <div class="soft-skill-item" style="background: #f0fff4; padding: 15px; border-radius: 10px; text-align: center; border-left: 4px solid #48bb78;">
+              <h4 style="color: #2d3748; margin-bottom: 5px;">💬 Comunicación</h4>
+            </div>
+            <div class="soft-skill-item" style="background: #f7fafc; padding: 15px; border-radius: 10px; text-align: center; border-left: 4px solid #667eea;">
+              <h4 style="color: #2d3748; margin-bottom: 5px;">⚙️ Toma de Decisiones</h4>
+            </div>
+            <div class="soft-skill-item" style="background: #fef5e7; padding: 15px; border-radius: 10px; text-align: center; border-left: 4px solid #ed8936;">
+              <h4 style="color: #2d3748; margin-bottom: 5px;">⏰ Gestión del Tiempo</h4>
+            </div>
+            <div class="soft-skill-item" style="background: #edf2f7; padding: 15px; border-radius: 10px; text-align: center; border-left: 4px solid #4a5568;">
+              <h4 style="color: #2d3748; margin-bottom: 5px;">🤝 Trabajo en Equipo</h4>
+            </div>
+            <div class="soft-skill-item" style="background: #fed7d7; padding: 15px; border-radius: 10px; text-align: center; border-left: 4px solid #f56565;">
+              <h4 style="color: #2d3748; margin-bottom: 5px;">🎯 Pensamiento Estratégico</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Certificaciones -->
+      <section id="certificates" class="cv-section">
+        <h2 class="section-title">🏆 Certificaciones</h2>
+        <div class="certificates-grid">
+          <div class="certificate-card" onclick="openCertificate('IMG/calidad de desarrollador de software.jpg', 'Calidad de Desarrollador de Software')">
+            <img src="IMG/calidad de desarrollador de software.jpg" alt="Certificado Calidad Desarrollador">
+            <h4>Calidad de Desarrollador de Software</h4>
+            <p>SENA - 2023</p>
+            <div class="certificate-actions">
+              <button class="cert-btn" onclick="event.stopPropagation(); downloadFile('IMG/calidad de desarrollador de software.jpg', 'Certificado_Calidad_Desarrollador.jpg')">📥 Descargar</button>
+              <button class="cert-btn" onclick="event.stopPropagation(); viewFile('IMG/calidad de desarrollador de software.jpg')">👁️ Ver</button>
+            </div>
+          </div>
+          <div class="certificate-card" onclick="openCertificate('IMG/cartificado calidad desarrollador de software.jpg', 'Certificado Calidad Desarrollador')">
+            <img src="IMG/cartificado calidad desarrollador de software.jpg" alt="Certificado Calidad Desarrollador">
+            <h4>Certificado Calidad Desarrollador</h4>
+            <p>SENA - 2023</p>
+            <div class="certificate-actions">
+              <button class="cert-btn" onclick="event.stopPropagation(); downloadFile('IMG/cartificado calidad desarrollador de software.jpg', 'Certificado_Calidad_Dev.jpg')">📥 Descargar</button>
+              <button class="cert-btn" onclick="event.stopPropagation(); viewFile('IMG/cartificado calidad desarrollador de software.jpg')">👁️ Ver</button>
+            </div>
+          </div>
+          <div class="certificate-card" onclick="openCertificate('IMG/diploma.jpg', 'Diploma Técnico')">
+            <img src="IMG/diploma.jpg" alt="Diploma">
+            <h4>Diploma Técnico</h4>
+            <p>CENSA Montería</p>
+            <div class="certificate-actions">
+              <button class="cert-btn" onclick="event.stopPropagation(); downloadFile('IMG/diploma.jpg', 'Diploma_Tecnico.jpg')">📥 Descargar</button>
+              <button class="cert-btn" onclick="event.stopPropagation(); viewFile('IMG/diploma.jpg')">👁️ Ver</button>
+            </div>
+          </div>
+          <div class="certificate-card" onclick="openCertificate('IMG/acta de grado.jpg', 'Acta de Grado')">
+            <img src="IMG/acta de grado.jpg" alt="Acta de Grado">
+            <h4>Acta de Grado</h4>
+            <p>Documentación oficial</p>
+            <div class="certificate-actions">
+              <button class="cert-btn" onclick="event.stopPropagation(); downloadFile('IMG/acta de grado.jpg', 'Acta_de_Grado.jpg')">📥 Descargar</button>
+              <button class="cert-btn" onclick="event.stopPropagation(); viewFile('IMG/acta de grado.jpg')">👁️ Ver</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Objetivo Profesional -->
+      <section id="objective" class="cv-section">
+        <h2 class="section-title">🎯 Objetivo Profesional</h2>
+        <div class="objective-card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 25px; border-radius: 15px; box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);">
+          <h3 style="margin-bottom: 15px; font-size: 22px;">Meta Profesional</h3>
+          <p style="margin-bottom: 15px; line-height: 1.6;">Aportar mis conocimientos técnicos y experiencia en sistemas, junto con mis competencias en calidad de desarrollo de software, para garantizar el correcto funcionamiento de las infraestructuras tecnológicas y la excelencia en el desarrollo de proyectos, contribuyendo al éxito de la organización.</p>
+          <p style="line-height: 1.6;">Aprovechar mis prácticas empresariales para aplicar y fortalecer mis conocimientos, adquirir experiencia en el ámbito laboral y contribuir de manera significativa en el área de sistemas. Mi meta es crecer como profesional, desarrollar habilidades prácticas y prepararme para enfrentar los retos del sector tecnológico.</p>
+        </div>
+      </section>
+      
+      <!-- Estudios Actuales -->
+      <section id="current-studies" class="cv-section">
+        <h2 class="section-title">📚 Estudios Actuales</h2>
+        <div class="current-studies-card">
+          <h3>Desarrollo Web y Programación</h3>
+          <p><strong>Plataforma:</strong> Platzi</p>
+          <p><strong>Cursos:</strong></p>
+          <ul>
+            <li>Python - Programación</li>
+            <li>HTML - Estructura web</li>
+            <li>CSS - Diseño y estilos</li>
+            <li>Fundamentos de desarrollo web</li>
+          </ul>
+          <p>Fortaleciendo conocimientos para el desarrollo de páginas web y aplicaciones, complementando mi formación técnica en sistemas.</p>
+        </div>
+      </section>
+    </div>
+
+    <!-- Sidebar derecho -->
+    <div class="right-sidebar">
+      <!-- Documentos -->
+      <div class="sidebar-section">
+        <h3>📄 DOCUMENTOS</h3>
+        <div class="documents-list">
+          <div class="doc-item">
+            <div class="doc-link" onclick="downloadFile('H/Hoja de Vida Administrador Sencillo Blanco y Negro.docx', 'CV_Completo.docx')">
+              📋 CV Completo (Word)
+            </div>
+            <div class="doc-actions">
+              <button class="doc-btn" onclick="downloadFile('H/Hoja de Vida Administrador Sencillo Blanco y Negro.docx', 'CV_Completo.docx')">📥</button>
+            </div>
+          </div>
+          <div class="doc-item">
+            <div class="doc-link" onclick="playVideo('video de monitoreo de internet/video de monitoreo de internet.mp4')">
+              🎥 Video Monitoreo de Internet
+            </div>
+            <div class="doc-actions">
+              <button class="doc-btn" onclick="downloadFile('video de monitoreo de internet/video de monitoreo de internet.mp4', 'Monitoreo_Internet.mp4')">📥</button>
+              <button class="doc-btn" onclick="playVideo('video de monitoreo de internet/video de monitoreo de internet.mp4')">▶️</button>
+            </div>
+          </div>
+          <div class="doc-item">
+            <div class="doc-link" onclick="showWindowsInfo()">
+              💿 Windows 11 Modificado (Optimizado)
+            </div>
+            <div class="doc-actions">
+              <button class="doc-btn" onclick="downloadFile('windos modificados/Win11_24H2_Spanish_x64.iso', 'Windows11_Optimizado.iso')">📥</button>
+              <button class="doc-btn" onclick="showWindowsInfo()">ℹ️</button>
+            </div>
+          </div>
+          <div class="doc-item">
+            <div class="doc-link" onclick="showWindowsInfo()">
+              💿 Windows 10 Modificado (Optimizado)
+            </div>
+            <div class="doc-actions">
+              <button class="doc-btn" onclick="downloadFile('windos modificados/Win10_22H2_Spanish_x64.iso', 'Windows10_Optimizado.iso')">📥</button>
+              <button class="doc-btn" onclick="showWindowsInfo()">ℹ️</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Modal para imágenes -->
+  <div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImg">
+    <div class="modal-actions">
+      <button class="modal-btn" id="downloadModalBtn" onclick="downloadCurrentImage()">📥 Descargar</button>
+      <button class="modal-btn" onclick="openInNewTab()">🔗 Abrir en nueva pestaña</button>
+    </div>
+  </div>
+
+  <!-- Modal para PDFs -->
+  <div id="pdfModal" class="modal">
+    <span class="close" onclick="closePDFModal()">&times;</span>
+    <div class="pdf-container">
+      <iframe id="pdfViewer" src="" width="100%" height="90%"></iframe>
+      <div class="pdf-actions">
+        <button class="modal-btn" id="downloadPDFBtn" onclick="downloadCurrentPDF()">📥 Descargar PDF</button>
+        <button class="modal-btn" onclick="openPDFInNewTab()">🔗 Abrir en nueva pestaña</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Función de búsqueda
+    function searchSection() {
+      const searchTerm = document.getElementById('search-input').value.toLowerCase();
+      const sections = document.querySelectorAll('.cv-section');
+      
+      sections.forEach(section => {
+        const title = section.querySelector('.section-title').textContent.toLowerCase();
+        const content = section.textContent.toLowerCase();
+        section.style.display = (title.includes(searchTerm) || content.includes(searchTerm)) ? 'block' : 'none';
+      });
+    }
+    
+    // Búsqueda en tiempo real
+    document.getElementById('search-input').addEventListener('input', searchSection);
+    
+    // Navegación del sidebar
+    document.querySelectorAll('.sidebar-nav a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelectorAll('.sidebar-nav a').forEach(a => a.classList.remove('active'));
+        this.classList.add('active');
+        
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+    
+    // Función para descargar CV
+    function downloadCV() {
+      downloadFile('H/Hoja de Vida Administrador Sencillo Blanco y Negro.docx', 'CV_Completo.docx');
+    }
+    
+    // Función de contacto
+    function contactMe() {
+      alert('Información de contacto disponible en la sección de contacto');
+    }
+    
+    // Variables globales para modales
+    let currentImageSrc = '';
+    let currentPDFSrc = '';
+    let currentFileName = '';
+    
+    // Modal para imágenes
+    function openModal(img) {
+      const modal = document.getElementById('imageModal');
+      const modalImg = document.getElementById('modalImg');
+      modal.style.display = 'block';
+      modalImg.src = img.src;
+      currentImageSrc = img.src;
+    }
+    
+    function openCertificate(src, title) {
+      const modal = document.getElementById('imageModal');
+      const modalImg = document.getElementById('modalImg');
+      modal.style.display = 'block';
+      modalImg.src = src;
+      currentImageSrc = src;
+      currentFileName = title;
+    }
+    
+    function closeModal() {
+      document.getElementById('imageModal').style.display = 'none';
+    }
+    
+    // Modal para PDFs
+    function openPDF(src, title) {
+      const modal = document.getElementById('pdfModal');
+      const pdfViewer = document.getElementById('pdfViewer');
+      modal.style.display = 'block';
+      pdfViewer.src = src;
+      currentPDFSrc = src;
+      currentFileName = title;
+    }
+    
+    function viewPDF(src) {
+      openPDF(src, 'Documento PDF');
+    }
+    
+    function closePDFModal() {
+      document.getElementById('pdfModal').style.display = 'none';
+      document.getElementById('pdfViewer').src = '';
+    }
+    
+    // Funciones de descarga
+    function downloadFile(src, filename) {
+      const link = document.createElement('a');
+      link.href = src;
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+    
+    function downloadCurrentImage() {
+      if (currentImageSrc) {
+        const filename = currentFileName ? currentFileName.replace(/\s+/g, '_') + '.jpg' : 'certificado.jpg';
+        downloadFile(currentImageSrc, filename);
+      }
+    }
+    
+    function downloadCurrentPDF() {
+      if (currentPDFSrc) {
+        const filename = currentFileName ? currentFileName.replace(/\s+/g, '_') + '.pdf' : 'documento.pdf';
+        downloadFile(currentPDFSrc, filename);
+      }
+    }
+    
+    function openInNewTab() {
+      const modalImg = document.getElementById('modalImg');
+      if (modalImg.src) {
+        window.open(modalImg.src, '_blank');
+      }
+    }
+
+    function openPDFInNewTab() {
+      const pdfViewer = document.getElementById('pdfViewer');
+      if (pdfViewer.src) {
+        window.open(pdfViewer.src, '_blank');
+      }
+    }
+
+    // Funciones de navegación y búsqueda
+    function toggleMenu() {
+      const navMenu = document.getElementById('navMenu');
+      const menuToggle = document.querySelector('.menu-toggle');
+      navMenu.classList.toggle('active');
+      menuToggle.classList.toggle('active');
+    }
+
+    function performSearch() {
+      const searchTerm = document.getElementById('search-input').value.toLowerCase().trim();
+      if (!searchTerm) {
+        clearSearchHighlights();
+        return;
+      }
+
+      clearSearchHighlights();
+      
+      // Buscar en todas las secciones
+      const sections = document.querySelectorAll('.cv-section');
+      let found = false;
+      
+      sections.forEach(section => {
+        const sectionText = section.textContent.toLowerCase();
+        if (sectionText.includes(searchTerm)) {
+          // Resaltar la sección encontrada
+          section.style.backgroundColor = '#fff3cd';
+          section.style.border = '2px solid #ffc107';
+          
+          if (!found) {
+            // Scroll a la primera coincidencia
+            section.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            found = true;
+          }
+          
+          // Resaltar texto específico
+          highlightText(section, searchTerm);
+        }
+      });
+
+      if (!found) {
+        alert('No se encontraron resultados para: ' + searchTerm);
+      }
+      
+      // Cerrar dropdown después de buscar
+      closeDropdown();
+    }
+
+    function highlightText(element, searchTerm) {
+      const walker = document.createTreeWalker(
+        element,
+        NodeFilter.SHOW_TEXT,
+        null,
+        false
+      );
+
+      const textNodes = [];
+      let node;
+      while (node = walker.nextNode()) {
+        if (node.textContent.toLowerCase().includes(searchTerm)) {
+          textNodes.push(node);
+        }
+      }
+
+      textNodes.forEach(textNode => {
+        const parent = textNode.parentNode;
+        const text = textNode.textContent;
+        const regex = new RegExp(`(${searchTerm})`, 'gi');
+        const highlightedText = text.replace(regex, '<mark style="background-color: #ffeb3b; padding: 2px;">$1</mark>');
+        
+        if (highlightedText !== text) {
+          const span = document.createElement('span');
+          span.innerHTML = highlightedText;
+          parent.replaceChild(span, textNode);
+        }
+      });
+    }
+
+    function clearSearchHighlights() {
+      // Limpiar resaltados de secciones
+      const sections = document.querySelectorAll('.cv-section');
+      sections.forEach(section => {
+        section.style.backgroundColor = '';
+        section.style.border = '';
+      });
+
+      // Limpiar resaltados de texto
+      const marks = document.querySelectorAll('mark');
+      marks.forEach(mark => {
+        const parent = mark.parentNode;
+        parent.replaceChild(document.createTextNode(mark.textContent), mark);
+        parent.normalize();
+      });
+    }
+
+    function handleSearchEnter(event) {
+      if (event.key === 'Enter') {
+        performSearch();
+      }
+    }
+
+    function toggleDropdown() {
+      const dropdown = document.getElementById('dropdownMenu');
+      dropdown.classList.toggle('show');
+    }
+
+    function scrollToSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    function closeDropdown() {
+      const dropdown = document.getElementById('dropdownMenu');
+      dropdown.classList.remove('show');
+    }
+
+    // Cerrar dropdown al hacer clic fuera
+    window.addEventListener('click', function(event) {
+      if (!event.target.matches('.dropdown-toggle')) {
+        const dropdown = document.getElementById('dropdownMenu');
+        if (dropdown.classList.contains('show')) {
+          dropdown.classList.remove('show');
+        }
+      }
+    });
+
+    function playVideo(videoPath) {
+      // Crear modal para video
+      const videoModal = document.createElement('div');
+      videoModal.className = 'modal';
+      videoModal.style.display = 'block';
+      videoModal.innerHTML = `
+        <span class="close" onclick="this.parentElement.remove()">&times;</span>
+        <div style="position: relative; width: 90%; max-width: 800px; margin: 50px auto; background: white; border-radius: 10px; padding: 20px;">
+          <video controls style="width: 100%; height: auto; border-radius: 8px;">
+            <source src="${videoPath}" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+          </video>
+          <div style="text-align: center; margin-top: 15px;">
+            <button class="modal-btn" onclick="downloadFile('${videoPath}', 'Monitoreo_Internet.mp4')">📥 Descargar Video</button>
+          </div>
+        </div>
+      `;
+      document.body.appendChild(videoModal);
+    }
+
+    function showWindowsInfo() {
+      const infoModal = document.createElement('div');
+      infoModal.className = 'modal';
+      infoModal.style.display = 'block';
+      infoModal.innerHTML = `
+        <span class="close" onclick="this.parentElement.remove()">&times;</span>
+        <div style="position: relative; width: 90%; max-width: 600px; margin: 50px auto; background: white; border-radius: 10px; padding: 30px;">
+          <h2 style="color: #2d3748; text-align: center; margin-bottom: 20px;">💿 Windows Modificados - Optimizados</h2>
+          
+          <div style="background: #f7fafc; padding: 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #4299e1;">
+            <h3 style="color: #2d3748; margin-bottom: 15px;">🚀 Características de Optimización:</h3>
+            <ul style="color: #4a5568; line-height: 1.6;">
+              <li><strong>Sistema Liviano:</strong> Eliminación completa de aplicaciones basura innecesarias para empresas</li>
+              <li><strong>Bajo Consumo de RAM:</strong> Windows 11 optimizado consume 2.6-3.0GB inicial, estabiliza en 3.4GB</li>
+              <li><strong>Windows 10 Eficiente:</strong> Consume 2.0GB inicial, oscila cerca de 3GB después de actualizaciones</li>
+              <li><strong>Actualizaciones Intactas:</strong> Mantiene todas las funcionalidades de seguridad y actualizaciones</li>
+              <li><strong>Optimizado para Empresas:</strong> Configuración ideal para entornos corporativos</li>
+            </ul>
+          </div>
+
+          <div style="background: #fff5f5; padding: 15px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #f56565;">
+            <p style="color: #e53e3e; font-weight: bold; margin: 0;">⚠️ Nota Importante:</p>
+            <p style="color: #4a5568; margin: 5px 0 0 0;">Estos son sistemas operativos modificados para demostración técnica. Úselos solo en entornos de prueba.</p>
+          </div>
+
+          <div style="text-align: center;">
+            <button class="modal-btn" onclick="downloadFile('windos modificados/Win11_24H2_Spanish_x64.iso', 'Windows11_Optimizado.iso')" style="margin: 5px;">📥 Descargar Windows 11</button>
+            <button class="modal-btn" onclick="downloadFile('windos modificados/Win10_22H2_Spanish_x64.iso', 'Windows10_Optimizado.iso')" style="margin: 5px;">📥 Descargar Windows 10</button>
+          </div>
+        </div>
+      `;
+      document.body.appendChild(infoModal);
+    }
+    
+    function viewFile(src) {
+      window.open(src, '_blank');
+    }
+    
+    // Cerrar modales al hacer clic fuera
+    window.onclick = function(event) {
+      const imageModal = document.getElementById('imageModal');
+      const pdfModal = document.getElementById('pdfModal');
+      
+      if (event.target == imageModal) {
+        imageModal.style.display = 'none';
+      }
+      if (event.target == pdfModal) {
+        pdfModal.style.display = 'none';
+        document.getElementById('pdfViewer').src = '';
+      }
+    }
+  </script>
+</body>
+</html>
