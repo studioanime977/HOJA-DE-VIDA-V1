@@ -1,1510 +1,969 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hoja de Vida - Esteban Manuel Lopez Rivero</title>
-  <link rel="icon" type="image/x-icon"
-    href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTYiIGZpbGw9InVybCgjZ3JhZGllbnQwX2xpbmVhcl8xXzEpIi8+CjxwYXRoIGQ9Ik0xMC41IDEySDIxLjVWMTRIMTAuNVYxMlpNMTAuNSAxNkgyMS41VjE4SDEwLjVWMTZaTTEwLjUgMjBIMTguNVYyMkgxMC41VjIwWiIgZmlsbD0id2hpdGUiLz4KPHN2ZyB3aWR0aD0iOCIgaGVpZ2h0PSI4IiB2aWV3Qm94PSIwIDAgOCA4IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8Y2lyY2xlIGN4PSI0IiBjeT0iNCIgcj0iNCIgZmlsbD0iIzY2N0VFQSIvPgo8L3N2Zz4KPHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSI2IiB2aWV3Qm94PSIwIDAgNiA2IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8Y2lyY2xlIGN4PSIzIiBjeT0iMyIgcj0iMyIgZmlsbD0iIzc2NEJBMiIvPgo8L3N2Zz4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZGllbnQwX2xpbmVhcl8xXzEiIHgxPSIwIiB5MT0iMCIgeDI9IjMyIiB5Mj0iMzIiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iIzY2N0VFQSIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM3NjRCQTIiLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8L3N2Zz4K">
+  <title>Esteban Manuel López Rivero - CV Profesional</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23667eea'/%3E%3Cstop offset='100%25' stop-color='%23764ba2'/%3E%3C/linearGradient%3E%3CanimateTransform attributeName='transform' type='rotate' from='0 50 50' to='360 50 50' dur='4s' repeatCount='indefinite'/%3E%3C/defs%3E%3Ccircle cx='50' cy='50' r='45' fill='url(%23g)'/%3E%3Ctext x='50' y='62' font-size='40' text-anchor='middle' fill='white' font-weight='bold'%3EE%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <!-- Header -->
-  <div class="header">
-    <div class="logo">💼 Esteban Manuel Lopez Rivero</div>
-    <div class="header-spacer"></div>
-    <div class="user-actions">
-      <div class="dropdown">
-        <button class="auth-btn dropdown-toggle" onclick="toggleDropdown()">☰ Menú</button>
-        <div class="dropdown-menu" id="dropdownMenu">
-          <div class="dropdown-search">
-            <input type="text" placeholder="Buscar sección o palabra..." id="search-input" onkeyup="performSearch()"
-              onkeypress="handleSearchEnter(event)">
-            <button onclick="performSearch()">🔍</button>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">Esteban Manuel López Rivero</div>
+    <button class="nav-toggle" onclick="toggleNav()" aria-label="Menú">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero" onclick="closeNav()">Inicio</a></li>
+      <li><a href="#about" onclick="closeNav()">Perfil</a></li>
+      <li><a href="#experience" onclick="closeNav()">Experiencia</a></li>
+      <li><a href="#projects" onclick="closeNav()">Proyectos</a></li>
+      <li><a href="#skills" onclick="closeNav()">Habilidades</a></li>
+      <li><a href="#certificates" onclick="closeNav()">Certificaciones</a></li>
+      <li><a href="#education" onclick="closeNav()">Formación</a></li>
+      <li><a href="#" onclick="downloadCV()">📄 CV</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero" class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-profile">
+        <img src="IMG/FOTO%203X4.jpg" alt="Esteban Manuel López Rivero" class="hero-img">
+      </div>
+      <h1 class="hero-title">Esteban Manuel<br>López Rivero</h1>
+      <p class="hero-subtitle">Técnico en Sistemas · Full-Stack Developer · Infraestructura de Redes · Automatización</p>
+      <div class="hero-contact">
+        <a href="https://wa.me/573017400553" target="_blank" class="hero-btn whatsapp">WhatsApp</a>
+        <a href="https://www.linkedin.com/in/esteban-manuel-lópez-rivero-3b5887370" target="_blank" class="hero-btn linkedin">LinkedIn</a>
+        <a href="https://github.com/studioanime977" target="_blank" class="hero-btn github">GitHub</a>
+        <a href="#" onclick="downloadCV()" class="hero-btn cv">📄 Descargar CV</a>
+      </div>
+      <div class="hero-contact" style="margin-top: 8px;">
+        <a href="https://www.youtube.com/@STUDIOOTAKUFF" target="_blank" class="hero-btn yt" style="background:#ff0033">🎮 YouTube Gaming</a>
+        <a href="https://www.tiktok.com/@studiootakuff" target="_blank" class="hero-btn tt" style="background:#000">🎵 TikTok</a>
+        <a href="https://www.youtube.com/@EMLFLOW" target="_blank" class="hero-btn yt" style="background:#1db954">🎤 IA Music</a>
+        <a href="https://www.youtube.com/@STUDIOOTAKU1" target="_blank" class="hero-btn yt" style="background:#6441a5">📺 Anime</a>
+      </div>
+      <div class="hero-meta">
+        <span>📍 Cereté, Córdoba</span>
+        <span>📧 love8012e@gmail.com</span>
+        <span>📱 3017400553</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT / PERFIL ===== -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">Perfil Profesional</h2>
+      <div class="about-grid">
+        <div class="about-card glass">
+          <p>Soy <strong>Técnico en Sistemas Informáticos</strong> y <strong>Desarrollador Full-Stack</strong>. Mi enfoque se centra en diseñar, optimizar y automatizar infraestructuras tecnológicas robustas que impulsen los resultados del negocio. Fusiono habilidades técnicas avanzadas con una sólida base en gestión financiera y operativa.</p>
+          <p>En el área de <strong>Redes y Servidores</strong>, tengo experiencia demostrada en el despliegue, hardening y administración de servidores <strong>Ubuntu</strong> mediante protocolos avanzados de tunelización segura (<strong>Vmess y V2ray</strong>). Optimizo infraestructuras de enrutamiento y sistemas de seguridad CCTV con monitoreo remoto para entornos empresariales.</p>
+          <p>Como <strong>Desarrollador</strong>, diseño soluciones eficientes y automatizadas: desde bots en <strong>Python</strong> para análisis financiero y trading algorítmico integrados con la <strong>API de Binance</strong> en entornos VPS 24/7, hasta plataformas web completas, escalables, indexadas en motores de búsqueda y monetizadas.</p>
+          <p>Mi diferencial clave es mi <strong>visión integral de negocio</strong>: combino mi experiencia técnica con competencias en auditoría de inventarios, gestión de operaciones y caja, respaldadas por una certificación en <strong>Contabilidad y Reconocimiento de Recursos Financieros del SENA</strong> (Calificación: 4.5). Esto me permite alinear la tecnología con las necesidades financieras y comerciales de cualquier organización.</p>
+        </div>
+        <div class="about-stats">
+          <div class="stat-item glass">
+            <span class="stat-num">60+</span>
+            <span class="stat-label">Equipos ensamblados</span>
           </div>
-          <div class="dropdown-divider"></div>
-          <a href="#" onclick="downloadCV(); closeDropdown()">📄 Descargar CV</a>
-          <a href="#" onclick="contactMe(); closeDropdown()">📧 Contacto</a>
-          <a href="#personal" onclick="scrollToSection('personal'); closeDropdown()">👤 Datos Personales</a>
-          <a href="#education" onclick="scrollToSection('education'); closeDropdown()">🎓 Formación Académica</a>
-          <a href="#experience" onclick="scrollToSection('experience'); closeDropdown()">💼 Experiencia</a>
-          <a href="#skills" onclick="scrollToSection('skills'); closeDropdown()">🛠️ Habilidades</a>
-          <a href="#certificates" onclick="scrollToSection('certificates'); closeDropdown()">🏆 Certificaciones</a>
-          <a href="#projects" onclick="scrollToSection('projects'); closeDropdown()">🌐 Proyectos Web</a>
-          <a href="#mobile-app" onclick="scrollToSection('mobile-app'); closeDropdown()">📱 Aplicación Móvil</a>
-          <a href="#objective" onclick="scrollToSection('objective'); closeDropdown()">🎯 Objetivo Profesional</a>
-          <a href="#current-studies" onclick="scrollToSection('current-studies'); closeDropdown()">📚 Estudios
-            Actuales</a>
+          <div class="stat-item glass">
+            <span class="stat-num">10+</span>
+            <span class="stat-label">Proyectos web</span>
+          </div>
+          <div class="stat-item glass">
+            <span class="stat-num">14</span>
+            <span class="stat-label">Certificaciones técnicas</span>
+          </div>
+          <div class="stat-item glass">
+            <span class="stat-num">4</span>
+            <span class="stat-label">Marcas digitales</span>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="main-container">
-    <!-- Sidebar izquierdo -->
-    <div class="left-sidebar">
-      <!-- Foto de perfil -->
-      <div class="profile-photo">
-        <img src="IMG/FOTO 3X4.jpg" alt="Foto de perfil" class="profile-img">
-        <h3>Esteban Manuel Lopez Rivero</h3>
-        <p>Técnico en Sistemas y Desarrollador Junior</p>
-      </div>
-
-      <!-- Información de contacto -->
-      <div class="sidebar-section">
-        <h3>📞 CONTACTO</h3>
-        <div class="contact-info">
-          <p>📍 CR 11 6A-10, Barrio Altos del Noval</p>
-          <p style="margin-left: 20px;">Cereté, Córdoba</p>
-          <p>📧 love8012e@gmail.com</p>
-          <p>📱 3017400553</p>
-          <p>🆔 CC: 1062604753</p>
-          <a href="https://www.linkedin.com/in/esteban-manuel-lópez-rivero-3b5887370" target="_blank"
-            style="display: block; padding: 8px; background: #0077b5; color: white; text-decoration: none; border-radius: 6px; text-align: center; margin-top: 10px; transition: all 0.3s ease;">
-            🔗 LinkedIn
-          </a>
-          <a href="https://github.com/studioanime977" target="_blank"
-            style="display: block; padding: 8px; background: #333; color: white; text-decoration: none; border-radius: 6px; text-align: center; margin-top: 10px; transition: all 0.3s ease;">
-            💻 GitHub Profile
-          </a>
-          <a href="https://wa.me/573017400553?text=Hola%20Esteban,%20he%20visto%20tu%20hoja%20de%20vida%20en%20la%20web%20y%20me%20gustar%C3%ADa%20contactarte."
-            target="_blank" class="whatsapp-btn">
-            <img src="ico/whatsapp.webp" alt="WhatsApp"> WhatsApp
-          </a>
+  <!-- ===== EXPERIENCE ===== -->
+  <section id="experience" class="section alt-bg">
+    <div class="container">
+      <h2 class="section-title">Experiencia Profesional</h2>
+      <div class="timeline">
+        <div class="timeline-item glass" style="--accent: #f6ad55">
+          <div class="tl-marker"></div>
+          <div class="tl-content">
+            <h3>Asesor de Ventas y Gestor Operativo</h3>
+            <span class="tl-date">Feb 2023 - Sep 2025</span>
+            <p><strong>Tienda Altos del Noval</strong> (NIT 30688395-6). Asesoría personalizada a clientes, fidelización
+            comercial, gestión operativa general (apertura/cierre), control y auditoría de inventarios, manejo de caja
+            y registros sistemáticos de ventas diarias.</p>
+            <div style="margin-top:8px">
+              <a href="#" onclick="openCertificate('IMG/certificado_tienda.jpg','Certificado Laboral - Tienda Altos del Noval');return false" class="carousel-info" style="font-size:12px">📜 Ver certificado laboral</a>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item glass" style="--accent: #667eea">
+          <div class="tl-marker"></div>
+          <div class="tl-content">
+            <h3>Prácticas - Cabarcas Sarmiento S.A.S</h3>
+            <span class="tl-date">Feb - Ago 2025 (+2 meses)</span>
+            <p>Técnico en Sistemas Informáticos. Soporte técnico integral, mantenimiento preventivo/correctivo,
+            configuración de redes empresariales, instalación de sistemas CCTV (IP/Análogas, DVR/NVR) con monitoreo remoto.</p>
+          </div>
+        </div>
+        <div class="timeline-item glass" style="--accent: #48bb78">
+          <div class="tl-marker"></div>
+          <div class="tl-content">
+            <h3>Fundador - MoviVIP Network</h3>
+            <span class="tl-date">May 2026 - Actualidad</span>
+            <p>Marca de distribución de datos móviles VIP con aprovisionamiento de red, soporte técnico especializado
+            y automatización de ventas mediante bots en Telegram.</p>
+          </div>
+        </div>
+        <div class="timeline-item glass" style="--accent: #ed8936">
+          <div class="tl-marker"></div>
+          <div class="tl-content">
+            <h3>Desarrollador Web & Administrador de Servidores</h3>
+            <span class="tl-date">Ene 2026 - Actualidad</span>
+            <p>Configuración y hardening de servidores Ubuntu en VPS con implementación de protocolos de tunelización segura (<strong>Vmess/V2ray</strong>), panel de gestión de túneles (<strong>VPS TunnelActive</strong>), balanceo de puertos HTTP/HTTPS y monitoreo de conectividad. Desarrollo de bots Python para trading algorítmico (API Binance) y plataformas web indexadas/monetizadas.</p>
+          </div>
+        </div>
+        <div class="timeline-item glass" style="--accent: #9f7aea">
+          <div class="tl-marker"></div>
+          <div class="tl-content">
+            <h3>Creador de Contenido - @STUDIOOTAKUFF</h3>
+            <span class="tl-date">2024 - Actualidad</span>
+            <p>Estrategia de engagement, edición y marketing digital en TikTok y YouTube. Creación de MacroViral StudioFF,
+            plataforma de kits virales y generador de sensibilidad para Free Fire. Producción musical con IA en EMLFLOW.</p>
+            <div style="margin-top:8px; display:flex; gap:6px; flex-wrap:wrap">
+              <a href="https://www.youtube.com/@STUDIOOTAKUFF" target="_blank" class="carousel-info" style="font-size:12px">🎮 YouTube Gaming</a>
+              <a href="https://www.tiktok.com/@studiootakuff" target="_blank" class="carousel-info" style="font-size:12px">🎵 TikTok</a>
+              <a href="https://www.youtube.com/@EMLFLOW" target="_blank" class="carousel-info" style="font-size:12px">🎤 IA Music</a>
+              <a href="https://www.youtube.com/@STUDIOOTAKU1" target="_blank" class="carousel-info" style="font-size:12px">📺 Anime</a>
+            </div>
+          </div>
         </div>
       </div>
-
-      <!-- Menú hamburguesa para móviles -->
-      <div class="menu-toggle" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
-      <!-- Navegación -->
-      <ul class="nav-menu" id="navMenu">
-        <li><a href="#personal"><span class="emoji">👤</span> Datos Personales</a></li>
-        <li><a href="#education"><span class="emoji">🎓</span> Formación Académica</a></li>
-        <li><a href="#experience"><span class="emoji">💼</span> Experiencia</a></li>
-        <li><a href="#skills"><span class="emoji">🛠️</span> Habilidades</a></li>
-        <li><a href="#certificates"><span class="emoji">🏆</span> Certificaciones</a></li>
-        <li><a href="#projects"><span class="emoji">🌐</span> Proyectos Web</a></li>
-        <li><a href="#mobile-app"><span class="emoji">📱</span> Aplicación Móvil</a></li>
-        <li><a href="#objective"><span class="emoji">🎯</span> Objetivo Profesional</a></li>
-        <li><a href="#current-studies"><span class="emoji">📚</span> Estudios Actuales</a></li>
-      </ul>
     </div>
+  </section>
 
-    <!-- Contenido principal -->
-    <div class="main-content">
-      <!-- Datos Personales -->
-      <section id="personal" class="cv-section">
-        <h2 class="section-title">👤 Datos Personales</h2>
-        <div class="info-grid">
-          <div class="info-card">
-            <h3>Información Básica</h3>
-            <p><strong>Nombre Completo:</strong> Esteban Manuel Lopez Rivero</p>
-            <p><strong>Profesión:</strong> Técnico en Sistemas y Desarrollador Junior</p>
-            <p><strong>Identificación:</strong> 1062604753</p>
-            <p><strong>Ubicación:</strong> CR 11 6A-10, Barrio Altos del Noval, Cereté, Córdoba</p>
-            <p><strong>Estado:</strong> Graduado como Técnico en Sistemas Informáticos (Septiembre 2025)</p>
-          </div>
-          <div class="info-card">
-            <h3>Sobre Mí</h3>
-            <p>Soy un <strong>Técnico en Sistemas y Desarrollador Junior</strong> graduado del Centro de Sistemas de Antioquia
-              (CENSA), con una trayectoria de alto impacto en soporte técnico, seguridad electrónica y desarrollo web.
-              Mi perfil combina la precisión técnica del hardware con la creatividad del desarrollo de software moderno,
-              permitiéndome ofrecer soluciones integrales que van desde la infraestructura física hasta la
-              implementación de plataformas digitales monetizadas.</p>
-
-            <p>En el ámbito del <strong>Hardware y Soporte Técnico</strong>, he ensamblado y configurado <strong>más de
-                60 equipos de cómputo</strong> de alto rendimiento. Soy experto en el mantenimiento preventivo y
-              correctivo, así como en la <strong>optimización extrema de sistemas operativos Windows (10 y 11)</strong>,
-              logrando reducir el consumo de RAM a niveles críticos (2.0-3.4GB) para maximizar la productividad en
-              entornos corporativos y de alto desempeño.</p>
-
-            <p>Mi veteranía en <strong>Soluciones de Red y Seguridad</strong> incluye el diseño e instalación de redes
-              locales y sistemas avanzados de videovigilancia (CCTV, cámaras IP/Análogas, DVR/NVR) con monitoreo remoto.
-              Estas competencias fueron consolidadas durante mis prácticas en <strong>Cabarcas Sarmiento S.A.S</strong>,
-              donde gestioné infraestructuras de seguridad robustas y seguras.</p>
-
-            <p>Como <strong>Full-Stack Web Developer</strong> con formación en <strong>Platzi</strong>, lidero proyectos
-              que generan valor real y monetización. Mi portafolio destaca plataformas como <strong>Mundo Otaku
-                Latino</strong> e <strong>Inmobiliaria Integrales Cereté</strong>, ambas indexadas en Google y
-              optimizadas para SEO. Dominio de tecnologías como HTML5, CSS3, JavaScript y Python, con un enfoque
-              constante en la integración de <strong>Inteligencia Artificial</strong> para optimizar procesos y
-              experiencias de usuario.</p>
-
-            <p>Me defino como un profesional estratégico, movido por el aprendizaje continuo y la excelencia técnica. Mi
-              objetivo es transformar los desafíos tecnológicos en oportunidades de crecimiento empresarial,
-              garantizando siempre sistemas estables, redes seguras y aplicaciones escalables.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Formación Académica -->
-      <section id="education" class="cv-section">
-        <h2 class="section-title">🎓 Formación Académica</h2>
-        <div class="education-timeline">
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <h3>Técnico en Sistemas Informáticos</h3>
-              <p><strong>Institución:</strong> Centro de Sistemas de Antioquia (CENSA)</p>
-              <p><strong>Ubicación:</strong> Montería, Córdoba</p>
-              <p><strong>Año:</strong> 2024 - Septiembre 2025</p>
-              <p>Formación integral completada en sistemas informáticos, armado físico de equipos, instalación de
-                sistemas operativos y configuración de redes.</p>
+  <!-- ===== PROJECTS (3D Carousel) ===== -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title">Proyectos Web</h2>
+      <div class="carousel-3d-wrapper">
+        <div class="carousel-3d" id="carousel3d">
+          <div class="carousel-item" data-index="0">
+            <div class="carousel-card glass" style="border-top: 4px solid #f093fb">
+              <span class="carousel-badge">🤖 Automatización · VPS 24/7</span>
+              <h3>🤖 Trading Bot Algorítmico</h3>
+              <p>Bot en Python para trading algorítmico integrado con la API de Binance. Análisis financiero automatizado en tiempo real desplegado en VPS 24/7.</p>
+              <div class="carousel-links">
+                <span class="carousel-info" onclick="showTradingInfo()">ℹ️ Más información</span>
+              </div>
             </div>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <h3>Calidad de Desarrollador de Software</h3>
-              <p><strong>Institución:</strong> SENA</p>
-              <p><strong>Año:</strong> 2023</p>
-              <p>Curso especializado en procesos y estándares necesarios para garantizar proyectos tecnológicos de alto
-                nivel.</p>
+          <div class="carousel-item" data-index="1">
+            <div class="carousel-card glass" style="border-top: 4px solid #0f9b0f">
+              <h3>📶 MoviVIP Network</h3>
+              <p>Distribución de paquetes de datos y servicios de internet móvil VIP con soporte especializado y automatización de ventas mediante bots en Telegram.</p>
+              <div class="carousel-links">
+                <a href="https://movivip-network.web.app/" target="_blank">🌐 Ver Sitio</a>
+                <span class="carousel-info" onclick="showMoviVIPInfo()">ℹ️ Más información</span>
+              </div>
             </div>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <h3>Educación Media</h3>
-              <p><strong>Institución:</strong> Institución Educativa Dolores Garrido de Gonzáles</p>
-              <p><strong>Año:</strong> 2023</p>
-              <p>Bachillerato académico completado.</p>
+          <div class="carousel-item" data-index="2">
+            <div class="carousel-card glass" style="border-top: 4px solid #2b6cb0">
+              <span class="carousel-badge">🔥 Indexado · Monetizado</span>
+              <h3>🏠 Inmobiliaria Integrales Cereté</h3>
+              <p>Mini empresa inmobiliaria con catálogo de propiedades. Indexada en Google.</p>
+              <div class="carousel-links">
+                <a href="https://inmobiliariaintegarlescerete.vercel.app/" target="_blank">🌐 Ver Sitio</a>
+                <a href="https://github.com/studioanime977/Inmobiliaria-Integarles-Cerete" target="_blank">💻 GitHub</a>
+              </div>
             </div>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <h3>Document Object Model (DOM)</h3>
-              <p><strong>Institución:</strong> Platzi</p>
-              <p><strong>Año:</strong> Finalizado el 17 de febrero de 2026</p>
-              <p>Curso especializado en manipulación del DOM para crear interfaces web interactivas y dinámicas.</p>
+          <div class="carousel-item" data-index="3">
+            <div class="carousel-card glass" style="border-top: 4px solid #f093fb">
+              <span class="carousel-badge">🔥 Marca Propia</span>
+              <h3>🎮 MacroViral StudioFF</h3>
+              <p>Ecosistema de distribución de kits virales y generador dinámico de sensibilidad para móviles.</p>
+              <div class="carousel-links">
+                <a href="https://macroviralstudioff.web.app/" target="_blank">🌐 Ver Sitio</a>
+                <a href="https://github.com/studioanime977" target="_blank">💻 GitHub</a>
+              </div>
             </div>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <h3>Java Programming</h3>
-              <p><strong>Institución:</strong> Platzi</p>
-              <p><strong>Año:</strong> Finalizado el 17 de febrero de 2026</p>
-              <p>Curso completo de programación Java cubriendo desde conceptos básicos hasta programación orientada a objetos.</p>
+          <div class="carousel-item" data-index="4">
+            <div class="carousel-card glass" style="border-top: 4px solid #e53e3e">
+              <span class="carousel-badge">🔥 Indexado · Monetizado</span>
+              <h3>🌸 Mundo Otaku Latino</h3>
+              <p>Plataforma de contenido anime para la comunidad latina. Indexada en Google.</p>
+              <div class="carousel-links">
+                <a href="https://mundootakulatino.vercel.app/" target="_blank">🌐 Ver Sitio</a>
+                <a href="https://github.com/studioanime977/Mundo-otaku-latino" target="_blank">💻 GitHub</a>
+              </div>
             </div>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <h3>Node.js Development</h3>
-              <p><strong>Institución:</strong> Platzi</p>
-              <p><strong>Año:</strong> Finalizado el 17 de febrero de 2026</p>
-              <p>Curso especializado en desarrollo backend con Node.js, creando APIs y aplicaciones del lado del servidor.</p>
+          <div class="carousel-item" data-index="5">
+            <div class="carousel-card glass" style="border-top: 4px solid #9f7aea">
+              <h3>📚 Edu-Clic</h3>
+              <p>Plataforma educativa interactiva con diseño moderno para el aprendizaje digital.</p>
+              <div class="carousel-links">
+                <a href="https://edu-clic.vercel.app/" target="_blank">🌐 Ver Sitio</a>
+                <a href="https://github.com/studioanime977/Edu-clic" target="_blank">💻 GitHub</a>
+              </div>
             </div>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <h3>SQL y MySQL</h3>
-              <p><strong>Institución:</strong> Platzi</p>
-              <p><strong>Año:</strong> Finalizado el 17 de febrero de 2026</p>
-              <p>Curso completo de bases de datos SQL y MySQL, diseñando y gestionando sistemas de bases de datos relacionales.</p>
+          <div class="carousel-item" data-index="6">
+            <div class="carousel-card glass" style="border-top: 4px solid #4299e1">
+              <h3>🎮 Dinámica Juvenil</h3>
+              <p>Cuestionarios interactivos dinámicos para fomentar el conocimiento de manera divertida.</p>
+              <div class="carousel-links">
+                <a href="https://dinamicajuvenil.vercel.app/" target="_blank">🌐 Ver Sitio</a>
+                <a href="https://github.com/studioanime977/dinamicajuvenil" target="_blank">💻 GitHub</a>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <!-- Experiencia Profesional -->
-      <section id="experience" class="cv-section">
-        <h2 class="section-title">💼 Experiencia y Proyectos</h2>
-        <div class="experience-card"
-          style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); margin-bottom: 20px;">
-          <h3>Prácticas Empresariales - Cabarcas Sarmiento S.A.S</h3>
-          <p><strong>Período:</strong> Febrero - Agosto 7, 2025 (+ 2 meses adicionales)</p>
-          <p><strong>Posición:</strong> Técnico en Sistemas Informáticos</p>
-          <p><strong>Logros y Responsabilidades:</strong></p>
-          <ul style="color: white; margin-left: 20px; line-height: 1.6;">
-            <li>Aplicación práctica de conocimientos teóricos en entorno empresarial real</li>
-            <li>Soporte técnico integral a usuarios finales</li>
-            <li>Mantenimiento preventivo y correctivo de equipos informáticos</li>
-            <li>Configuración y optimización de redes empresariales</li>
-            <li>Aprendizaje e implementación de sistemas de cámaras de seguridad</li>
-            <li>Desarrollo de competencias profesionales y trabajo en equipo</li>
-          </ul>
-        </div>
-
-        <div class="experience-card"
-          style="background: linear-gradient(135deg, #48bb78 0%, #38a169 100%); margin-bottom: 20px;">
-          <h3>Proyectos de Instalación de Sistemas de Seguridad</h3>
-          <p><strong>Descripción:</strong> Conocimientos adquiridos durante las prácticas empresariales en Cabarcas
-            Sarmiento S.A.S</p>
-          <p><strong>Proyectos Realizados:</strong></p>
-          <ul style="color: white; margin-left: 20px; line-height: 1.6;">
-            <li>Instalación de cámaras IP y análogas en residencias y comercios</li>
-            <li>Configuración de sistemas DVR/NVR para grabación y monitoreo</li>
-            <li>Cableado estructurado para sistemas de videovigilancia</li>
-            <li>Configuración de acceso remoto para monitoreo móvil</li>
-            <li>Mantenimiento y actualización de sistemas existentes</li>
-            <li>Capacitación a usuarios finales sobre el uso del sistema</li>
-          </ul>
-        </div>
-
-        <div class="experience-card"
-          style="background: linear-gradient(135deg, #ed8936 0%, #dd6b20 100%); margin-bottom: 20px;">
-          <h3>Soporte Técnico y Mantenimiento</h3>
-          <p><strong>Descripción:</strong> Servicios técnicos especializados en hardware y software</p>
-          <p><strong>Servicios Prestados:</strong></p>
-          <ul style="color: white; margin-left: 20px; line-height: 1.6;">
-            <li>Diagnóstico y reparación de equipos de cómputo</li>
-            <li>Instalación y optimización de sistemas operativos Windows</li>
-            <li>Configuración de redes domésticas y empresariales</li>
-            <li>Recuperación de datos y backup de información</li>
-            <li>Actualización y mejora de componentes de hardware</li>
-            <li>Asesoría técnica para compra de equipos</li>
-          </ul>
-        </div>
-
-        <div class="experience-card">
-          <h3>Proyectos de Desarrollo Personal</h3>
-          <p><strong>Descripción:</strong> Desarrollo continuo de habilidades técnicas a través de proyectos
-            autodidactas</p>
-          <p><strong>Actividades y Logros:</strong></p>
-          <ul style="color: white; margin-left: 20px; line-height: 1.6;">
-            <li>Ensamblaje completo de más de 60 equipos de cómputo</li>
-            <li>Modificación y optimización de sistemas operativos Windows 10/11</li>
-            <li>Creación de laboratorio casero para pruebas de red</li>
-            <li>Desarrollo de aplicaciones web con tecnologías modernas</li>
-            <li>Implementación de soluciones de monitoreo de red</li>
-            <li>Configuración de servidores locales para desarrollo</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Proyectos Web Desarrollados -->
-      <section id="web-projects" class="cv-section">
-        <h2 class="section-title">🌐 Proyectos Web Desarrollados</h2>
-        <div class="projects-grid"
-          style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px;">
-
-          <!-- Proyecto Casa de Avivamiento -->
-          <div class="project-card"
-            style="background: linear-gradient(135deg, #48bb78 0%, #38a169 100%); color: white; padding: 25px; border-radius: 15px; box-shadow: 0 8px 25px rgba(72, 187, 120, 0.3);">
-            <h3 style="margin-bottom: 15px; font-size: 20px;">⛪ Casa de Avivamiento y Reino</h3>
-            <p style="margin-bottom: 15px; line-height: 1.6;"><strong>Descripción:</strong> Página web para iglesia con
-              diseño moderno y funcionalidades interactivas.</p>
-            <p style="margin-bottom: 15px;"><strong>Tecnologías:</strong> HTML, CSS, JavaScript</p>
-            <div class="project-links" style="display: flex; gap: 10px; margin-top: 15px;">
-              <a href="https://github.com/studioanime977/Casa-de-Avivamiento-y-Reino-cerete-" target="_blank"
-                style="background: rgba(255,255,255,0.2); color: white; padding: 8px 15px; border-radius: 20px; text-decoration: none; font-size: 14px; transition: all 0.3s ease;">
-                💻 GitHub
-              </a>
-              <a href="https://casa-de-avivamiento-y-reino-cerete.vercel.app/" target="_blank"
-                style="background: rgba(255,255,255,0.2); color: white; padding: 8px 15px; border-radius: 20px; text-decoration: none; font-size: 14px; transition: all 0.3s ease;">
-                🌍 Ver Sitio
-              </a>
+          <div class="carousel-item" data-index="7">
+            <div class="carousel-card glass" style="border-top: 4px solid #4fd1c5">
+              <h3>🖼️ Eliminador de Marcas de Agua</h3>
+              <p>Herramienta inteligente para eliminar marcas de agua de fotos generadas por IA.</p>
+              <div class="carousel-links">
+                <a href="https://eliminador-de-marcas-de-agua.vercel.app/" target="_blank">🌐 Ver Sitio</a>
+                <a href="https://github.com/studioanime977/eliminador-de-marcas-de-agua" target="_blank">💻 GitHub</a>
+              </div>
             </div>
           </div>
-
-
-          <!-- Proyecto Edu-Clic -->
-          <div class="project-card"
-            style="background: linear-gradient(135deg, #9f7aea 0%, #805ad5 100%); color: white; padding: 25px; border-radius: 15px; box-shadow: 0 8px 25px rgba(159, 122, 234, 0.3);">
-            <h3 style="margin-bottom: 15px; font-size: 20px;">📚 Edu-Clic</h3>
-            <p style="margin-bottom: 15px; line-height: 1.6;"><strong>Descripción:</strong> Plataforma educativa
-              interactiva con diseño moderno y funcionalidades para el aprendizaje digital.</p>
-            <p style="margin-bottom: 15px;"><strong>Tecnologías:</strong> HTML, CSS, JavaScript</p>
-            <div class="project-links" style="display: flex; gap: 10px; margin-top: 15px;">
-              <a href="https://github.com/studioanime977/Edu-clic" target="_blank"
-                style="background: rgba(255,255,255,0.2); color: white; padding: 8px 15px; border-radius: 20px; text-decoration: none; font-size: 14px; transition: all 0.3s ease;">
-                💻 GitHub
-              </a>
-              <a href="https://edu-clic.vercel.app/" target="_blank"
-                style="background: rgba(255,255,255,0.2); color: white; padding: 8px 15px; border-radius: 20px; text-decoration: none; font-size: 14px; transition: all 0.3s ease;">
-                🌍 Ver Sitio
-              </a>
+          <div class="carousel-item" data-index="8">
+            <div class="carousel-card glass" style="border-top: 4px solid #f6ad55">
+              <h3>🎬 EML Studio</h3>
+              <p>Editor de fotos y documentos profesional estilo Adobe Acrobat con PDF.js.</p>
+              <div class="carousel-links">
+                <a href="https://eml-studio-yquw.vercel.app/" target="_blank">🌐 Ver Sitio</a>
+                <a href="https://github.com/studioanime977/EML-STUDIO" target="_blank">💻 GitHub</a>
+              </div>
             </div>
           </div>
-
-          <!-- Proyecto SERVICIOS (Plantilla) -->
-          <div class="project-card"
-            style="background: linear-gradient(135deg, #38b2ac 0%, #319795 100%); color: white; padding: 25px; border-radius: 15px; box-shadow: 0 8px 25px rgba(56, 178, 172, 0.3);">
-            <h3 style="margin-bottom: 15px; font-size: 20px;">🛠️ Servicios (Plantilla)</h3>
-            <p style="margin-bottom: 15px; line-height: 1.6;"><strong>Descripción:</strong> Plantilla web profesional
-              para servicios, con diseño moderno y reutilizable.</p>
-            <p style="margin-bottom: 15px;"><strong>Tecnologías:</strong> HTML, CSS, JavaScript</p>
-            <div class="project-links" style="display: flex; gap: 10px; margin-top: 15px;">
-              <a href="https://github.com/studioanime977/SERVICIOS" target="_blank"
-                style="background: rgba(255,255,255,0.2); color: white; padding: 8px 15px; border-radius: 20px; text-decoration: none; font-size: 14px; transition: all 0.3s ease;">
-                💻 GitHub
-              </a>
-              <a href="https://servicios-psi.vercel.app/" target="_blank"
-                style="background: rgba(255,255,255,0.2); color: white; padding: 8px 15px; border-radius: 20px; text-decoration: none; font-size: 14px; transition: all 0.3s ease;">
-                🌍 Ver Sitio
-              </a>
+          <div class="carousel-item" data-index="9">
+            <div class="carousel-card glass" style="border-top: 4px solid #48bb78">
+              <h3>⛪ Casa de Avivamiento</h3>
+              <p>Página web para iglesia con diseño moderno y funcionalidades interactivas.</p>
+              <div class="carousel-links">
+                <a href="https://casa-de-avivamiento-y-reino-cerete.vercel.app/" target="_blank">🌐 Ver Sitio</a>
+                <a href="https://github.com/studioanime977/Casa-de-Avivamiento-y-Reino-cerete-" target="_blank">💻 GitHub</a>
+              </div>
             </div>
           </div>
-
-          <!-- Proyecto Terrenos Prueba -->
-          <div class="project-card"
-            style="background: linear-gradient(135deg, #e53e3e 0%, #c53030 100%); color: white; padding: 25px; border-radius: 15px; box-shadow: 0 8px 25px rgba(229, 62, 62, 0.3);">
-            <h3 style="margin-bottom: 15px; font-size: 20px;">🏘️ Terrenos Prueba</h3>
-            <p style="margin-bottom: 15px; line-height: 1.6;"><strong>Descripción:</strong> Plataforma web para la
-              gestión y visualización de terrenos disponibles.</p>
-            <p style="margin-bottom: 15px;"><strong>Tecnologías:</strong> HTML, CSS, JavaScript</p>
-            <div class="project-links" style="display: flex; gap: 10px; margin-top: 15px;">
-              <a href="https://github.com/studioanime977/terrenosprueba" target="_blank"
-                style="background: rgba(255,255,255,0.2); color: white; padding: 8px 15px; border-radius: 20px; text-decoration: none; font-size: 14px; transition: all 0.3s ease;">
-                💻 GitHub
-              </a>
-              <a href="https://terrenosprueba.vercel.app/" target="_blank"
-                style="background: rgba(255,255,255,0.2); color: white; padding: 8px 15px; border-radius: 20px; text-decoration: none; font-size: 14px; transition: all 0.3s ease;">
-                🌍 Ver Sitio
-              </a>
+          <div class="carousel-item" data-index="10">
+            <div class="carousel-card glass" style="border-top: 4px solid #667eea">
+              <h3>👥 Generación Benjamín</h3>
+              <p>Página oficial de grupo juvenil de iglesia para fomentar comunidad y actividades.</p>
+              <div class="carousel-links">
+                <a href="https://generacion-benjamin.vercel.app/" target="_blank">🌐 Ver Sitio</a>
+                <a href="https://github.com/studioanime977/GENERACION-BENJAMIN" target="_blank">💻 GitHub</a>
+              </div>
             </div>
           </div>
-
-          <!-- Proyecto Dinámica Bíblica -->
-          <div class="project-card"
-            style="background: linear-gradient(135deg, #d69e2e 0%, #b7791f 100%); color: white; padding: 25px; border-radius: 15px; box-shadow: 0 8px 25px rgba(214, 158, 46, 0.3);">
-            <h3 style="margin-bottom: 15px; font-size: 20px;">📖 Dinámica Bíblica</h3>
-            <p style="margin-bottom: 15px; line-height: 1.6;"><strong>Descripción:</strong> Plataforma web interactiva
-              con contenido bíblico y dinámicas educativas.</p>
-            <p style="margin-bottom: 15px;"><strong>Tecnologías:</strong> HTML, CSS, JavaScript</p>
-            <div class="project-links" style="display: flex; gap: 10px; margin-top: 15px;">
-              <a href="https://github.com/studioanime977/Dinamicabiblica" target="_blank"
-                style="background: rgba(255,255,255,0.2); color: white; padding: 8px 15px; border-radius: 20px; text-decoration: none; font-size: 14px; transition: all 0.3s ease;">
-                💻 GitHub
-              </a>
-              <a href="https://dinamicabiblica.vercel.app/" target="_blank"
-                style="background: rgba(255,255,255,0.2); color: white; padding: 8px 15px; border-radius: 20px; text-decoration: none; font-size: 14px; transition: all 0.3s ease;">
-                🌍 Ver Sitio
-              </a>
+          <div class="carousel-item" data-index="11">
+            <div class="carousel-card glass" style="border-top: 4px solid #38b2ac">
+              <h3>🛠️ Servicios (Plantilla)</h3>
+              <p>Plantilla web profesional para servicios con diseño moderno y reutilizable.</p>
+              <div class="carousel-links">
+                <a href="https://servicios-psi.vercel.app/" target="_blank">🌐 Ver Sitio</a>
+                <a href="https://github.com/studioanime977/SERVICIOS" target="_blank">💻 GitHub</a>
+              </div>
             </div>
           </div>
-
-          <!-- Proyecto Inmobiliaria Integrales Cereté (Monetizado) -->
-          <div class="project-card"
-            style="background: linear-gradient(135deg, #2b6cb0 0%, #2c5282 100%); color: white; padding: 25px; border-radius: 15px; box-shadow: 0 8px 25px rgba(43, 108, 176, 0.3); border: 2px solid rgba(255,255,255,0.2);">
-            <h3 style="margin-bottom: 15px; font-size: 20px;">🏠 Inmobiliaria Integrales Cereté</h3>
-            <p style="margin-bottom: 8px;"><span
-                style="background: rgba(255,255,255,0.2); padding: 3px 10px; border-radius: 12px; font-size: 12px;">🔥
-                Indexado en Google · Monetizado</span></p>
-            <p style="margin-bottom: 15px; line-height: 1.6;"><strong>Descripción:</strong> Sitio web de una mini
-              empresa inmobiliaria con catálogo de propiedades, completado con constantes modificaciones y mejoras.</p>
-            <p style="margin-bottom: 15px;"><strong>Tecnologías:</strong> HTML, CSS, JavaScript</p>
-            <div class="project-links" style="display: flex; gap: 10px; margin-top: 15px;">
-              <a href="https://github.com/studioanime977/Inmobiliaria-Integarles-Cerete" target="_blank"
-                style="background: rgba(255,255,255,0.2); color: white; padding: 8px 15px; border-radius: 20px; text-decoration: none; font-size: 14px; transition: all 0.3s ease;">
-                💻 GitHub
-              </a>
-              <a href="https://inmobiliariaintegarlescerete.vercel.app/" target="_blank"
-                style="background: rgba(255,255,255,0.2); color: white; padding: 8px 15px; border-radius: 20px; text-decoration: none; font-size: 14px; transition: all 0.3s ease;">
-                🌍 Ver Sitio
-              </a>
-            </div>
-          </div>
-
-          <!-- Proyecto Dinámica Juvenil -->
-          <div class="project-card"
-            style="background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%); color: white; padding: 25px; border-radius: 15px; box-shadow: 0 8px 25px rgba(66, 153, 225, 0.3);">
-            <h3 style="margin-bottom: 15px; font-size: 20px;">🎮 Dinámica Juvenil</h3>
-            <p style="margin-bottom: 15px; line-height: 1.6;"><strong>Descripción:</strong> Plataforma interactiva
-              diseñada para realizar cuestionarios (quices) dinámicos a jóvenes, fomentando el conocimiento espiritual
-              de manera divertida.</p>
-            <p style="margin-bottom: 15px;"><strong>Tecnologías:</strong> HTML, CSS, JavaScript</p>
-            <div class="project-links" style="display: flex; gap: 10px; margin-top: 15px;">
-              <a href="https://github.com/studioanime977/dinamicajuvenil" target="_blank"
-                style="background: rgba(255,255,255,0.2); color: white; padding: 8px 15px; border-radius: 20px; text-decoration: none; font-size: 14px; transition: all 0.3s ease;">
-                💻 GitHub
-              </a>
-              <a href="https://dinamicajuvenil.vercel.app/" target="_blank"
-                style="background: rgba(255,255,255,0.2); color: white; padding: 8px 15px; border-radius: 20px; text-decoration: none; font-size: 14px; transition: all 0.3s ease;">
-                🌍 Ver Sitio
-              </a>
-              <a href="https://dinamicajuvenil.vercel.app/admin.html" target="_blank"
-                style="background: rgba(0,0,0,0.2); color: white; padding: 8px 15px; border-radius: 20px; text-decoration: none; font-size: 14px; transition: all 0.3s ease;">
-                ⚙️ Admin
-              </a>
-            </div>
-          </div>
-
-          <!-- Proyecto Mundo Otaku Latino (Personal, Monetizado) -->
-          <div class="project-card"
-            style="background: linear-gradient(135deg, #e53e3e 0%, #9f7aea 100%); color: white; padding: 25px; border-radius: 15px; box-shadow: 0 8px 25px rgba(159, 122, 234, 0.3); border: 2px solid rgba(255,255,255,0.2);">
-            <h3 style="margin-bottom: 15px; font-size: 20px;">🌸 Mundo Otaku Latino</h3>
-            <p style="margin-bottom: 8px;"><span
-                style="background: rgba(255,255,255,0.2); padding: 3px 10px; border-radius: 12px; font-size: 12px;">🔥
-                Indexado en Google · Monetizado · Proyecto Personal</span></p>
-            <p style="margin-bottom: 15px; line-height: 1.6;"><strong>Descripción:</strong> Plataforma de contenido
-              anime y cultura otaku para la comunidad latina, con constantes actualizaciones y mejoras.</p>
-            <p style="margin-bottom: 15px;"><strong>Tecnologías:</strong> HTML, CSS, JavaScript</p>
-            <div class="project-links" style="display: flex; gap: 10px; margin-top: 15px;">
-              <a href="https://github.com/studioanime977/Mundo-otaku-latino" target="_blank"
-                style="background: rgba(255,255,255,0.2); color: white; padding: 8px 15px; border-radius: 20px; text-decoration: none; font-size: 14px; transition: all 0.3s ease;">
-                💻 GitHub
-              </a>
-              <a href="https://mundootakulatino.vercel.app/" target="_blank"
-                style="background: rgba(255,255,255,0.2); color: white; padding: 8px 15px; border-radius: 20px; text-decoration: none; font-size: 14px; transition: all 0.3s ease;">
-                🌍 Ver Sitio
-              </a>
-            </div>
-          </div>
-
-          <!-- Proyecto Generación Benjamín -->
-          <div class="project-card"
-            style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 25px; border-radius: 15px; box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);">
-            <h3 style="margin-bottom: 15px; font-size: 20px;">👥 Generación Benjamín</h3>
-            <p style="margin-bottom: 15px; line-height: 1.6;"><strong>Descripción:</strong> Página web oficial de un grupo de jóvenes de la iglesia, diseñada para fomentar la comunidad y compartir actividades.</p>
-            <p style="margin-bottom: 15px;"><strong>Tecnologías:</strong> HTML, CSS, JavaScript</p>
-            <div class="project-links" style="display: flex; gap: 10px; margin-top: 15px;">
-              <a href="https://github.com/studioanime977/GENERACION-BENJAMIN" target="_blank"
-                style="background: rgba(255,255,255,0.2); color: white; padding: 8px 15px; border-radius: 20px; text-decoration: none; font-size: 14px; transition: all 0.3s ease;">
-                💻 GitHub
-              </a>
-              <a href="https://generacion-benjamin.vercel.app/" target="_blank"
-                style="background: rgba(255,255,255,0.2); color: white; padding: 8px 15px; border-radius: 20px; text-decoration: none; font-size: 14px; transition: all 0.3s ease;">
-                🌍 Ver Sitio
-              </a>
-            </div>
-          </div>
-
-          <!-- Proyecto Eliminador de Marcas de Agua -->
-          <div class="project-card"
-            style="background: linear-gradient(135deg, #4fd1c5 0%, #38b2ac 100%); color: white; padding: 25px; border-radius: 15px; box-shadow: 0 8px 25px rgba(79, 209, 197, 0.3);">
-            <h3 style="margin-bottom: 15px; font-size: 20px;">🖼️ Eliminador de Marcas de Agua</h3>
-            <p style="margin-bottom: 15px; line-height: 1.6;"><strong>Descripción:</strong> Herramienta inteligente diseñada para eliminar marcas de agua de fotos generadas por IA (Gemini, DALL-E, etc.).</p>
-            <p style="margin-bottom: 15px;"><strong>Tecnologías:</strong> JavaScript, Canvas API, AI Image Processing</p>
-            <div class="project-links" style="display: flex; gap: 10px; margin-top: 15px;">
-              <a href="https://github.com/studioanime977/eliminador-de-marcas-de-agua" target="_blank"
-                style="background: rgba(255,255,255,0.2); color: white; padding: 8px 15px; border-radius: 20px; text-decoration: none; font-size: 14px; transition: all 0.3s ease;">
-                💻 GitHub
-              </a>
-              <a href="https://eliminador-de-marcas-de-agua.vercel.app/" target="_blank"
-                style="background: rgba(255,255,255,0.2); color: white; padding: 8px 15px; border-radius: 20px; text-decoration: none; font-size: 14px; transition: all 0.3s ease;">
-                🌍 Ver Sitio
-              </a>
-            </div>
-          </div>
-
-          <!-- Proyecto EML Studio -->
-          <div class="project-card"
-            style="background: linear-gradient(135deg, #f6ad55 0%, #ed8936 100%); color: white; padding: 25px; border-radius: 15px; box-shadow: 0 8px 25px rgba(246, 173, 85, 0.3);">
-            <h3 style="margin-bottom: 15px; font-size: 20px;">🎬 EML Studio</h3>
-            <p style="margin-bottom: 15px; line-height: 1.6;"><strong>Descripción:</strong> Un clon avanzado de Adobe Acrobat que permite a los usuarios editar fotos y documentos de manera profesional.</p>
-            <p style="margin-bottom: 15px;"><strong>Tecnologías:</strong> HTML, CSS, JavaScript, PDF.js</p>
-            <div class="project-links" style="display: flex; gap: 10px; margin-top: 15px;">
-              <a href="https://github.com/studioanime977/EML-STUDIO" target="_blank"
-                style="background: rgba(255,255,255,0.2); color: white; padding: 8px 15px; border-radius: 20px; text-decoration: none; font-size: 14px; transition: all 0.3s ease;">
-                💻 GitHub
-              </a>
-              <a href="https://eml-studio-yquw.vercel.app/" target="_blank"
-                style="background: rgba(255,255,255,0.2); color: white; padding: 8px 15px; border-radius: 20px; text-decoration: none; font-size: 14px; transition: all 0.3s ease;">
-                🌍 Ver Sitio
-              </a>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Aplicación Móvil -->
-        <div class="mobile-app-section" style="margin-top: 30px;">
-          <h3 style="color: #2d3748; margin-bottom: 20px;">📱 Aplicación Móvil</h3>
-          <div class="app-card"
-            style="background: linear-gradient(135deg, #ed8936 0%, #dd6b20 100%); color: white; padding: 25px; border-radius: 15px; box-shadow: 0 8px 25px rgba(237, 137, 54, 0.3);">
-            <h4 style="margin-bottom: 15px; font-size: 18px;">🎬 Anime TV APK</h4>
-            <p style="margin-bottom: 15px; line-height: 1.6;">Aplicación móvil desarrollada para la visualización de
-              contenido anime, implementando tecnologías de streaming y optimización para dispositivos móviles.</p>
-            <div class="app-features" style="margin: 15px 0;">
-              <p style="margin-bottom: 8px;"><strong>Características:</strong></p>
-              <ul style="margin-left: 20px; line-height: 1.5;">
-                <li>Interfaz optimizada para móviles</li>
-                <li>Sistema de streaming integrado</li>
-                <li>Implementación de IA para recomendaciones</li>
-                <li>Compatibilidad con redes móviles</li>
-              </ul>
-            </div>
-            <a href="https://drive.google.com/file/d/1akgXsn3JwhK9qD1RhXMv4dDXK8FQmGyV/view?usp=sharing" target="_blank"
-              style="background: rgba(255,255,255,0.2); color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-size: 14px; display: inline-block; margin-top: 10px; transition: all 0.3s ease;">
-              📥 Descargar APK
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Habilidades -->
-      <section id="skills" class="cv-section">
-        <h2 class="section-title">🛠️ Habilidades Técnicas</h2>
-        <div class="skills-grid">
-          <div class="skill-card">
-            <h4>Armado Físico de Equipos</h4>
-            <p>Ensamblaje completo de computadoras, instalación de componentes y configuración de hardware.</p>
-          </div>
-          <div class="skill-card">
-            <h4>Mantenimiento de Computadoras</h4>
-            <p>Mantenimiento preventivo y correctivo de equipos, limpieza, actualización de componentes y optimización
-              del rendimiento.</p>
-          </div>
-          <div class="skill-card">
-            <h4>Instalación y Configuración de Redes</h4>
-            <p>Instalación de redes locales, configuración de equipos de red, cableado estructurado y protocolos de
-              comunicación.</p>
-          </div>
-          <div class="skill-card">
-            <h4>Optimización de Redes</h4>
-            <p>Análisis de rendimiento de red, optimización de ancho de banda y mejora de la conectividad.</p>
-          </div>
-          <div class="skill-card">
-            <h4>Monitoreo de Redes</h4>
-            <p>Monitoreo constante del comportamiento de la red, análisis de tráfico y supervisión a través de
-              aplicaciones especializadas.</p>
-          </div>
-          <div class="skill-card">
-            <h4>Instalación de Cámaras de Seguridad</h4>
-            <p>Instalación y configuración de sistemas de videovigilancia, cableado de cámaras IP y análogas,
-              configuración de DVR/NVR y sistemas de monitoreo remoto.</p>
-          </div>
-          <div class="skill-card">
-            <h4>Sistemas Operativos Windows</h4>
-            <p>Instalación y configuración de Windows y sistemas básicos de red.</p>
-          </div>
-          <div class="skill-card">
-            <h4>Modificación de Sistemas Operativos</h4>
-            <p>Optimización y personalización de Windows 10/11, eliminación de aplicaciones innecesarias, reducción de
-              consumo de RAM (2.0-3.4GB) y mejora del rendimiento empresarial.</p>
-          </div>
-          <div class="skill-card">
-            <h4>Resolución de Problemas</h4>
-            <p>Diagnóstico y solución de problemas técnicos en hardware, software y conectividad de red.</p>
-          </div>
-          <div class="skill-card">
-            <h4>Desarrollo Web</h4>
-            <p>HTML, CSS, JavaScript, Python, bases de datos y frameworks modernos.</p>
-          </div>
-          <div class="skill-card">
-            <h4>Inteligencia Artificial (En Aprendizaje)</h4>
-            <p>Actualmente estudiando implementación de IA a través de cursos en Platzi para integración futura en
-              aplicaciones web y móviles.</p>
-          </div>
-          <div class="skill-card">
-            <h4>Desarrollo Móvil</h4>
-            <p>Creación de aplicaciones móviles nativas y multiplataforma.</p>
-          </div>
-        </div>
-
-        <div class="soft-skills-section" style="margin-top: 30px;">
-          <h3 style="color: #2d3748; margin-bottom: 20px;">🧠 Habilidades Blandas</h3>
-          <div class="soft-skills-grid"
-            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
-            <div class="soft-skill-item"
-              style="background: #e6fffa; padding: 15px; border-radius: 10px; text-align: center; border-left: 4px solid #38b2ac;">
-              <h4 style="color: #2d3748; margin-bottom: 5px;">👥 Liderazgo</h4>
-            </div>
-            <div class="soft-skill-item"
-              style="background: #f0fff4; padding: 15px; border-radius: 10px; text-align: center; border-left: 4px solid #48bb78;">
-              <h4 style="color: #2d3748; margin-bottom: 5px;">💬 Comunicación</h4>
-            </div>
-            <div class="soft-skill-item"
-              style="background: #f7fafc; padding: 15px; border-radius: 10px; text-align: center; border-left: 4px solid #667eea;">
-              <h4 style="color: #2d3748; margin-bottom: 5px;">⚙️ Toma de Decisiones</h4>
-            </div>
-            <div class="soft-skill-item"
-              style="background: #fef5e7; padding: 15px; border-radius: 10px; text-align: center; border-left: 4px solid #ed8936;">
-              <h4 style="color: #2d3748; margin-bottom: 5px;">⏰ Gestión del Tiempo</h4>
-            </div>
-            <div class="soft-skill-item"
-              style="background: #edf2f7; padding: 15px; border-radius: 10px; text-align: center; border-left: 4px solid #4a5568;">
-              <h4 style="color: #2d3748; margin-bottom: 5px;">🤝 Trabajo en Equipo</h4>
-            </div>
-            <div class="soft-skill-item"
-              style="background: #fed7d7; padding: 15px; border-radius: 10px; text-align: center; border-left: 4px solid #f56565;">
-              <h4 style="color: #2d3748; margin-bottom: 5px;">🎯 Pensamiento Estratégico</h4>
-            </div>
-            <div class="soft-skill-item"
-              style="background: #f0f9ff; padding: 15px; border-radius: 10px; text-align: center; border-left: 4px solid #0ea5e9;">
-              <h4 style="color: #2d3748; margin-bottom: 5px;">💡 Resolución de Problemas</h4>
-            </div>
-            <div class="soft-skill-item"
-              style="background: #fef3c7; padding: 15px; border-radius: 10px; text-align: center; border-left: 4px solid #f59e0b;">
-              <h4 style="color: #2d3748; margin-bottom: 5px;">🔍 Atención al Detalle</h4>
-            </div>
-            <div class="soft-skill-item"
-              style="background: #ecfdf5; padding: 15px; border-radius: 10px; text-align: center; border-left: 4px solid #10b981;">
-              <h4 style="color: #2d3748; margin-bottom: 5px;">🚀 Aprendizaje Continuo</h4>
-            </div>
-            <div class="soft-skill-item"
-              style="background: #faf5ff; padding: 15px; border-radius: 10px; text-align: center; border-left: 4px solid #a855f7;">
-              <h4 style="color: #2d3748; margin-bottom: 5px;">🔧 Adaptabilidad Tecnológica</h4>
-            </div>
-            <div class="soft-skill-item"
-              style="background: #fff7ed; padding: 15px; border-radius: 10px; text-align: center; border-left: 4px solid #ea580c;">
-              <h4 style="color: #2d3748; margin-bottom: 5px;">📝 Documentación Clara</h4>
+          <div class="carousel-item" data-index="12">
+            <div class="carousel-card glass" style="border-top: 4px solid #e53e3e">
+              <h3>🏘️ Terrenos Prueba</h3>
+              <p>Plataforma para gestión y visualización de terrenos disponibles.</p>
+              <div class="carousel-links">
+                <a href="https://terrenosprueba.vercel.app/" target="_blank">🌐 Ver Sitio</a>
+                <a href="https://github.com/studioanime977/terrenosprueba" target="_blank">💻 GitHub</a>
+              </div>
             </div>
           </div>
         </div>
-      </section>
-
-      <!-- Certificaciones -->
-      <section id="certificates" class="cv-section">
-        <h2 class="section-title">🏆 Certificaciones</h2>
-        <div class="certificates-grid">
-          <div class="certificate-card"
-            onclick="openCertificate('IMG/calidad de desarrollador de software.jpg', 'Calidad de Desarrollador de Software')">
-            <img src="IMG/calidad de desarrollador de software.jpg" alt="Certificado Calidad Desarrollador">
-            <h4>Calidad de Desarrollador de Software</h4>
-            <p>SENA - 2023</p>
-            <div class="certificate-actions">
-              <button class="cert-btn"
-                onclick="event.stopPropagation(); downloadFile('IMG/calidad de desarrollador de software.jpg', 'Certificado_Calidad_Desarrollador.jpg')">📥
-                Local</button>
-              <button class="cert-btn"
-                onclick="event.stopPropagation(); window.open('https://drive.google.com/file/d/1Y-cEdZ7Pb9OVbCfLMEJk8ryVhG6x7PXc/view?usp=sharing', '_blank')">☁️
-                Drive</button>
-              <button class="cert-btn"
-                onclick="event.stopPropagation(); viewFile('IMG/calidad de desarrollador de software.jpg')">👁️
-                Ver</button>
-            </div>
-          </div>
-          <div class="certificate-card"
-            onclick="openCertificate('IMG/cartificado calidad desarrollador de software.jpg', 'Certificado Calidad Desarrollador')">
-            <img src="IMG/cartificado calidad desarrollador de software.jpg" alt="Certificado Calidad Desarrollador">
-            <h4>Certificado Calidad Desarrollador</h4>
-            <p>SENA - 2023</p>
-            <div class="certificate-actions">
-              <button class="cert-btn"
-                onclick="event.stopPropagation(); downloadFile('IMG/cartificado calidad desarrollador de software.jpg', 'Certificado_Calidad_Dev.jpg')">📥
-                Local</button>
-              <button class="cert-btn"
-                onclick="event.stopPropagation(); window.open('https://drive.google.com/file/d/1JbT6twLBy9JH9k0GN-SY7m9XE-HI2c18/view?usp=sharing', '_blank')">☁️
-                Drive</button>
-              <button class="cert-btn"
-                onclick="event.stopPropagation(); viewFile('IMG/cartificado calidad desarrollador de software.jpg')">👁️
-                Ver</button>
-            </div>
-          </div>
-          <div class="certificate-card" onclick="openCertificate('IMG/acta de grado.jpg', 'Acta de Grado')">
-            <img src="IMG/acta de grado.jpg" alt="Acta de Grado">
-            <h4>Acta de Grado</h4>
-            <p>Documentación oficial</p>
-            <div class="certificate-actions">
-              <button class="cert-btn"
-                onclick="event.stopPropagation(); downloadFile('IMG/acta de grado.jpg', 'Acta_de_Grado.jpg')">📥
-                Local</button>
-              <button class="cert-btn"
-                onclick="event.stopPropagation(); window.open('https://drive.google.com/file/d/1oQWPdzakutAWaC_LCGK1nj2vksnAqRii/view?usp=sharing', '_blank')">☁️
-                Drive</button>
-              <button class="cert-btn" onclick="event.stopPropagation(); viewFile('IMG/acta de grado.jpg')">👁️
-                Ver</button>
-            </div>
-          </div>
-          <div class="certificate-card"
-            onclick="openCertificate('IMG/CERTIFICADO ESTEBAN LOPEZ.jpg', 'Certificado de Prácticas Empresariales')">
-            <img src="IMG/CERTIFICADO ESTEBAN LOPEZ.jpg" alt="Certificado Prácticas Empresariales">
-            <h4>Certificado de Prácticas Empresariales</h4>
-            <p>Cabarcas Sarmiento S.A.S - 2025</p>
-            <div class="certificate-actions">
-              <button class="cert-btn"
-                onclick="event.stopPropagation(); downloadFile('IMG/CERTIFICADO ESTEBAN LOPEZ.jpg', 'Certificado_Practicas_Empresariales.jpg')">📥
-                Local</button>
-              <button class="cert-btn"
-                onclick="event.stopPropagation(); window.open('https://drive.google.com/file/d/1EX9YdXGvOFmwcSSS_sx862HtSIHEjlI0/view?usp=sharing', '_blank')">☁️
-                Drive</button>
-              <button class="cert-btn"
-                onclick="event.stopPropagation(); viewFile('IMG/CERTIFICADO ESTEBAN LOPEZ.jpg')">👁️ Ver</button>
-            </div>
-          </div>
-          <div class="certificate-card" onclick="openCertificate('IMG/diploma-document-object-model_page-0001.jpg', 'Document Object Model (DOM)')">
-            <img src="IMG/diploma-document-object-model_page-0001.jpg" alt="Certificado DOM">
-            <h4>Document Object Model (DOM)</h4>
-            <p>Curso Especializado - Manipulación del DOM</p>
-            <div class="certificate-actions">
-              <button class="cert-btn"
-                onclick="event.stopPropagation(); downloadFile('IMG/diploma-document-object-model_page-0001.jpg', 'Certificado_DOM.jpg')">📥
-                Local</button>
-              <button class="cert-btn" onclick="event.stopPropagation(); viewFile('IMG/diploma-document-object-model_page-0001.jpg')">👁️
-                Ver</button>
-            </div>
-          </div>
-          <div class="certificate-card" onclick="openCertificate('IMG/diploma-java_page-0001.jpg', 'Java Programming')">
-            <img src="IMG/diploma-java_page-0001.jpg" alt="Certificado Java">
-            <h4>Java Programming</h4>
-            <p>Curso Especializado - Programación Java</p>
-            <div class="certificate-actions">
-              <button class="cert-btn"
-                onclick="event.stopPropagation(); downloadFile('IMG/diploma-java_page-0001.jpg', 'Certificado_Java.jpg')">📥
-                Local</button>
-              <button class="cert-btn" onclick="event.stopPropagation(); viewFile('IMG/diploma-java_page-0001.jpg')">👁️
-                Ver</button>
-            </div>
-          </div>
-          <div class="certificate-card" onclick="openCertificate('IMG/diploma-nodejs_page-0001.jpg', 'Node.js Development')">
-            <img src="IMG/diploma-nodejs_page-0001.jpg" alt="Certificado Node.js">
-            <h4>Node.js Development</h4>
-            <p>Curso Especializado - Desarrollo Backend con Node.js</p>
-            <div class="certificate-actions">
-              <button class="cert-btn"
-                onclick="event.stopPropagation(); downloadFile('IMG/diploma-nodejs_page-0001.jpg', 'Certificado_NodeJS.jpg')">📥
-                Local</button>
-              <button class="cert-btn" onclick="event.stopPropagation(); viewFile('IMG/diploma-nodejs_page-0001.jpg')">👁️
-                Ver</button>
-            </div>
-          </div>
-          <div class="certificate-card" onclick="openCertificate('IMG/diploma-sql-mysql_page-0001.jpg', 'SQL y MySQL')">
-            <img src="IMG/diploma-sql-mysql_page-0001.jpg" alt="Certificado SQL MySQL">
-            <h4>SQL y MySQL</h4>
-            <p>Curso Especializado - Bases de Datos SQL y MySQL</p>
-            <div class="certificate-actions">
-              <button class="cert-btn"
-                onclick="event.stopPropagation(); downloadFile('IMG/diploma-sql-mysql_page-0001.jpg', 'Certificado_SQL_MySQL.jpg')">📥
-                Local</button>
-              <button class="cert-btn" onclick="event.stopPropagation(); viewFile('IMG/diploma-sql-mysql_page-0001.jpg')">👁️
-                Ver</button>
-            </div>
-          </div>
-          <div class="certificate-card" onclick="openCertificate('IMG/diploma.jpg', 'Diploma Bachiller')">
-            <img src="IMG/diploma.jpg" alt="Diploma Bachiller">
-            <h4>Diploma Bachiller</h4>
-            <p>Institución Educativa - 2023</p>
-            <div class="certificate-actions">
-              <button class="cert-btn"
-                onclick="event.stopPropagation(); downloadFile('IMG/diploma.jpg', 'Diploma_Bachiller.jpg')">📥
-                Local</button>
-              <button class="cert-btn"
-                onclick="event.stopPropagation(); window.open('https://drive.google.com/file/d/1st7G87ft6rJWMtzt_nyai9EgYvSXohXh/view?usp=sharing', '_blank')">☁️
-                Drive</button>
-              <button class="cert-btn" onclick="event.stopPropagation(); viewFile('IMG/diploma.jpg')">👁️ Ver</button>
-            </div>
-          </div>
-          <div class="certificate-card" onclick="openCertificate('IMG/diploma_censa.jpg', 'Diploma CENSA')">
-            <img src="IMG/diploma_censa.jpg" alt="Diploma CENSA">
-            <h4>Diploma CENSA</h4>
-            <p>CENSA - 2025</p>
-            <div class="certificate-actions">
-              <button class="cert-btn"
-                onclick="event.stopPropagation(); downloadFile('IMG/diploma_censa.jpg', 'Diploma_CENSA.jpg')">📥
-                Local</button>
-              <button class="cert-btn" onclick="event.stopPropagation(); viewFile('IMG/diploma_censa.jpg')">👁️
-                Ver</button>
-            </div>
-          </div>
-          <div class="certificate-card" onclick="openCertificate('IMG/acta_censa.jpg', 'Acta CENSA')">
-            <img src="IMG/acta_censa.jpg" alt="Acta CENSA">
-            <h4>Acta CENSA</h4>
-            <p>CENSA - 2025</p>
-            <div class="certificate-actions">
-              <button class="cert-btn"
-                onclick="event.stopPropagation(); downloadFile('IMG/acta_censa.jpg', 'Acta_CENSA.jpg')">📥
-                Local</button>
-              <button class="cert-btn" onclick="event.stopPropagation(); viewFile('IMG/acta_censa.jpg')">👁️
-                Ver</button>
-            </div>
-          </div>
-          <div class="certificate-card"
-            onclick="openCertificate('IMG/Certificado-cabarcas.jpg', 'Certificado Cabarcas Sarmiento')">
-            <img src="IMG/Certificado-cabarcas.jpg" alt="Certificado Cabarcas">
-            <h4>Certificado Cabarcas Sarmiento</h4>
-            <p>Cabarcas Sarmiento S.A.S - 2025</p>
-            <div class="certificate-actions">
-              <button class="cert-btn"
-                onclick="event.stopPropagation(); downloadFile('IMG/Certificado-cabarcas.jpg', 'Certificado_Cabarcas.jpg')">📥
-                Local</button>
-              <button class="cert-btn" onclick="event.stopPropagation(); viewFile('IMG/Certificado-cabarcas.jpg')">👁️
-                Ver</button>
-            </div>
-          </div>
-          <div class="certificate-card"
-            onclick="openCertificate('IMG/aplicaciones moviles.jpg', 'Aplicaciones Móviles')">
-            <img src="IMG/aplicaciones moviles.jpg" alt="Aplicaciones Móviles">
-            <h4>Aplicaciones Móviles</h4>
-            <p>SENA - 2024</p>
-            <div class="certificate-actions">
-              <button class="cert-btn"
-                onclick="event.stopPropagation(); downloadFile('IMG/aplicaciones moviles.jpg', 'Aplicaciones_Moviles.jpg')">📥
-                Local</button>
-              <button class="cert-btn" onclick="event.stopPropagation(); viewFile('IMG/aplicaciones moviles.jpg')">👁️
-                Ver</button>
-            </div>
-          </div>
-          <div class="certificate-card" onclick="openCertificate('IMG/telematica_y_redes.jpg', 'Telemática y Redes')">
-            <img src="IMG/telematica_y_redes.jpg" alt="Telemática y Redes">
-            <h4>Telemática y Redes</h4>
-            <p>Formación Técnica - 2024</p>
-            <div class="certificate-actions">
-              <button class="cert-btn"
-                onclick="event.stopPropagation(); downloadFile('IMG/telematica_y_redes.jpg', 'Telematica_Redes.jpg')">📥
-                Local</button>
-              <button class="cert-btn" onclick="event.stopPropagation(); viewFile('IMG/telematica_y_redes.jpg')">👁️
-                Ver</button>
-            </div>
-          </div>
-          <div class="certificate-card" onclick="openCertificate('IMG/certificado_tienda.jpg', 'Certificado Tienda')">
-            <img src="IMG/certificado_tienda.jpg" alt="Certificado Tienda">
-            <h4>Certificado Tienda</h4>
-            <p>Experiencia Laboral - 2024</p>
-            <div class="certificate-actions">
-              <button class="cert-btn"
-                onclick="event.stopPropagation(); downloadFile('IMG/certificado_tienda.jpg', 'Certificado_Tienda.jpg')">📥
-                Local</button>
-              <button class="cert-btn" onclick="event.stopPropagation(); viewFile('IMG/certificado_tienda.jpg')">👁️
-                Ver</button>
-            </div>
-          </div>
-          <div class="certificate-card" onclick="openCertificate('IMG/etica y valores.jpg', 'Ética y Valores')">
-            <img src="IMG/etica y valores.jpg" alt="Ética y Valores">
-            <h4>Ética y Valores</h4>
-            <p>CENSA - 2024</p>
-            <div class="certificate-actions">
-              <button class="cert-btn"
-                onclick="event.stopPropagation(); downloadFile('IMG/etica y valores.jpg', 'Etica_Valores.jpg')">📥
-                Local</button>
-              <button class="cert-btn" onclick="event.stopPropagation(); viewFile('IMG/etica y valores.jpg')">👁️
-                Ver</button>
-            </div>
-          </div>
-          <div class="certificate-card" onclick="openCertificate('IMG/medio ambiente.jpg', 'Medio Ambiente')">
-            <img src="IMG/medio ambiente.jpg" alt="Medio Ambiente">
-            <h4>Medio Ambiente</h4>
-            <p>CENSA - 2024</p>
-            <div class="certificate-actions">
-              <button class="cert-btn"
-                onclick="event.stopPropagation(); downloadFile('IMG/medio ambiente.jpg', 'Medio_Ambiente.jpg')">📥
-                Local</button>
-              <button class="cert-btn" onclick="event.stopPropagation(); viewFile('IMG/medio ambiente.jpg')">👁️
-                Ver</button>
-            </div>
-          </div>
-          <div class="certificate-card" onclick="openCertificate('IMG/Certificado4.jpg', 'Certificado Adicional')">
-            <img src="IMG/Certificado4.jpg" alt="Certificado 4">
-            <h4>Certificado Adicional</h4>
-            <p>Formación Complementaria - 2024</p>
-            <div class="certificate-actions">
-              <button class="cert-btn"
-                onclick="event.stopPropagation(); downloadFile('IMG/Certificado4.jpg', 'Certificado_Adicional.jpg')">📥
-                Local</button>
-              <button class="cert-btn" onclick="event.stopPropagation(); viewFile('IMG/Certificado4.jpg')">👁️
-                Ver</button>
-            </div>
-          </div>
+        <div class="carousel-controls">
+          <button class="carousel-btn" onclick="rotateCarousel(-1)" aria-label="Anterior">‹</button>
+          <div class="carousel-dots" id="carouselDots"></div>
+          <button class="carousel-btn" onclick="rotateCarousel(1)" aria-label="Siguiente">›</button>
         </div>
-      </section>
-
-      <!-- Objetivo Profesional -->
-      <section id="objective" class="cv-section">
-        <h2 class="section-title">🎯 Objetivo Profesional</h2>
-        <div class="objective-card"
-          style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 25px; border-radius: 15px; box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);">
-          <h3 style="margin-bottom: 15px; font-size: 22px;">Meta Profesional</h3>
-          <p style="margin-bottom: 15px; line-height: 1.6;">Aportar mis conocimientos técnicos y experiencia en
-            sistemas, junto con mis competencias en calidad de desarrollo de software, para garantizar el correcto
-            funcionamiento de las infraestructuras tecnológicas y la excelencia en el desarrollo de proyectos,
-            contribuyendo al éxito de la organización.</p>
-          <p style="line-height: 1.6;">Aprovechar mis prácticas empresariales para aplicar y fortalecer mis
-            conocimientos, adquirir experiencia en el ámbito laboral y contribuir de manera significativa en el área de
-            sistemas. Mi meta es crecer como profesional, desarrollar habilidades prácticas y prepararme para enfrentar
-            los retos del sector tecnológico.</p>
-        </div>
-      </section>
-
-      <!-- Estudios Actuales -->
-      <section id="current-studies" class="cv-section">
-        <h2 class="section-title">📚 Estudios Actuales</h2>
-        <div class="current-studies-card">
-          <h3>Desarrollo Web y Programación</h3>
-          <p><strong>Plataforma:</strong> Platzi</p>
-          <p><strong>Cursos:</strong></p>
-          <ul>
-            <li>Python - Programación</li>
-            <li>HTML - Estructura web</li>
-            <li>CSS - Diseño y estilos</li>
-            <li>Fundamentos de desarrollo web</li>
-          </ul>
-          <p>Fortaleciendo conocimientos para el desarrollo de páginas web y aplicaciones, complementando mi formación
-            técnica en sistemas.</p>
-        </div>
-      </section>
+      </div>
     </div>
+  </section>
 
-    <!-- Sidebar derecho -->
-    <div class="right-sidebar">
-      <!-- Documentos -->
-      <div class="sidebar-section">
-        <h3>📄 DOCUMENTOS</h3>
-        <div class="documents-list">
-          <div class="doc-item">
-            <div class="doc-link"
-              onclick="downloadFile('H/ESTEBAN-MANUEL-LOPEZ-RIVERO.pdf', 'ESTEBAN_MANUEL_LOPEZ_RIVERO.pdf')">
-              📋 CV Completo (PDF)
-            </div>
-            <div class="doc-actions">
-              <button class="doc-btn"
-                onclick="downloadFile('H/ESTEBAN-MANUEL-LOPEZ-RIVERO.pdf', 'ESTEBAN_MANUEL_LOPEZ_RIVERO.pdf')">📥</button>
-              <button class="doc-btn"
-                onclick="window.open('https://drive.google.com/file/d/1fCxtM5-3mg1SYQkl-gShvjzzQfqel-Rd/view?usp=sharing', '_blank')">☁️</button>
-              <button class="doc-btn"
-                onclick="window.open('https://drive.google.com/uc?export=download&id=1fCxtM5-3mg1SYQkl-gShvjzzQfqel-Rd', '_blank')"
-                title="Descarga directa desde Google Drive">🔗</button>
-            </div>
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="section alt-bg">
+    <div class="container">
+      <h2 class="section-title">Habilidades Técnicas</h2>
+      <div class="skills-grid">
+        <div class="skill-category-card glass">
+          <h3>🖥️ Hardware & Sistemas</h3>
+          <div class="skill-tags">
+            <span>Despliegue y Arquitectura de Hardware (60+ Equipos)</span>
+            <span>Mantenimiento PC Avanzado</span>
+            <span>Personalización y Hardening de Windows 10/11</span>
+            <span>Optimización Extrema con NTLite (RAM 2-3GB)</span>
           </div>
-          <div class="doc-item">
-            <div class="doc-link"
-              onclick="playVideo('video de monitoreo de internet/video de monitoreo de internet.mp4')">
-              🎥 Video Monitoreo de Internet
-            </div>
-            <div class="doc-actions">
-              <button class="doc-btn"
-                onclick="downloadFile('video de monitoreo de internet/video de monitoreo de internet.mp4', 'Monitoreo_Internet.mp4')">📥</button>
-              <button class="doc-btn"
-                onclick="playVideo('video de monitoreo de internet/video de monitoreo de internet.mp4')">▶️</button>
-            </div>
+        </div>
+        <div class="skill-category-card glass">
+          <h3>🌐 Redes & Servidores</h3>
+          <div class="skill-tags">
+            <span>Servidores Ubuntu</span>
+            <span>VPS TunnelActive</span>
+            <span>Vmess & V2ray</span>
+            <span>Balanceo de Puertos</span>
+            <span>Configuración Routers</span>
+            <span>Firmware & Enrutamiento</span>
+            <span>DVR/NVR & CCTV</span>
           </div>
-          <div class="doc-item">
-            <div class="doc-link" onclick="showWindowsInfo()">
-              💿 Windows 11 Modificado (Optimizado)
-            </div>
-            <div class="doc-actions">
-              <button class="doc-btn"
-                onclick="downloadFile('windos modificados/Win11_24H2_Spanish_x64.iso', 'Windows11_Optimizado.iso')">📥</button>
-              <button class="doc-btn" onclick="showWindowsInfo()">ℹ️</button>
-            </div>
+        </div>
+        <div class="skill-category-card glass">
+          <h3>💻 Desarrollo Web</h3>
+          <div class="skill-tags">
+            <span>HTML5 & CSS3</span>
+            <span>JavaScript</span>
+            <span>Node.js</span>
+            <span>Java (POO)</span>
+            <span>SQL & MySQL</span>
+            <span>Python</span>
+            <span>APIs REST</span>
           </div>
-          <div class="doc-item">
-            <div class="doc-link" onclick="showWindowsInfo()">
-              💿 Windows 10 Modificado (Optimizado)
-            </div>
-            <div class="doc-actions">
-              <button class="doc-btn"
-                onclick="downloadFile('windos modificados/Win10_22H2_Spanish_x64.iso', 'Windows10_Optimizado.iso')">📥</button>
-              <button class="doc-btn" onclick="showWindowsInfo()">ℹ️</button>
-            </div>
+        </div>
+        <div class="skill-category-card glass">
+          <h3>🔐 Seguridad & Backend</h3>
+          <div class="skill-tags">
+            <span>Row Level Security (RLS)</span>
+            <span>Supabase</span>
+            <span>CORS Security Headers</span>
+            <span>Protocolos Cifrados</span>
+            <span>Hardening Ubuntu</span>
+          </div>
+        </div>
+        <div class="skill-category-card glass">
+          <h3>🤖 Trading & Automatización</h3>
+          <div class="skill-tags">
+            <span>Bots Python</span>
+            <span>API Binance</span>
+            <span>Análisis Financiero</span>
+            <span>VPS Deployment 24/7</span>
+          </div>
+        </div>
+        <div class="skill-category-card glass">
+          <h3>🎮 Gaming & Contenido</h3>
+          <div class="skill-tags">
+            <span>@STUDIOOTAKUFF</span>
+            <span>MacroViral StudioFF</span>
+            <span>DPI 500-630</span>
+            <span>Infinix Hot 50 Pro+</span>
+            <span>Marketing Digital</span>
+          </div>
+        </div>
+        <div class="skill-category-card glass">
+          <h3>📡 MoviVIP Network</h3>
+          <div class="skill-tags">
+            <span>Datos Móviles VIP</span>
+            <span>Aprovisionamiento Red</span>
+            <span>Soporte Técnico</span>
+            <span>Bots Telegram</span>
+          </div>
+        </div>
+        <div class="skill-category-card glass">
+          <h3>🔊 Audio Profesional</h3>
+          <div class="skill-tags">
+            <span>Consolas de Sonido</span>
+            <span>Ecualización</span>
+            <span>Eventos Comunitarios</span>
+            <span>Proyecciones</span>
           </div>
         </div>
       </div>
 
+      <h2 class="section-title" style="margin-top: 40px;">🧠 Habilidades Blandas</h2>
+      <div class="soft-skills">
+        <span class="soft-skill glass">Liderazgo Operativo</span>
+        <span class="soft-skill glass">Comunicación Efectiva</span>
+        <span class="soft-skill glass">Pensamiento Analítico</span>
+        <span class="soft-skill glass">Resolución de Problemas</span>
+        <span class="soft-skill glass">Gestión del Tiempo</span>
+        <span class="soft-skill glass">Trabajo en Equipo</span>
+        <span class="soft-skill glass">Aprendizaje Continuo</span>
+        <span class="soft-skill glass">Atención al Detalle</span>
+        <span class="soft-skill glass">Adaptabilidad Tecnológica</span>
+        <span class="soft-skill glass">Pensamiento Estratégico</span>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <!-- Footer -->
+  <!-- ===== CERTIFICATES ===== -->
+  <section id="certificates" class="section">
+    <div class="container">
+      <h2 class="section-title">Certificaciones</h2>
+      <div class="certs-grid">
+        <div class="cert-card glass" onclick="openCertificate('IMG/CERTIFICADO%20ESTEBAN%20LOPEZ.jpg','Prácticas Cabarcas Sarmiento')">
+          <img src="IMG/CERTIFICADO%20ESTEBAN%20LOPEZ.jpg" alt="Certificado Prácticas" loading="lazy">
+          <h4>Prácticas Empresariales</h4>
+          <p>Cabarcas Sarmiento S.A.S - 2025</p>
+        </div>
+        <div class="cert-card glass" onclick="openCertificate('IMG/diploma_censa.jpg','Diploma CENSA')">
+          <img src="IMG/diploma_censa.jpg" alt="Diploma CENSA" loading="lazy">
+          <h4>Diploma CENSA</h4>
+          <p>Técnico en Sistemas - 2025</p>
+        </div>
+        <div class="cert-card glass" onclick="openCertificate('IMG/acta_censa.jpg','Acta CENSA')">
+          <img src="IMG/acta_censa.jpg" alt="Acta CENSA" loading="lazy">
+          <h4>Acta CENSA</h4>
+          <p>Grado - 2025</p>
+        </div>
+        <div class="cert-card glass" onclick="openCertificate('IMG/calidad%20de%20desarrollador%20de%20software.jpg','Calidad de Software SENA')">
+          <img src="IMG/calidad%20de%20desarrollador%20de%20software.jpg" alt="Calidad Desarrollador" loading="lazy">
+          <h4>Calidad de Software</h4>
+          <p>SENA - 2023</p>
+        </div>
+        <div class="cert-card glass" onclick="openCertificate('IMG/cartificado%20calidad%20desarrollador%20de%20software.jpg','Certificado Calidad Dev')">
+          <img src="IMG/cartificado%20calidad%20desarrollador%20de%20software.jpg" alt="Certificado Calidad" loading="lazy">
+          <h4>Certificado Calidad</h4>
+          <p>SENA - 2023</p>
+        </div>
+        <div class="cert-card glass" onclick="openCertificate('IMG/diploma-java_page-0001.jpg','Java Programming')">
+          <img src="IMG/diploma-java_page-0001.jpg" alt="Java" loading="lazy">
+          <h4>Java Programming</h4>
+          <p>Platzi - Feb 2026</p>
+        </div>
+        <div class="cert-card glass" onclick="openCertificate('IMG/diploma-nodejs_page-0001.jpg','Node.js Development')">
+          <img src="IMG/diploma-nodejs_page-0001.jpg" alt="Node.js" loading="lazy">
+          <h4>Node.js Development</h4>
+          <p>Platzi - Feb 2026</p>
+        </div>
+        <div class="cert-card glass" onclick="openCertificate('IMG/diploma-sql-mysql_page-0001.jpg','SQL y MySQL')">
+          <img src="IMG/diploma-sql-mysql_page-0001.jpg" alt="SQL" loading="lazy">
+          <h4>SQL y MySQL</h4>
+          <p>Platzi - Feb 2026</p>
+        </div>
+        <div class="cert-card glass" onclick="openCertificate('IMG/diploma-document-object-model_page-0001.jpg','Document Object Model')">
+          <img src="IMG/diploma-document-object-model_page-0001.jpg" alt="DOM" loading="lazy">
+          <h4>Document Object Model</h4>
+          <p>Platzi - Feb 2026</p>
+        </div>
+        <div class="cert-card glass" onclick="openCertificate('IMG/aplicaciones%20moviles.jpg','Aplicaciones Móviles')">
+          <img src="IMG/aplicaciones%20moviles.jpg" alt="Apps Móviles" loading="lazy">
+          <h4>Aplicaciones Móviles</h4>
+          <p>SENA - 2024</p>
+        </div>
+        <div class="cert-card glass" onclick="openCertificate('IMG/telematica_y_redes.jpg','Telemática y Redes')">
+          <img src="IMG/telematica_y_redes.jpg" alt="Telemática" loading="lazy">
+          <h4>Telemática y Redes</h4>
+          <p>2024</p>
+        </div>
+        <div class="cert-card glass" onclick="openCertificate('IMG/Certificado-cabarcas.jpg','Certificado Cabarcas')">
+          <img src="IMG/Certificado-cabarcas.jpg" alt="Cabarcas" loading="lazy">
+          <h4>Certificado Cabarcas</h4>
+          <p>2025</p>
+        </div>
+        <div class="cert-card glass" onclick="openCertificate('IMG/CERTIFICADO%20CONTABILIDAD%20RECONOCIMIENTO%20DE%20RECURSOS%20FINANCIEROS.jpg','Contabilidad SENA - Aprobación')">
+          <img src="IMG/CERTIFICADO%20CONTABILIDAD%20RECONOCIMIENTO%20DE%20RECURSOS%20FINANCIEROS.jpg" alt="Contabilidad SENA" loading="lazy">
+          <h4>Contabilidad SENA</h4>
+          <p>Aprobación - Dic 2022</p>
+        </div>
+        <div class="cert-card glass" onclick="openCertificate('IMG/ACTA%20CONTABILIDAD%20RECONOCIMIENTO%20DE%20RECURSOS%20FINANCIEROS.jpg','Contabilidad SENA - Notas')">
+          <img src="IMG/ACTA%20CONTABILIDAD%20RECONOCIMIENTO%20DE%20RECURSOS%20FINANCIEROS.jpg" alt="Actas Contabilidad SENA" loading="lazy">
+          <h4>Actas Contabilidad SENA</h4>
+          <p>Notas 4.5 - Dic 2022</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION ===== -->
+  <section id="education" class="section alt-bg">
+    <div class="container">
+      <h2 class="section-title">Formación Académica</h2>
+      <div class="edu-grid">
+        <div class="edu-card glass" style="--accent: #667eea">
+          <div class="edu-icon">🎓</div>
+          <h3>Técnico en Sistemas Informáticos</h3>
+          <p class="edu-institution">CENSA - Montería, Córdoba</p>
+          <p class="edu-date">2024 - Septiembre 2025</p>
+          <p class="edu-desc">Formación integral en sistemas informáticos, armado de equipos, redes y soporte técnico.</p>
+        </div>
+        <div class="edu-card glass" style="--accent: #48bb78">
+          <div class="edu-icon">📜</div>
+          <h3>Calidad de Desarrollador de Software</h3>
+          <p class="edu-institution">SENA</p>
+          <p class="edu-date">2023</p>
+          <p class="edu-desc">Procesos y estándares para garantizar proyectos tecnológicos de alto nivel.</p>
+        </div>
+        <div class="edu-card glass" style="--accent: #ed8936">
+          <div class="edu-icon">📚</div>
+          <h3>Bachiller Académico</h3>
+          <p class="edu-institution">I.E. Dolores Garrido de Gonzáles</p>
+          <p class="edu-date">2023</p>
+          <p class="edu-desc">Bachillerato académico completado.</p>
+        </div>
+      </div>
+
+      <h2 class="section-title" style="margin-top: 40px;">📚 Formación Complementaria</h2>
+      <div class="edu-grid">
+        <div class="edu-card glass" style="--accent: #9f7aea">
+          <div class="edu-icon">📖</div>
+          <h3>Java Programming</h3>
+          <p class="edu-institution">Platzi</p>
+          <p class="edu-date">Febrero 2026</p>
+          <p class="edu-desc">Programación Orientada a Objetos con Java.</p>
+        </div>
+        <div class="edu-card glass" style="--accent: #38b2ac">
+          <div class="edu-icon">📖</div>
+          <h3>Node.js Development</h3>
+          <p class="edu-institution">Platzi</p>
+          <p class="edu-date">Febrero 2026</p>
+          <p class="edu-desc">Desarrollo Backend con Node.js, APIs y servidores.</p>
+        </div>
+        <div class="edu-card glass" style="--accent: #f6ad55">
+          <div class="edu-icon">📖</div>
+          <h3>SQL y MySQL</h3>
+          <p class="edu-institution">Platzi</p>
+          <p class="edu-date">Febrero 2026</p>
+          <p class="edu-desc">Bases de datos relacionales con SQL y MySQL.</p>
+        </div>
+        <div class="edu-card glass" style="--accent: #4299e1">
+          <div class="edu-icon">📖</div>
+          <h3>Document Object Model (DOM)</h3>
+          <p class="edu-institution">Platzi</p>
+          <p class="edu-date">Febrero 2026</p>
+          <p class="edu-desc">Manipulación del DOM para interfaces web interactivas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
   <footer class="footer">
-    <p>© 2026 <span class="dev-name">Esteban Manuel Lopez Rivero</span> - Todos los derechos reservados.</p>
-    <p>Desarrollado con ❤️ para servicios tecnológicos y soporte integral.</p>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="https://wa.me/573017400553" target="_blank">WhatsApp</a>
+          <a href="https://www.linkedin.com/in/esteban-manuel-lópez-rivero-3b5887370" target="_blank">LinkedIn</a>
+          <a href="https://github.com/studioanime977" target="_blank">GitHub</a>
+          <a href="#" onclick="downloadCV()">📄 Descargar CV</a>
+        </div>
+        <p class="footer-copy">© 2026 <strong>Esteban Manuel López Rivero</strong> — Desarrollado con tecnología de alta gama</p>
+        <p class="footer-tech">HTML5 · CSS3 · JavaScript · Python · Node.js · Ubuntu · VPS · RLS · CORS · Supabase</p>
+      </div>
+    </div>
   </footer>
 
-  <!-- Botón de scroll hacia arriba -->
-  <button id="scrollToTop" class="scroll-to-top" onclick="scrollToTop()" title="Volver al inicio">
-    ⬆️
-  </button>
+  <!-- ===== SCROLL TO TOP ===== -->
+  <button id="scrollTop" class="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Volver arriba">⬆</button>
 
-  <!-- Chat flotante -->
-  <div id="chatWidget" class="chat-widget">
+  <!-- ===== CHAT WIDGET ===== -->
+  <div class="chat-widget" id="chatWidget">
     <div class="chat-header" onclick="toggleChat()">
       <span class="chat-icon">💬</span>
       <span class="chat-title">Asistente CV</span>
       <span class="chat-toggle" id="chatToggle">+</span>
     </div>
-    <div class="chat-body" id="chatBody">
+    <div class="chat-body" id="chatBody" style="display:none">
       <div class="chat-messages" id="chatMessages">
-        <div class="bot-message">
-          ¡Hola! 👋 Soy tu asistente virtual. Pregúntame sobre la experiencia, habilidades o proyectos de Esteban.
-        </div>
+        <div class="bot-message">¡Hola! 👋 Pregúntame sobre la experiencia, habilidades o proyectos de Esteban.</div>
       </div>
-      <div class="chat-input-container">
-        <input type="text" id="chatInput" placeholder="Escribe tu pregunta..." onkeypress="handleChatEnter(event)">
-        <button onclick="sendMessage()" class="send-btn">📤</button>
+      <div class="chat-input-area">
+        <input type="text" id="chatInput" placeholder="Escribe tu pregunta..." onkeydown="if(event.key==='Enter')sendMessage()">
+        <button onclick="sendMessage()" class="send-btn">➤</button>
       </div>
       <div class="chat-actions">
-        <button onclick="contactWhatsApp()" class="whatsapp-btn">
-          📱 Contactar por WhatsApp
-        </button>
+        <button onclick="window.open('https://wa.me/573017400553?text=Hola%20Esteban,%20vi%20tu%20CV%20web','_blank')" class="wa-btn">📱 WhatsApp</button>
       </div>
     </div>
   </div>
 
-  <!-- Modal para imágenes -->
+  <!-- ===== IMAGE MODAL ===== -->
   <div id="imageModal" class="modal">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <img class="modal-content" id="modalImg">
+    <span class="modal-close" onclick="closeModal()">&times;</span>
+    <img id="modalImg" class="modal-img">
     <div class="modal-actions">
-      <button class="modal-btn" id="downloadModalBtn" onclick="downloadCurrentImage()">📥 Descargar</button>
-      <button class="modal-btn" onclick="openInNewTab()">🔗 Abrir en nueva pestaña</button>
-    </div>
-  </div>
-
-  <!-- Modal para PDFs -->
-  <div id="pdfModal" class="modal">
-    <span class="close" onclick="closePDFModal()">&times;</span>
-    <div class="pdf-container">
-      <iframe id="pdfViewer" src="" width="100%" height="90%"></iframe>
-      <div class="pdf-actions">
-        <button class="modal-btn" id="downloadPDFBtn" onclick="downloadCurrentPDF()">📥 Descargar PDF</button>
-        <button class="modal-btn" onclick="openPDFInNewTab()">🔗 Abrir en nueva pestaña</button>
-      </div>
+      <button class="modal-btn" onclick="downloadCurrentImage()">📥 Descargar</button>
+      <button class="modal-btn" onclick="window.open(document.getElementById('modalImg').src,'_blank')">🔗 Abrir</button>
     </div>
   </div>
 
   <script>
-    // Función de búsqueda
-    function searchSection() {
-      const searchTerm = document.getElementById('search-input').value.toLowerCase();
-      const sections = document.querySelectorAll('.cv-section');
+    // ===== 3D CAROUSEL =====
+    let carouselAngle = 0;
+    const carousel = document.getElementById('carousel3d');
+    const items = carousel.querySelectorAll('.carousel-item');
+    const total = items.length;
+    const dotsContainer = document.getElementById('carouselDots');
+    let autoRotate;
 
-      sections.forEach(section => {
-        const title = section.querySelector('.section-title').textContent.toLowerCase();
-        const content = section.textContent.toLowerCase();
-        section.style.display = (title.includes(searchTerm) || content.includes(searchTerm)) ? 'block' : 'none';
+    // Create dots
+    for (let i = 0; i < total; i++) {
+      const dot = document.createElement('span');
+      dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+      dot.onclick = () => { stopAutoRotate(); goToCarousel(i); };
+      dotsContainer.appendChild(dot);
+    }
+
+    function updateCarousel() {
+      const radius = 430;
+      const angleStep = 360 / total;
+      items.forEach((item, i) => {
+        const angle = carouselAngle + i * angleStep;
+        const rad = (angle * Math.PI) / 180;
+        const x = radius * Math.sin(rad);
+        const z = radius * Math.cos(rad) - radius;
+        const scale = (z + radius * 2) / (radius * 3);
+        const opacity = Math.max(0.3, Math.min(1, (z + radius * 2) / (radius * 2.5)));
+        item.style.transform = `translateX(${x}px) translateZ(${z}px) scale(${scale})`;
+        item.style.opacity = opacity;
+        item.style.zIndex = Math.round(scale * 100);
+        item.style.pointerEvents = opacity > 0.7 ? 'auto' : 'none';
+      });
+      // Update dots
+      const activeIdx = ((-carouselAngle % 360 + 360) % 360) / angleStep;
+      document.querySelectorAll('.carousel-dot').forEach((d, i) => {
+        d.classList.toggle('active', Math.abs(i - activeIdx) < 0.5 || Math.abs(i - activeIdx) > total - 0.5);
       });
     }
 
-    // Búsqueda en tiempo real
-    document.getElementById('search-input').addEventListener('input', searchSection);
+    function rotateCarousel(dir) {
+      stopAutoRotate();
+      carouselAngle -= dir * (360 / total);
+      updateCarousel();
+      startAutoRotate();
+    }
 
-    // Navegación del sidebar
-    document.querySelectorAll('.sidebar-nav a').forEach(link => {
-      link.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelectorAll('.sidebar-nav a').forEach(a => a.classList.remove('active'));
-        this.classList.add('active');
+    function goToCarousel(idx) {
+      const angleStep = 360 / total;
+      carouselAngle = -idx * angleStep;
+      updateCarousel();
+    }
 
-        const targetId = this.getAttribute('href').substring(1);
-        const targetSection = document.getElementById(targetId);
-        if (targetSection) {
-          targetSection.scrollIntoView({ behavior: 'smooth' });
-        }
-      });
+    function startAutoRotate() {
+      if (autoRotate) clearInterval(autoRotate);
+      autoRotate = setInterval(() => {
+        carouselAngle -= 360 / total;
+        updateCarousel();
+      }, 4000);
+    }
+
+    function stopAutoRotate() {
+      if (autoRotate) { clearInterval(autoRotate); autoRotate = null; }
+    }
+
+    // Touch support
+    let touchStartX = 0;
+    carousel.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; stopAutoRotate(); });
+    carousel.addEventListener('touchend', e => {
+      const diff = touchStartX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 30) rotateCarousel(diff > 0 ? 1 : -1);
+      else startAutoRotate();
+    });
+    carousel.addEventListener('mouseenter', stopAutoRotate);
+    carousel.addEventListener('mouseleave', startAutoRotate);
+
+    updateCarousel();
+    startAutoRotate();
+
+    // ===== NAVBAR =====
+    function toggleNav() {
+      document.getElementById('navLinks').classList.toggle('open');
+    }
+    function closeNav() {
+      document.getElementById('navLinks').classList.remove('open');
+    }
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+      document.getElementById('scrollTop').classList.toggle('visible', window.scrollY > 300);
     });
 
-    // Función para descargar CV
-    function downloadCV() {
-      // Mostrar opciones de descarga
-      const downloadModal = document.createElement('div');
-      downloadModal.className = 'modal';
-      downloadModal.style.display = 'block';
-      downloadModal.innerHTML = `
-        <span class="close" onclick="this.parentElement.remove()">&times;</span>
-        <div style="position: relative; width: 90%; max-width: 500px; margin: 50px auto; background: white; border-radius: 10px; padding: 30px; text-align: center;">
-          <h2 style="color: #2d3748; margin-bottom: 20px;">📄 Descargar CV</h2>
-          <p style="color: #4a5568; margin-bottom: 25px;">Elige tu opción de descarga preferida:</p>
-          <div style="display: flex; flex-direction: column; gap: 15px;">
-            <button class="modal-btn" onclick="downloadFile('H/ESTEBAN-MANUEL-LOPEZ-RIVERO.pdf', 'ESTEBAN_MANUEL_LOPEZ_RIVERO.pdf'); this.parentElement.parentElement.parentElement.remove();" style="padding: 15px; font-size: 16px;">
-              💾 Descarga Directa (PDF)
-            </button>
-            <button class="modal-btn" onclick="window.open('https://drive.google.com/file/d/1fCxtM5-3mg1SYQkl-gShvjzzQfqel-Rd/view?usp=sharing', '_blank'); this.parentElement.parentElement.parentElement.remove();" style="padding: 15px; font-size: 16px;">
-              ☁️ Google Drive
-            </button>
-          </div>
-        </div>
-      `;
-      document.body.appendChild(downloadModal);
+    // ===== MOVIVIP INFO MODAL =====
+    function showTradingInfo() {
+      const modal = document.createElement('div');
+      modal.className = 'modal';
+      modal.style.display = 'flex';
+      modal.innerHTML = `
+        <span class="modal-close" onclick="this.parentElement.remove()">&times;</span>
+        <div class="modal-box glass">
+          <h2>🤖 Trading Bot Algorítmico</h2>
+          <p>Bot en Python para trading algorítmico en criptomonedas, integrado con la <strong>API de Binance</strong>. Opera 24/7 en un VPS con análisis técnico automatizado.</p>
+          <h3>⚙️ Características:</h3>
+          <ul><li>Integración API Binance (tiempo real)</li><li>Análisis financiero automatizado</li><li>Estrategias de trading algorítmico</li><li>Despliegue VPS 24/7</li><li>Monitoreo de rendimiento continuo</li></ul>
+        </div>`;
+      document.body.appendChild(modal);
+      modal.onclick = e => { if (e.target === modal) modal.remove(); };
     }
 
-    // Función de contacto
-    function contactMe() {
-      alert('Información de contacto disponible en la sección de contacto');
+    function showMoviVIPInfo() {
+      const modal = document.createElement('div');
+      modal.className = 'modal';
+      modal.style.display = 'flex';
+      modal.innerHTML = `
+        <span class="modal-close" onclick="this.parentElement.remove()">&times;</span>
+        <div class="modal-box glass">
+          <h2>📶 MoviVIP Network</h2>
+          <p>Marca propia enfocada en la comercialización, aprovisionamiento y distribución de paquetes de datos y servicios de internet móvil VIP. Ofrece cobertura optimizada con soporte técnico especializado.</p>
+          <h3>🚀 Servicios:</h3>
+          <ul><li>Paquetes de datos móviles VIP</li><li>Aprovisionamiento de red</li><li>Soporte técnico 24/7</li><li>Optimización de conectividad</li></ul>
+        </div>`;
+      document.body.appendChild(modal);
+      modal.onclick = e => { if (e.target === modal) modal.remove(); };
     }
 
-    // Variables globales para modales
+    // ===== CERTIFICATE MODAL =====
     let currentImageSrc = '';
-    let currentPDFSrc = '';
-    let currentFileName = '';
-
-    // Modal para imágenes
-    function openModal(img) {
-      const modal = document.getElementById('imageModal');
-      const modalImg = document.getElementById('modalImg');
-      modal.style.display = 'block';
-      modalImg.src = img.src;
-      currentImageSrc = img.src;
-    }
 
     function openCertificate(src, title) {
       const modal = document.getElementById('imageModal');
-      const modalImg = document.getElementById('modalImg');
-      modal.style.display = 'block';
-      modalImg.src = src;
+      document.getElementById('modalImg').src = src;
       currentImageSrc = src;
-      currentFileName = title;
+      modal.style.display = 'flex';
     }
 
     function closeModal() {
       document.getElementById('imageModal').style.display = 'none';
     }
 
-    // Modal para PDFs
-    function openPDF(src, title) {
-      const modal = document.getElementById('pdfModal');
-      const pdfViewer = document.getElementById('pdfViewer');
-      modal.style.display = 'block';
-      pdfViewer.src = src;
-      currentPDFSrc = src;
-      currentFileName = title;
-    }
-
-    function viewPDF(src) {
-      openPDF(src, 'Documento PDF');
-    }
-
-    function closePDFModal() {
-      document.getElementById('pdfModal').style.display = 'none';
-      document.getElementById('pdfViewer').src = '';
-    }
-
-    // Funciones de descarga
-    function downloadFile(src, filename) {
-      const link = document.createElement('a');
-      link.href = src;
-      link.download = filename;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    }
-
     function downloadCurrentImage() {
       if (currentImageSrc) {
-        const filename = currentFileName ? currentFileName.replace(/\s+/g, '_') + '.jpg' : 'certificado.jpg';
-        downloadFile(currentImageSrc, filename);
+        const a = document.createElement('a');
+        a.href = currentImageSrc;
+        a.download = 'certificado.jpg';
+        a.click();
       }
     }
 
-    function downloadCurrentPDF() {
-      if (currentPDFSrc) {
-        const filename = currentFileName ? currentFileName.replace(/\s+/g, '_') + '.pdf' : 'documento.pdf';
-        downloadFile(currentPDFSrc, filename);
-      }
-    }
-
-    function openInNewTab() {
-      const modalImg = document.getElementById('modalImg');
-      if (modalImg.src) {
-        window.open(modalImg.src, '_blank');
-      }
-    }
-
-    function openPDFInNewTab() {
-      const pdfViewer = document.getElementById('pdfViewer');
-      if (pdfViewer.src) {
-        window.open(pdfViewer.src, '_blank');
-      }
-    }
-
-    // Funciones de navegación y búsqueda
-    function toggleMenu() {
-      const navMenu = document.getElementById('navMenu');
-      const menuToggle = document.querySelector('.menu-toggle');
-      navMenu.classList.toggle('active');
-      menuToggle.classList.toggle('active');
-    }
-
-    function performSearch() {
-      const searchTerm = document.getElementById('search-input').value.toLowerCase().trim();
-      if (!searchTerm) {
-        clearSearchHighlights();
-        return;
-      }
-
-      clearSearchHighlights();
-
-      // Buscar en todas las secciones
-      const sections = document.querySelectorAll('.cv-section');
-      let found = false;
-
-      sections.forEach(section => {
-        const sectionText = section.textContent.toLowerCase();
-        if (sectionText.includes(searchTerm)) {
-          // Resaltar la sección encontrada
-          section.style.backgroundColor = '#fff3cd';
-          section.style.border = '2px solid #ffc107';
-
-          if (!found) {
-            // Scroll a la primera coincidencia
-            section.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            found = true;
-          }
-
-          // Resaltar texto específico
-          highlightText(section, searchTerm);
-        }
-      });
-
-      if (!found) {
-        alert('No se encontraron resultados para: ' + searchTerm);
-      }
-
-      // Cerrar dropdown después de buscar
-      closeDropdown();
-    }
-
-    function highlightText(element, searchTerm) {
-      const walker = document.createTreeWalker(
-        element,
-        NodeFilter.SHOW_TEXT,
-        null,
-        false
-      );
-
-      const textNodes = [];
-      let node;
-      while (node = walker.nextNode()) {
-        if (node.textContent.toLowerCase().includes(searchTerm)) {
-          textNodes.push(node);
-        }
-      }
-
-      textNodes.forEach(textNode => {
-        const parent = textNode.parentNode;
-        const text = textNode.textContent;
-        const regex = new RegExp(`(${searchTerm})`, 'gi');
-        const highlightedText = text.replace(regex, '<mark style="background-color: #ffeb3b; padding: 2px;">$1</mark>');
-
-        if (highlightedText !== text) {
-          const span = document.createElement('span');
-          span.innerHTML = highlightedText;
-          parent.replaceChild(span, textNode);
-        }
-      });
-    }
-
-    function clearSearchHighlights() {
-      // Limpiar resaltados de secciones
-      const sections = document.querySelectorAll('.cv-section');
-      sections.forEach(section => {
-        section.style.backgroundColor = '';
-        section.style.border = '';
-      });
-
-      // Limpiar resaltados de texto
-      const marks = document.querySelectorAll('mark');
-      marks.forEach(mark => {
-        const parent = mark.parentNode;
-        parent.replaceChild(document.createTextNode(mark.textContent), mark);
-        parent.normalize();
-      });
-    }
-
-    function handleSearchEnter(event) {
-      if (event.key === 'Enter') {
-        performSearch();
-      }
-    }
-
-    function toggleDropdown() {
-      const dropdown = document.getElementById('dropdownMenu');
-      dropdown.classList.toggle('show');
-    }
-
-    function scrollToSection(sectionId) {
-      const section = document.getElementById(sectionId);
-      if (section) {
-        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    }
-
-    function closeDropdown() {
-      const dropdown = document.getElementById('dropdownMenu');
-      dropdown.classList.remove('show');
-    }
-
-    // Cerrar dropdown al hacer clic fuera
-    window.addEventListener('click', function (event) {
-      if (!event.target.matches('.dropdown-toggle')) {
-        const dropdown = document.getElementById('dropdownMenu');
-        if (dropdown.classList.contains('show')) {
-          dropdown.classList.remove('show');
-        }
-      }
-    });
-
-    function playVideo(videoPath) {
-      // Crear modal para video
-      const videoModal = document.createElement('div');
-      videoModal.className = 'modal';
-      videoModal.style.display = 'block';
-      videoModal.innerHTML = `
-        <span class="close" onclick="this.parentElement.remove()">&times;</span>
-        <div style="position: relative; width: 90%; max-width: 800px; margin: 50px auto; background: white; border-radius: 10px; padding: 20px;">
-          <video controls style="width: 100%; height: auto; border-radius: 8px;">
-            <source src="${videoPath}" type="video/mp4">
-            Tu navegador no soporta el elemento de video.
-          </video>
-          <div style="text-align: center; margin-top: 15px;">
-            <button class="modal-btn" onclick="downloadFile('${videoPath}', 'Monitoreo_Internet.mp4')">📥 Descargar Video</button>
-          </div>
-        </div>
-      `;
-      document.body.appendChild(videoModal);
-    }
-
-    function showWindowsInfo() {
-      const infoModal = document.createElement('div');
-      infoModal.className = 'modal';
-      infoModal.style.display = 'block';
-      infoModal.innerHTML = `
-        <span class="close" onclick="this.parentElement.remove()">&times;</span>
-        <div style="position: relative; width: 90%; max-width: 600px; margin: 50px auto; background: white; border-radius: 10px; padding: 30px;">
-          <h2 style="color: #2d3748; text-align: center; margin-bottom: 20px;">💿 Windows Modificados - Optimizados</h2>
-          
-          <div style="background: #f7fafc; padding: 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #4299e1;">
-            <h3 style="color: #2d3748; margin-bottom: 15px;">🚀 Características de Optimización:</h3>
-            <ul style="color: #4a5568; line-height: 1.6;">
-              <li><strong>Sistema Liviano:</strong> Eliminación completa de aplicaciones basura innecesarias para empresas</li>
-              <li><strong>Bajo Consumo de RAM:</strong> Windows 11 optimizado consume 2.6-3.0GB inicial, estabiliza en 3.4GB</li>
-              <li><strong>Windows 10 Eficiente:</strong> Consume 2.0GB inicial, oscila cerca de 3GB después de actualizaciones</li>
-              <li><strong>Actualizaciones Intactas:</strong> Mantiene todas las funcionalidades de seguridad y actualizaciones</li>
-              <li><strong>Optimizado para Empresas:</strong> Configuración ideal para entornos corporativos</li>
-            </ul>
-          </div>
-
-          <div style="background: #fff5f5; padding: 15px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #f56565;">
-            <p style="color: #e53e3e; font-weight: bold; margin: 0;">⚠️ Nota Importante:</p>
-            <p style="color: #4a5568; margin: 5px 0 0 0;">Estos son sistemas operativos modificados para demostración técnica. Úselos solo en entornos de prueba.</p>
-          </div>
-
-          <div style="text-align: center;">
-            <button class="modal-btn" onclick="downloadFile('windos modificados/Win11_24H2_Spanish_x64.iso', 'Windows11_Optimizado.iso')" style="margin: 5px;">📥 Descargar Windows 11</button>
-            <button class="modal-btn" onclick="downloadFile('windos modificados/Win10_22H2_Spanish_x64.iso', 'Windows10_Optimizado.iso')" style="margin: 5px;">📥 Descargar Windows 10</button>
-          </div>
-        </div>
-      `;
-      document.body.appendChild(infoModal);
-    }
-
-    function viewFile(src) {
-      window.open(src, '_blank');
-    }
-
-    // Cerrar modales al hacer clic fuera
-    window.onclick = function (event) {
-      const imageModal = document.getElementById('imageModal');
-      const pdfModal = document.getElementById('pdfModal');
-
-      if (event.target == imageModal) {
-        imageModal.style.display = 'none';
-      }
-      if (event.target == pdfModal) {
-        pdfModal.style.display = 'none';
-        document.getElementById('pdfViewer').src = '';
-      }
-    }
-
-    // Función para scroll hacia arriba
-    function scrollToTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    }
-
-    // Mostrar/ocultar botón de scroll según posición
-    window.addEventListener('scroll', function () {
-      const scrollBtn = document.getElementById('scrollToTop');
-      if (window.pageYOffset > 300) {
-        scrollBtn.style.display = 'block';
-        scrollBtn.style.opacity = '1';
-      } else {
-        scrollBtn.style.opacity = '0';
-        setTimeout(() => {
-          if (window.pageYOffset <= 300) {
-            scrollBtn.style.display = 'none';
-          }
-        }, 300);
-      }
-    });
-
-    // Variables del chat
-    let chatOpen = false;
-    const responses = {
-      'experiencia': 'Esteban completó sus prácticas empresariales en Cabarcas Sarmiento S.A.S y se graduó en Septiembre 2025. Cuenta con más de 60 equipos ensamblados, amplia experiencia en optimización de Windows y soporte técnico integral.',
-      'habilidades': 'Sus principales habilidades incluyen: armado físico de equipos, mantenimiento de computadoras, instalación y configuración de redes, desarrollo web (HTML, CSS, JavaScript, Python), y optimización de Windows para empresas.',
-      'proyectos': 'Ha desarrollado proyectos destacados como: Inmobiliaria Integrales Cereté y Mundo Otaku Latino (ambos indexados y monetizados), además de Generación Benjamín, Eliminador de Marcas de Agua, EML Studio, Edu-Clic, Dinámica Bíblica, Terrenos Prueba y la APP Anime TV APK.',
-      'educacion': 'Técnico en Sistemas Informáticos graduado de CENSA Montería (Septiembre 2025), certificación en Calidad de Desarrollador de Software del SENA y bachillerato académico.',
-      'contacto': 'Puedes contactarlo por email: love8012e@gmail.com, teléfono: 3017400553. Su CV 2026 está disponible para descarga.',
-      'ubicacion': 'Se encuentra en CR 11 6A-10, Barrio Altos del Noval, Cereté, Córdoba.',
-      'estudios': 'Se graduó de CENSA en 2025. Actualmente fortalece sus conocimientos en Python, HTML y CSS a través de Platzi.',
-      'windows': 'Especialista en versiones optimizadas de Windows 10 y 11 para empresas, logrando consumos de RAM mínimos (2.0-3.4GB) sin sacrificar estabilidad.',
-      'certificaciones': 'Cuenta con Diploma y Acta de CENSA (2025), Certificación SENA en Calidad de Software, Aplicaciones Móviles, Telemática y más.',
-      'objetivo': 'Su meta es aportar excelencia técnica en sistemas y desarrollo para garantizar infraestructuras tecnológicas eficientes y contribuir al éxito organizacional.'
+    // Close modal on backdrop click
+    document.getElementById('imageModal').onclick = function(e) {
+      if (e.target === this) closeModal();
     };
 
-    // Funciones del chat
-    function toggleChat() {
-      const chatBody = document.getElementById('chatBody');
-      const chatToggle = document.getElementById('chatToggle');
+    // ===== DOWNLOAD CV =====
+    function downloadCV() {
+      const modal = document.createElement('div');
+      modal.className = 'modal';
+      modal.style.display = 'flex';
+      modal.innerHTML = `
+        <span class="modal-close" onclick="this.parentElement.remove()">&times;</span>
+        <div class="modal-box glass" style="max-width:400px;text-align:center">
+          <h2>📄 Descargar CV</h2>
+          <p style="font-size:13px;color:var(--text-muted);margin:8px 0">Elige la versión que prefieras:</p>
+          <button class="hero-btn cv" onclick="downloadFile('H/ESTEBAN-MANUEL-LOPEZ-RIVERO.pdf','CV_Esteban_Lopez.pdf');this.closest('.modal').remove()" style="margin:6px;width:80%">📄 CV Plano (265 KB)</button>
+          <button class="hero-btn" onclick="downloadFile('H/ESTEBAN-MANUEL-LOPEZ-RIVERO-COMPLETO.pdf','CV_Esteban_Lopez_Completo.pdf');this.closest('.modal').remove()" style="margin:6px;width:80%;background:#0f9b0f">📚 CV Completo + 20 Certificados (6 MB · 24 pág)</button>
+        </div>`;
+      document.body.appendChild(modal);
+      modal.onclick = e => { if (e.target === modal) modal.remove(); };
+    }
 
-      if (chatOpen) {
-        chatBody.style.display = 'none';
-        chatToggle.textContent = '+';
-        chatOpen = false;
-      } else {
-        chatBody.style.display = 'block';
-        chatToggle.textContent = '−';
-        chatOpen = true;
-      }
+    function downloadFile(path, name) {
+      const a = document.createElement('a');
+      a.href = path;
+      a.download = name;
+      a.click();
+    }
+
+    // ===== CHAT =====
+    let chatOpen = false;
+    const responses = {
+      'experiencia': 'Esteban tiene 5 experiencias clave: 1) Tienda Altos del Noval (Asesor Ventas 2023-2025), 2) Cabarcas Sarmiento (Prácticas 2025), 3) MoviVIP Network (Fundador 2026-actual), 4) Desarrollador Web & Admin Servidores (2026-actual), 5) Creador de Contenido @STUDIOOTAKUFF (2024-actual).',
+      'cabarcas': 'Prácticas profesionales como Técnico en Sistemas en Cabarcas Sarmiento S.A.S (Feb-Ago 2025 +2 meses). Soporte técnico integral, redes empresariales, instalación CCTV DVR/NVR con monitoreo remoto.',
+      'tienda': 'Asesor de Ventas y Gestor Operativo en Tienda Altos del Noval (NIT 30688395-6) desde Feb 2023 hasta Sep 2025. Manejo de caja, inventarios, atención al cliente, apertura/cierre y operación general.',
+      'altos del noval': 'Trabajó 2 años 7 meses en Tienda Altos del Noval. Certificado laboral disponible en la galería de certificaciones.',
+      'inventario': 'Auditoría y control de inventarios en Tienda Altos del Noval con métodos de rotación y gestión de existencias.',
+      'habilidades': 'Hardware (60+ equipos), NTLite, redes (Ubuntu, Vmess/V2ray, VPS TunnelActive), desarrollo web (HTML, CSS, JS, Node, Java, SQL, Python), seguridad (RLS, CORS, Supabase), trading bots, audio profesional y gestión comercial.',
+      'proyectos': '13 proyectos web: Trading Bot Algorítmico, MoviVIP Network, Inmobiliaria Integrales Cereté, MacroViral StudioFF, Mundo Otaku Latino, Edu-Clic, Dinámica Juvenil, Eliminador de Marcas de Agua, EML Studio, Casa de Avivamiento, Generación Benjamín, Servicios y Terrenos Prueba.',
+      'educacion': 'Técnico en Sistemas - CENSA Montería (2025). Cursos Platzi: Java, Node.js, SQL, DOM (2026). SENA: Calidad Software (2023), Apps Móviles (2024), Contabilidad (2022). Bachiller I.E. Dolores Garrido (2023).',
+      'contacto': 'Email: love8012e@gmail.com | Tel: 3017400553 | WhatsApp: wa.me/573017400553 | LinkedIn: linkedin.com/in/esteban-manuel-lópez-rivero-3b5887370 | GitHub: github.com/studioanime977',
+      'ubicacion': 'CR 11 6A-10, Barrio Altos del Noval, Cereté, Córdoba, Colombia.',
+      'estudios': 'Graduado de CENSA como Técnico en Sistemas (Sep 2025). Formación continua en Platzi y SENA.',
+      'windows': 'Optimización extrema de Windows 10/11 con NTLite: reducción de consumo RAM a 2-3GB eliminando telemetría, bloatware y servicios innecesarios. Hardening de seguridad.',
+      'ntlite': 'Personalización y tuning de Windows con NTLite para reducir consumo RAM a 2-3GB. Eliminación de componentes innecesarios, telemetría y bloatware para máximo rendimiento.',
+      'certificaciones': '14 certificaciones: Diploma CENSA, Acta CENSA, Prácticas Cabarcas, Certificado Tienda, Calidad Software SENA (×2), Apps Móviles SENA, Telemática, Contabilidad SENA (4.5), Java Platzi, Node.js Platzi, SQL Platzi, DOM Platzi, y más.',
+      'objetivo': 'Aportar excelencia técnica en sistemas, redes, desarrollo y automatización para infraestructuras tecnológicas eficientes con visión de negocio.',
+      'servidor': 'Administración de servidores Ubuntu en VPS con panel VPS TunnelActive, protocolos Vmess/V2ray, balanceo de puertos, hardening y monitoreo de conectividad.',
+      'ubuntu': 'Despliegue, hardening y configuración de servidores Ubuntu en VPS para entornos productivos con túneles seguros.',
+      'vps': 'Servidor VPS propio con panel VPS TunnelActive, protocolos Vmess/V2ray, balanceo HTTP/HTTPS, SSH key, monitoreo 24/7.',
+      'tunnelactive': 'Panel VPS TunnelActive para gestión de túneles V2ray/Vmess, balanceo de puertos 80/443/8080 y monitoreo de conectividad.',
+      'vmess': 'Protocolo Vmess para tunelización segura con tráfico cifrado. Gestionado mediante panel VPS TunnelActive.',
+      'v2ray': 'Implementación de V2ray para tunelización segura y comunicaciones cifradas con panel de administración.',
+      'python': 'Scripts Python para automatización, análisis financiero y trading algorítmico via API Binance en VPS 24/7.',
+      'binance': 'Bots de trading algorítmico conectados a API Binance para análisis en tiempo real y ejecución automatizada en VPS.',
+      'trading': 'Bot de trading algorítmico en Python + API Binance desplegado en VPS 24/7 con análisis financiero automatizado.',
+      'studiootaku': '@STUDIOOTAKUFF: marca gaming en TikTok y YouTube con estrategias de engagement y marketing digital.',
+      'macroviral': 'MacroViral StudioFF: ecosistema de kits virales y generador de sensibilidad para Free Fire. Sitio: macroviralstudioff.web.app',
+      'movivip': 'MoviVIP Network: distribución de datos móviles VIP con soporte técnico y bots Telegram. Sitio: movivip-network.web.app',
+      'dpi': 'Calibración DPI 500-630 para Infinix Hot 50 Pro+. Optimización de latencia táctil para gaming competitivo.',
+      'infinix': 'Optimización extrema del Infinix Hot 50 Pro+ con DPI 500-630 y sensibilidad táctil milimétrica.',
+      'audio': 'Administración de consolas de sonido y ecualización profesional para eventos comunitarios y proyecciones.',
+      'rls': 'Row Level Security (RLS) en Supabase para control de acceso a datos a nivel de fila en bases de datos relacionales.',
+      'supabase': 'Experiencia con Supabase: autenticación, Row Level Security (RLS), APIs en tiempo real y BaaS.',
+      'cors': 'Configuración de CORS (Cross-Origin Resource Sharing) y security headers para APIs web seguras.',
+      'seguridad': 'Security headers, CORS, Row Level Security (RLS) en Supabase, hardening de servidores Ubuntu.',
+      'sena': 'Certificaciones SENA: 1) Calidad de Desarrollador de Software (2023), 2) Aplicaciones Móviles (2024), 3) Contabilidad: Reconocimiento de Recursos Financieros (2022, calif. 4.5).',
+      'contabilidad': 'Certificado SENA en Contabilidad: Reconocimiento de Recursos Financieros (48h, Dic 2022). Calificación 4.5/5.0. Códigos: 9523002674664TI1062604753C (aprobación) y 9523002674664TI1062604753E (notas).',
+      'finanzas': 'Formación en Contabilidad SENA (4.5) + experiencia en caja, inventarios y ventas en Tienda Altos del Noval. Visión híbrida técnico-financiera.',
+      'youtube': 'Canales: @STUDIOOTAKUFF (gaming), @EMLFLOW (música con IA), @STUDIOOTAKU1 (anime). Todos en los botones del inicio.',
+      'tiktok': '@studiootakuff — contenido gaming, engagement y marketing digital en TikTok.',
+      'emlflow': 'EMLFLOW: canal de YouTube con canciones originales creadas mediante inteligencia artificial.',
+      'studiootaku1': '@STUDIOOTAKU1: canal de YouTube dedicado a contenido anime y comunidad otaku.',
+      'redes': 'Redes: YouTube (@STUDIOOTAKUFF, @EMLFLOW, @STUDIOOTAKU1), TikTok (@studiootakuff), LinkedIn, GitHub.',
+      'canales': '4 canales de contenido: YouTube Gaming, TikTok Gaming, YouTube Música IA, YouTube Anime.',
+      'pdf': 'Hay 2 versiones del CV en PDF: 1) Plano (262 KB) — texto profesional. 2) Completo (6 MB) — incluye fotos de los 14 certificados. Ambos se descargan desde el botón "Descargar CV" en la web.',
+      'cv': 'Descarga el CV desde el botón "📄 CV" en el menú o en el hero. Hay versión plana (262 KB) y completa con certificados (6 MB).',
+      'descargar': 'Botón "📄 Descargar CV" en el menú superior, en el hero y en el footer. Modal con 2 opciones: CV Plano (262KB) o CV Completo con certificados (6MB).',
+      'completo': 'CV Completo (6 MB): incluye foto, perfil, experiencia, habilidades visuales, 13 proyectos y páginas con fotos de los 14 certificados escaneados.',
+      'plano': 'CV Plano (262 KB): formato profesional ligero con toda la información de texto: perfil, experiencia, habilidades, proyectos y formación.',
+      'linkedin': 'linkedin.com/in/esteban-manuel-lópez-rivero-3b5887370 — conéctate y agrega a Esteban.',
+      'github': 'github.com/studioanime977 — repositorios de proyectos web y código abierto.',
+      'fullstack': 'Desarrollador Full-Stack con HTML, CSS, JavaScript, Node.js, Java, SQL, Python, APIs REST. Plataformas indexadas y monetizadas.',
+      'desarrollador': 'Desarrollador Web Full-Stack. Tecnologías: HTML5, CSS3, JavaScript, Node.js, Java (POO), SQL/MySQL, Python, APIs REST.',
+      'developer': 'Full-Stack Developer and Systems Technician. Tech stack: HTML5, CSS3, JavaScript, Node.js, Java, SQL, Python, REST APIs.',
+      'red': 'Redes empresariales: servidores Ubuntu, VPS TunnelActive, Vmess/V2ray, routers, firmware, enrutamiento, CCTV DVR/NVR.',
+      'cctv': 'Instalación y configuración de sistemas CCTV IP y análogos, DVR/NVR con monitoreo remoto seguro. Experiencia en Cabarcas Sarmiento.',
+      'dvr': 'DVR/NVR: instalación, configuración y monitoreo remoto de sistemas de videovigilancia empresarial.',
+      'hardware': 'Más de 60 equipos ensamblados. Mantenimiento preventivo y correctivo. Optimización con NTLite. Hardening de BIOS y sistema operativo.',
+      'mantenimiento': 'Mantenimiento preventivo y correctivo de equipos de cómputo. Más de 60 PCs ensambladas y optimizadas.',
+      'html': 'HTML5 semántico, accesibilidad, SEO on-page. Este portfolio está construido con HTML5 + CSS3 + JavaScript vanilla.',
+      'css': 'CSS3 avanzado: Flexbox, Grid, animaciones, glassmorphism, 3D transforms, diseño responsive, variables CSS, clamp().',
+      'javascript': 'JavaScript ES6+: manipulación del DOM, carrusel 3D, chatbot, modales, eventos, async/await.',
+      'node': 'Node.js para backend, APIs REST, desarrollo de servidores y herramientas de automatización.',
+      'java': 'Java con Programación Orientada a Objetos (POO). Certificado Platzi Feb 2026.',
+      'sql': 'SQL y MySQL: bases de datos relacionales, consultas complejas, normalización. Certificado Platzi Feb 2026.',
+      'whatsapp': 'WhatsApp: wa.me/573017400553. Respondo consultas laborales y técnicas.',
+      'telegram': 'Desarrollo de bots en Telegram para automatización de ventas y soporte en MoviVIP Network.',
+      'hardening': 'Hardening de servidores Ubuntu: configuración segura, firewall, cifrado, actualizaciones, monitoreo.',
+      'firewall': 'Configuración de firewalls y seguridad perimetral en servidores Ubuntu y redes empresariales.',
+      'rendimiento': 'Optimización de rendimiento en Windows con NTLite (RAM 2-3GB), tuning de SO, y calibración DPI para gaming.',
+      'velocidad': 'Optimización de velocidad en sistemas Windows y redes. Reducción de latencia, tuning de SO y conectividad.',
+      'ingles': 'Español nativo. Inglés técnico para lectura de documentación, APIs y configuraciones de servidores.',
+      'idioma': 'Español: nativo. Inglés: técnico (lectura y comprensión de documentación técnica).',
+      'hoja': 'Hoja de Vida web interactiva con glassmorphism, carrusel 3D y chatbot. Descarga el PDF desde el menú.',
+      'vida': 'Hoja de Vida profesional de Esteban Manuel López Rivero. Tecnologías: HTML5, CSS3, JavaScript, Python, Node.js.',
+      'referencia': 'Referencias personales y laborales disponibles bajo solicitud. Contacta a Esteban por email o WhatsApp.',
+      'google': 'Proyectos indexados en Google: Mundo Otaku Latino e Inmobiliaria Integrales Cereté. Ambos con tráfico orgánico.',
+      'certificado': '14 certificados disponibles en la galería: CENSA, SENA, Platzi, Tienda Altos del Noval y Cabarcas. Haz clic en cada uno para verlo en grande.',
+      'emprendimiento': 'Marcas propias: MoviVIP Network (datos móviles VIP), MacroViral StudioFF (gaming), EMLFLOW (música IA), @STUDIOOTAKUFF (contenido).',
+      'cliente': 'Experiencia en atención al cliente presencial y virtual. Asesoría personalizada en Tienda Altos del Noval y soporte técnico.',
+      'dominio': 'Gestión de dominios y despliegue en Vercel y Firebase Hosting para proyectos web propios y de clientes.'
+    };
+
+    function toggleChat() {
+      const body = document.getElementById('chatBody');
+      const tog = document.getElementById('chatToggle');
+      chatOpen = !chatOpen;
+      body.style.display = chatOpen ? 'block' : 'none';
+      tog.textContent = chatOpen ? '−' : '+';
     }
 
     function sendMessage() {
       const input = document.getElementById('chatInput');
-      const message = input.value.trim();
-
-      if (message) {
-        addMessage(message, 'user');
-        input.value = '';
-
-        setTimeout(() => {
-          const response = getBotResponse(message);
-          addMessage(response, 'bot');
-        }, 500);
-      }
+      const msg = input.value.trim();
+      if (!msg) return;
+      addMessage(msg, 'user');
+      input.value = '';
+      setTimeout(() => addMessage(getBotResponse(msg), 'bot'), 400);
     }
 
     function addMessage(text, sender) {
-      const messagesContainer = document.getElementById('chatMessages');
-      const messageDiv = document.createElement('div');
-      messageDiv.className = sender === 'user' ? 'user-message' : 'bot-message';
-      messageDiv.textContent = text;
-      messagesContainer.appendChild(messageDiv);
-      messagesContainer.scrollTop = messagesContainer.scrollHeight;
+      const container = document.getElementById('chatMessages');
+      const div = document.createElement('div');
+      div.className = sender === 'user' ? 'user-message' : 'bot-message';
+      div.textContent = text;
+      container.appendChild(div);
+      container.scrollTop = container.scrollHeight;
     }
 
-    function getBotResponse(message) {
-      const lowerMessage = message.toLowerCase();
+    function getBotResponse(msg) {
+      const lower = msg.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+      const words = lower.split(/\s+/).filter(w => w.length > 2);
 
-      for (const [key, response] of Object.entries(responses)) {
-        if (lowerMessage.includes(key)) {
-          return response;
+      // 1. Exact keyword match
+      for (const [key, resp] of Object.entries(responses)) {
+        if (lower.includes(key)) return resp;
+      }
+
+      // 2. Smart word scoring: find the keyword with most word overlap
+      let bestScore = 0;
+      let bestResp = null;
+      for (const [key, resp] of Object.entries(responses)) {
+        const keyWords = key.split(/\s+/).filter(w => w.length > 2);
+        let score = 0;
+        for (const w of words) {
+          for (const kw of keyWords) {
+            if (w.includes(kw) || kw.includes(w)) score++;
+            if (w === kw) score += 2;
+          }
+        }
+        if (score > bestScore) {
+          bestScore = score;
+          bestResp = resp;
+        }
+      }
+      if (bestScore >= 2) return bestResp;
+
+      // 3. Common question patterns
+      if (lower.includes('que es') || lower.includes('que hace') || lower.includes('quien es')) {
+        const topics = { 'servidor': responses['servidor'], 'vps': responses['vps'], 'trading': responses['trading'], 'movivip': responses['movivip'], 'red': responses['red'], 'ntlite': responses['ntlite'] };
+        for (const [k, r] of Object.entries(topics)) { if (lower.includes(k)) return r; }
+        return responses['objetivo'];
+      }
+
+      if (lower.includes('donde') || lower.includes('ubicacion') || lower.includes('direccion')) return responses['ubicacion'];
+      if (lower.includes('cuando') || lower.includes('fecha') || lower.includes('año') || lower.includes('a;o')) return 'Esteban se graduó como Técnico en Sistemas en Septiembre 2025. Su experiencia en Tienda Altos del Noval fue Feb 2023 - Sep 2025, y sus prácticas en Cabarcas Sarmiento Feb - Ago 2025.';
+      if (lower.includes('cuanto') || lower.includes('cuantas') || lower.includes('cuantos')) return 'Esteban ha ensamblado 60+ equipos, tiene 14 certificaciones, 13 proyectos web, 5 experiencias laborales y 4 marcas digitales.';
+      if (lower.includes('puedes') || lower.includes('ayuda') || lower.includes('que sabes')) return '¡Claro! Puedo responder sobre: experiencia laboral, proyectos web (13), habilidades técnicas, certificaciones (14), VPS/servidores, trading, gaming, canales de YouTube, formación académica, y más. Solo pregúntame. 😊';
+
+      // 4. Multi-word intent detection
+      if (words.length >= 3) {
+        let combined = lower.replace(/[¿?!¡.,;:]/g, '');
+        for (const [key, resp] of Object.entries(responses)) {
+          const kws = key.split(/\s+/);
+          let hits = 0;
+          for (const kw of kws) {
+            if (combined.includes(kw)) hits++;
+          }
+          if (hits >= kws.length * 0.6) return resp;
         }
       }
 
-      // Respuestas para palabras clave específicas
-      if (lowerMessage.includes('hola') || lowerMessage.includes('hi')) {
-        return '¡Hola! 👋 ¿En qué puedo ayudarte? Puedo contarte sobre la experiencia, habilidades, proyectos o educación de Esteban.';
+      // 5. Detect technology questions
+      const techs = { 'html': 'HTML5 semántico, accesibilidad, SEO on-page. Este portfolio está construido con HTML5 + CSS3 + JavaScript vanilla.', 'css': 'CSS3 avanzado: Flexbox, Grid, animaciones, glassmorphism, 3D transforms, diseño responsive.', 'javascript': 'JavaScript ES6+: manipulación del DOM, carrusel 3D, chatbot, modales, eventos, async/await.', 'node': 'Node.js para backend, APIs REST, desarrollo de servidores y herramientas de automatización.', 'java': 'Java con Programación Orientada a Objetos (POO). Certificado Platzi Feb 2026.', 'sql': 'SQL y MySQL: bases de datos relacionales, consultas complejas, normalización. Certificado Platzi Feb 2026.', 'python': responses['python'], 'docker': 'Actualmente no tengo experiencia en Docker documentada, pero es una tecnología en mi lista de aprendizaje.', 'react': 'Actualmente no uso React, desarrollo con JavaScript vanilla y Node.js en el frontend y backend respectivamente.' };
+      for (const [tech, resp] of Object.entries(techs)) {
+        if (lower.includes(tech) || words.some(w => w.includes(tech))) return resp;
       }
 
-      if (lowerMessage.includes('gracias')) {
-        return '¡De nada! 😊 ¿Hay algo más que te gustaría saber sobre el perfil profesional de Esteban?';
-      }
+      // 6. Greetings
+      if (lower.includes('hola') || lower.includes('buenas') || lower.includes('buen')) return '¡Hola! 👋 Soy el asistente virtual de Esteban. Pregúntame sobre su perfil profesional, proyectos, habilidades o cualquier cosa relacionada con su hoja de vida.';
+      if (lower.includes('gracias') || lower.includes('graciass') || lower.includes('thank')) return '¡De nada! 😊 Estoy aquí para lo que necesites saber sobre Esteban.';
+      if (lower.includes('telefono') || lower.includes('tel') || lower.includes('celular') || lower.includes('numero') || lower.includes('whatsapp')) return 'Teléfono/WhatsApp: 3017400553. Enlace directo: wa.me/573017400553.';
+      if (lower.includes('email') || lower.includes('correo') || lower.includes('mail') || lower.includes('gmail')) return 'Email: love8012e@gmail.com';
+      if (lower.includes('adios') || lower.includes('bye') || lower.includes('chao') || lower.includes('hasta')) return '¡Hasta luego! 😊 Vuelve cuando quieras saber más sobre el perfil de Esteban.';
 
-      if (lowerMessage.includes('telefono') || lowerMessage.includes('teléfono')) {
-        return 'El número de contacto es: 3017400553. También puedes usar el botón de WhatsApp para contacto directo.';
-      }
+      // 7. Fallback with best partial match
+      if (bestResp) return bestResp + ' ¿Quieres saber más detalles sobre algún tema en específico?';
 
-      if (lowerMessage.includes('email') || lowerMessage.includes('correo')) {
-        return 'Su email de contacto es: love8012e@gmail.com';
-      }
-
-      // Respuesta por defecto
-      return 'Interesante pregunta. Para información más específica, te recomiendo contactar directamente por WhatsApp usando el botón de abajo. 📱';
+      return 'No encontré información específica sobre eso. 😅 Puedes preguntarme sobre: experiencia laboral (5 cargos), proyectos web (13), habilidades técnicas, VPS/servidores, trading algorítmico, gaming, certificaciones (14), CV en PDF, formación académica, o canales de contenido. ¿Qué te gustaría saber?';
     }
 
-    function handleChatEnter(event) {
-      if (event.key === 'Enter') {
-        sendMessage();
-      }
-    }
-
-    function contactMe() {
-      window.open('https://wa.me/573017400553?text=Hola%20Esteban,%20he%20visto%20tu%20hoja%20de%20vida%20en%20la%20web%20y%20me%20gustar%C3%ADa%20contactarte.', '_blank');
-    }
+    // ===== SMOOTH SCROLL =====
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href');
+        if (id && id.length > 1) {
+          const el = document.querySelector(id);
+          if (el) el.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
   </script>
 </body>
-
 </html>
