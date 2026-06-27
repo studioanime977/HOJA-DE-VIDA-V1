@@ -1,38 +1,32 @@
 ﻿<div align="center">
 
-# ðŸ‘” Esteban Manuel LÃ³pez Rivero
+# 👔 Esteban Manuel Lopez Rivero
 
-**Hoja de Vida â€” CV Digital Interactivo**
+**Hoja de Vida - CV Digital Interactivo**
 
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)]()
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)]()
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)]()
-[![Ko-Fi](https://img.shields.io/badge/â˜•-CafÃ©-FF5E5B?style=flat-square&logo=ko-fi&logoColor=white)](https://ko-fi.com/studioanime977)
-
----
+[![Ko-Fi](https://img.shields.io/badge/☕-Café-FF5E5B?style=flat-square&logo=ko-fi&logoColor=white)](https://ko-fi.com/studioanime977)
 
 </div>
 
-## ðŸ“„ Sobre
+## 📄 Sobre
 
-CV digital profesional con diseÃ±o responsive e interactivo. Incluye experiencia laboral, formaciÃ³n acadÃ©mica, habilidades tÃ©cnicas y proyectos destacados.
+CV digital profesional con diseno responsive e interactivo. Incluye experiencia laboral, formacion academica, habilidades tecnicas y proyectos destacados.
 
-## ðŸ› ï¸ TecnologÃ­as
+## 🛠️ Tecnologias
 
-| TecnologÃ­a | PropÃ³sito |
-|---|---|
-| HTML5 | Estructura semÃ¡ntica |
-| CSS3 | DiseÃ±o responsive y animaciones |
-| JavaScript | Interactividad y dinamismo |
+HTML5 | CSS3 | JavaScript
 
-## ðŸŒ Live Demo
+## 🌐 Live Demo
 
-[Ver CV online](https://studioanime977.github.io/HOJA-DE-VIDA-V1/)
+https://studioanime977.github.io/HOJA-DE-VIDA-V1/
 
 ---
 
 <div align="center">
 
-[â˜• InvÃ­tame un cafÃ©](https://ko-fi.com/studioanime977)
+[☕ Invitame un cafe](https://ko-fi.com/studioanime977)
 
 </div>
