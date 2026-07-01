@@ -1,0 +1,4 @@
+Contact: mailto:love8012e@gmail.com
+Preferred-Languages: es, en
+Canonical: https://hoja-de-vida-esteban.web.app/.well-known/security.txt
+Policy: https://hoja-de-vida-esteban.web.app/security-policy.txt

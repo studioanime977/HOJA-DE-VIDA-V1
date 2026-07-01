@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Esteban Manuel López Rivero - CV</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: white;
+            color: #2c3e50;
+            width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            display: flex;
+            font-size: 11pt;
+            line-height: 1.4;
+        }
+        
+        /* Layout */
+        .left-col {
+            width: 35%;
+            background-color: #D2E0FB;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .right-col {
+            width: 65%;
+            background-color: #FFFFFF;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* Left Column Content */
+        .profile-container {
+            text-align: center;
+            padding: 40px 20px 20px;
+        }
+        
+        .profile-pic {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            margin-bottom: 20px;
+        }
+        
+        .name {
+            font-size: 22pt;
+            font-weight: 700;
+            color: #1A365D;
+            line-height: 1.1;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+        
+        .profession {
+            font-size: 11pt;
+            font-weight: 400;
+            color: #3B5998;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        .section-header-left {
+            background-color: #92B4F2;
+            color: #1A365D;
+            font-weight: 700;
+            padding: 8px 20px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 12pt;
+        }
+        
+        .left-content {
+            padding: 0 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 10pt;
+        }
+        
+        .contact-item svg {
+            width: 14px;
+            height: 14px;
+            margin-right: 10px;
+            fill: #1A365D;
+        }
+        
+        .skills-list, .lang-list {
+            list-style: none;
+            font-size: 10pt;
+        }
+        
+        .skills-list li {
+            position: relative;
+            padding-left: 15px;
+            margin-bottom: 8px;
+        }
+        
+        .skills-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #1A365D;
+            font-weight: bold;
+        }
+        
+        .lang-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        
+        .lang-bar-bg {
+            width: 60%;
+            background-color: white;
+            height: 8px;
+            border-radius: 4px;
+            margin-top: 4px;
+        }
+        
+        .lang-bar-fill {
+            background-color: #92B4F2;
+            height: 100%;
+            border-radius: 4px;
+        }
+        
+        /* Right Column Content */
+        .top-header {
+            background-color: #92B4F2;
+            padding: 40px 30px;
+            color: #1A365D;
+        }
+        
+        .top-header h2 {
+            font-size: 14pt;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .top-header p {
+            font-size: 10.5pt;
+            text-align: justify;
+        }
+        
+        .right-content {
+            padding: 20px 30px;
+        }
+        
+        .section-header-right {
+            font-size: 12pt;
+            font-weight: 700;
+            color: #1A365D;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        
+        .timeline-item {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        
+        .timeline-date {
+            width: 25%;
+            font-weight: 600;
+            font-size: 9.5pt;
+            color: #3B5998;
+        }
+        
+        .timeline-content {
+            width: 75%;
+            padding-left: 10px;
+        }
+        
+        .timeline-title {
+            font-weight: 700;
+            font-size: 10.5pt;
+            color: #1A365D;
+        }
+        
+        .timeline-subtitle {
+            font-weight: 600;
+            font-size: 9.5pt;
+            color: #4A5568;
+            margin-bottom: 3px;
+        }
+        
+        .timeline-bullets {
+            font-size: 9pt;
+            padding-left: 15px;
+        }
+        
+        .timeline-bullets li {
+            margin-bottom: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="left-col">
+        <div class="profile-container">
+            <img src="{{PROFILE_PIC}}" alt="Profile Picture" class="profile-pic">
+            <h1 class="name">ESTEBAN MANUEL<br>LÓPEZ RIVERO</h1>
+            <p class="profession">TÉCNICO EN SISTEMAS<br>FULL-STACK DEVELOPER</p>
+        </div>
+        
+        <div class="section-header-left">CONTACTO</div>
+        <div class="left-content">
+            <div class="contact-item">
+                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                love8012e@gmail.com
+            </div>
+            <div class="contact-item">
+                <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                (+57) 301 740 0553 (Llamadas)
+            </div>
+            <div class="contact-item">
+                <svg viewBox="0 0 24 24"><path d="M20.52 3.48A11.95 11.95 0 0012 0C5.37 0 0 5.37 0 12c0 2.12.55 4.19 1.6 6.03L.08 24l6.14-1.61A11.9 11.9 0 0012 24c6.63 0 12-5.37 12-12 0-3.21-1.25-6.22-3.48-8.52zM12 22.05c-1.8 0-3.56-.48-5.11-1.4l-.37-.22-3.8.99 1.02-3.7-.24-.39A9.96 9.96 0 012.05 12c0-5.5 4.47-9.96 9.96-9.96 2.66 0 5.16 1.04 7.04 2.92 1.88 1.88 2.92 4.38 2.92 7.04 0 5.5-4.47 9.96-9.96 9.96l-.01.01zM17.47 14.5c-.3-.15-1.78-.88-2.06-.98-.28-.1-.48-.15-.68.15-.2.3-.78.98-.95 1.18-.18.2-.35.23-.65.08-2.26-1.13-3.69-2.08-5.14-4.57-.13-.22-.01-.34.14-.49.13-.13.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.08-.15-.68-1.64-.93-2.25-.25-.59-.5-.51-.68-.52h-.58c-.2 0-.53.08-.8.38-.28.3-1.05 1.03-1.05 2.5 0 1.48 1.08 2.9 1.23 3.1.15.2 2.1 3.21 5.1 4.5.72.3 1.28.48 1.72.62.72.23 1.38.2 1.9.12.58-.09 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.08-.13-.28-.2-.58-.35z"/></svg>
+                (+57) 311 700 8185 (WhatsApp)
+            </div>
+            <div class="contact-item">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                hoja-de-vida-v1.vercel.app
+            </div>
+            <div class="contact-item">
+                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                Cereté, Córdoba, Colombia
+            </div>
+        </div>
+        
+        <div class="section-header-left">HABILIDADES</div>
+        <div class="left-content">
+            <ul class="skills-list">
+                <li>Desarrollo Web (Full-Stack)</li>
+                <li>Servidores y Redes (Ubuntu)</li>
+                <li>Hardening & Seguridad (Win/Linux)</li>
+                <li>Automatización (Python/Bots)</li>
+                <li>Trading Algorítmico</li>
+                <li>Mantenimiento PC (Hardware)</li>
+                <li>Generación de Audio con IA</li>
+                <li>Manejo de Base de Datos (SQL/Firebase)</li>
+            </ul>
+        </div>
+        
+        <div class="section-header-left">IDIOMAS</div>
+        <div class="left-content">
+            <div class="lang-item">
+                <span>Español (Nativo)</span>
+                <div class="lang-bar-bg"><div class="lang-bar-fill" style="width: 100%;"></div></div>
+            </div>
+            <div class="lang-item">
+                <span>Inglés (Técnico)</span>
+                <div class="lang-bar-bg"><div class="lang-bar-fill" style="width: 60%;"></div></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="right-col">
+        <div class="top-header">
+            <h2>PERFIL PROFESIONAL</h2>
+            <p>Técnico en Sistemas Informáticos y Desarrollador Full-Stack con visión integral de negocio. Enfoque en diseñar, optimizar y automatizar infraestructuras tecnológicas robustas. Fusiono habilidades técnicas avanzadas (redes, servidores, desarrollo web, cloud computing, IA, automatización) con una sólida base en gestión financiera y operativa (certificación SENA en Contabilidad 4.5/5.0). Cuento con más de 30 certificaciones técnicas en Platzi, SENA y CENSA.</p>
+        </div>
+        
+        <div class="right-content">
+            <div class="section-header-right">EXPERIENCIA LABORAL</div>
+            
+            <div class="timeline-item">
+                <div class="timeline-date">2026 - Actual</div>
+                <div class="timeline-content">
+                    <div class="timeline-title">Desarrollador Web & Adm. Servidores</div>
+                    <div class="timeline-subtitle">Freelance</div>
+                    <ul class="timeline-bullets">
+                        <li>Configuración y hardening de servidores Ubuntu en VPS (Vmess/V2ray).</li>
+                        <li>Desarrollo de bots Python para trading algorítmico con API Binance.</li>
+                        <li>Despliegue de plataformas full-stack serverless en GCP, AWS y Firebase.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-date">2026 - Actual</div>
+                <div class="timeline-content">
+                    <div class="timeline-title">Fundador</div>
+                    <div class="timeline-subtitle">MoviVIP Network</div>
+                    <ul class="timeline-bullets">
+                        <li>Plataforma de aprovisionamiento de datos móviles VIP.</li>
+                        <li>Automatización de ventas mediante bots en Telegram y soporte.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-date">2025 - 2025</div>
+                <div class="timeline-content">
+                    <div class="timeline-title">Técnico en Sistemas (Prácticas)</div>
+                    <div class="timeline-subtitle">Cabarcas Sarmiento S.A.S</div>
+                    <ul class="timeline-bullets">
+                        <li>Soporte técnico y mantenimiento preventivo/correctivo.</li>
+                        <li>Sistemas CCTV (DVR/NVR) con monitoreo remoto.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-date">2023 - 2025</div>
+                <div class="timeline-content">
+                    <div class="timeline-title">Asesor de Ventas y Gestor Operativo</div>
+                    <div class="timeline-subtitle">Tienda Altos del Noval</div>
+                    <ul class="timeline-bullets">
+                        <li>Apertura/cierre, conciliación de caja y auditoría de inventarios.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section-header-right">PROYECTOS WEB DESTACADOS</div>
+            
+            <div class="timeline-item">
+                <div class="timeline-date">Destacados</div>
+                <div class="timeline-content">
+                    <ul class="timeline-bullets">
+                        <li><strong>Trading Bot Algorítmico:</strong> Bot en Python con API Binance y VPS 24/7.</li>
+                        <li><strong>MoviVIP Network:</strong> Plataforma de servicios de conectividad VIP.</li>
+                        <li><strong>Inmobiliaria Integrales:</strong> Plataforma indexada/monetizada.</li>
+                        <li><strong>MacroViral StudioFF:</strong> Sitio de automatización y scripts.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section-header-right">ESTUDIOS SUPERIORES</div>
+            
+            <div class="timeline-item">
+                <div class="timeline-date">2024 - 2025</div>
+                <div class="timeline-content">
+                    <div class="timeline-title">Técnico en Sistemas Informáticos</div>
+                    <div class="timeline-subtitle">CENSA - Montería</div>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-date">2022 - 2026</div>
+                <div class="timeline-content">
+                    <div class="timeline-title">Múltiples Certificaciones TI y Desarrollo</div>
+                    <div class="timeline-subtitle">SENA y Platzi (AWS, Node.js, GCP, Python)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,447 @@
+{
+  "personal": {
+    "name": "Esteban Manuel López Rivero",
+    "title": "Técnico en Sistemas · Full-Stack Developer · Infraestructura de Redes · Automatización · IA",
+    "email": "love8012e@gmail.com",
+    "phone": "3017400553",
+    "whatsapp": "573117008185",
+    "location": "Cereté, Córdoba, Colombia",
+    "address": "CR 11 6A-10, Barrio Altos del Noval, Cereté, Córdoba",
+    "photo": "assets/images/af05a4d09e806b9ed91636c90bcf70d1.jpg",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/esteban-manuel-lópez-rivero-3b5887370",
+      "github": "https://github.com/studioanime977",
+      "whatsapp": "https://wa.me/573117008185",
+      "youtube_gaming": "https://www.youtube.com/@STUDIOOTAKUFF",
+      "youtube_music": "https://www.youtube.com/@EMLFLOW",
+      "youtube_anime": "https://www.youtube.com/@STUDIOOTAKU1",
+      "tiktok": "https://www.tiktok.com/@studiootakuff"
+    }
+  },
+  "profile": "Soy Técnico en Sistemas Informáticos y Desarrollador Full-Stack con una visión integral de negocio. Mi enfoque se centra en diseñar, optimizar y automatizar infraestructuras tecnológicas robustas que impulsen los resultados del negocio. Fusiono habilidades técnicas avanzadas —redes, servidores, desarrollo web, cloud computing, IA, automatización— con una sólida base en gestión financiera y operativa respaldada por certificación SENA en Contabilidad (4.5). Más de 30 certificaciones técnicas en Platzi, SENA y CENSA que avalan mi compromiso con el aprendizaje continuo y la excelencia tecnológica.",
+  "stats": [
+    { "label": "Equipos ensamblados", "value": "60+", "icon": "🖥️" },
+    { "label": "Proyectos web", "value": "13+", "icon": "🌐" },
+    { "label": "Certificaciones técnicas", "value": "30+", "icon": "📜" },
+    { "label": "Marcas digitales", "value": "4", "icon": "🚀" },
+    { "label": "Cursos Platzi", "value": "16", "icon": "🎓" },
+    { "label": "Horas de estudio", "value": "180+", "icon": "⏱️" }
+  ],
+  "experience": [
+    {
+      "role": "Desarrollador Web & Administrador de Servidores",
+      "company": "Freelance / Propio",
+      "period": "Ene 2026 — Actualidad",
+      "accent": "#667eea",
+      "highlights": [
+        "Configuración y hardening de servidores Ubuntu en VPS con protocolos Vmess/V2ray y panel VPS TunnelActive",
+        "Balanceo de puertos HTTP/HTTPS y monitoreo de conectividad 24/7",
+        "Desarrollo de bots Python para trading algorítmico integrado con API Binance en VPS 24/7",
+        "Creación de plataformas web full-stack indexadas en Google y monetizadas",
+        "Despliegue de soluciones serverless en Google Cloud, AWS y Firebase"
+      ]
+    },
+    {
+      "role": "Fundador — MoviVIP Network",
+      "company": "MoviVIP Network",
+      "period": "May 2026 — Actualidad",
+      "accent": "#48bb78",
+      "highlights": [
+        "Arquitectura e implementación de plataforma de aprovisionamiento de datos móviles VIP",
+        "Automatización de ventas y notificaciones mediante bots en Telegram",
+        "Soporte técnico especializado y gestión de red"
+      ]
+    },
+    {
+      "role": "Prácticas — Técnico en Sistemas",
+      "company": "Cabarcas Sarmiento S.A.S",
+      "period": "Feb — Ago 2025 (+2 meses)",
+      "accent": "#f6ad55",
+      "highlights": [
+        "Soporte técnico nivel 1 y 2: mantenimiento preventivo y correctivo de hardware",
+        "Diseño e instalación de redes estructuradas empresariales",
+        "Instalación y configuración de sistemas CCTV (DVR/NVR) con monitoreo remoto"
+      ]
+    },
+    {
+      "role": "Asesor de Ventas y Gestor Operativo",
+      "company": "Tienda Altos del Noval (NIT 30688395-6)",
+      "period": "Feb 2023 — Sep 2025",
+      "accent": "#ed8936",
+      "highlights": [
+        "Coordinación de apertura/cierre y conciliación de caja",
+        "Auditoría de inventarios y gestión de existencias",
+        "Fidelización de clientes mediante atención personalizada basada en datos de consumo"
+      ]
+    },
+    {
+      "role": "Creador de Contenido — @STUDIOOTAKUFF",
+      "company": "YouTube / TikTok",
+      "period": "2024 — Actualidad",
+      "accent": "#9f7aea",
+      "highlights": [
+        "Estrategia de engagement y marketing digital en TikTok y YouTube",
+        "Creación de MacroViral StudioFF: kits virales y generador de sensibilidad para Free Fire",
+        "Producción musical con IA en EMLFLOW"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "🤖 Trading Bot Algorítmico",
+      "badge": "Automatización · VPS 24/7",
+      "desc": "Bot en Python para trading algorítmico integrado con la API de Binance. Análisis financiero automatizado en tiempo real desplegado en VPS 24/7.",
+      "color": "#f093fb",
+      "links": { "info": "showTradingInfo()" }
+    },
+    {
+      "name": "📶 MoviVIP Network",
+      "desc": "Distribución de paquetes de datos y servicios de internet móvil VIP con soporte especializado y automatización de ventas mediante bots en Telegram.",
+      "color": "#0f9b0f",
+      "links": { "web": "https://movivip-network.web.app/", "info": "showMoviVIPInfo()" }
+    },
+    {
+      "name": "🏠 Inmobiliaria Integrales Cereté",
+      "badge": "Indexado · Monetizado",
+      "desc": "Mini empresa inmobiliaria con catálogo de propiedades. Indexada en Google.",
+      "color": "#2b6cb0",
+      "links": { "web": "https://inmobiliariaintegarlescerete.vercel.app/", "github": "https://github.com/studioanime977/Inmobiliaria-Integarles-Cerete" }
+    },
+    {
+      "name": "🎮 MacroViral StudioFF",
+      "badge": "Marca Propia",
+      "desc": "Ecosistema de distribución de kits virales y generador dinámico de sensibilidad para móviles.",
+      "color": "#f093fb",
+      "links": { "web": "https://macroviralstudioff.web.app/", "github": "https://github.com/studioanime977" }
+    },
+    {
+      "name": "🌸 Mundo Otaku Latino",
+      "badge": "Indexado · Monetizado",
+      "desc": "Plataforma de contenido anime para la comunidad latina. Indexada en Google.",
+      "color": "#e53e3e",
+      "links": { "web": "https://mundootakulatino.vercel.app/", "github": "https://github.com/studioanime977/Mundo-otaku-latino" }
+    },
+    {
+      "name": "📚 Edu-Clic",
+      "desc": "Plataforma educativa interactiva con diseño moderno para el aprendizaje digital.",
+      "color": "#9f7aea",
+      "links": { "web": "https://edu-clic.vercel.app/", "github": "https://github.com/studioanime977/Edu-clic" }
+    },
+    {
+      "name": "🎮 Dinámica Juvenil",
+      "desc": "Cuestionarios interactivos dinámicos para fomentar el conocimiento de manera divertida.",
+      "color": "#4299e1",
+      "links": { "web": "https://dinamicajuvenil.vercel.app/", "github": "https://github.com/studioanime977/dinamicajuvenil" }
+    },
+    {
+      "name": "🖼️ Eliminador de Marcas de Agua",
+      "desc": "Herramienta inteligente para eliminar marcas de agua de fotos generadas por IA.",
+      "color": "#4fd1c5",
+      "links": { "web": "https://eliminador-de-marcas-de-agua.vercel.app/", "github": "https://github.com/studioanime977/eliminador-de-marcas-de-agua" }
+    },
+    {
+      "name": "🎬 EML Studio",
+      "desc": "Editor de fotos y documentos profesional estilo Adobe Acrobat con PDF.js.",
+      "color": "#f6ad55",
+      "links": { "web": "https://eml-studio-yquw.vercel.app/", "github": "https://github.com/studioanime977/EML-STUDIO" }
+    },
+    {
+      "name": "⛪ Casa de Avivamiento",
+      "desc": "Página web para iglesia con diseño moderno y funcionalidades interactivas.",
+      "color": "#48bb78",
+      "links": { "web": "https://casa-de-avivamiento-y-reino-cerete.vercel.app/", "github": "https://github.com/studioanime977/Casa-de-Avivamiento-y-Reino-cerete-" }
+    },
+    {
+      "name": "👥 Generación Benjamín",
+      "desc": "Página oficial de grupo juvenil de iglesia para fomentar comunidad y actividades.",
+      "color": "#667eea",
+      "links": { "web": "https://generacion-benjamin.vercel.app/", "github": "https://github.com/studioanime977/GENERACION-BENJAMIN" }
+    },
+    {
+      "name": "🛠️ Servicios (Plantilla)",
+      "desc": "Plantilla web profesional para servicios con diseño moderno y reutilizable.",
+      "color": "#38b2ac",
+      "links": { "web": "https://servicios-psi.vercel.app/", "github": "https://github.com/studioanime977/SERVICIOS" }
+    },
+    {
+      "name": "🏘️ Terrenos Prueba",
+      "desc": "Plataforma para gestión y visualización de terrenos disponibles.",
+      "color": "#e53e3e",
+      "links": { "web": "https://terrenosprueba.vercel.app/", "github": "https://github.com/studioanime977/terrenosprueba" }
+    }
+  ],
+  "skills": {
+    "categories": [
+      {
+        "icon": "🖥️",
+        "title": "Hardware & Sistemas",
+        "tags": ["Despliegue y Arquitectura de Hardware (60+ Equipos)", "Mantenimiento PC Avanzado", "Hardening Windows 10/11 con NTLite", "Optimización RAM 2-3GB"]
+      },
+      {
+        "icon": "🌐",
+        "title": "Redes & Servidores",
+        "tags": ["Servidores Ubuntu Linux", "VPS TunnelActive", "Protocolos Vmess & V2ray", "Balanceo de Puertos", "Configuración Routers", "Firmware & Enrutamiento", "DVR/NVR & CCTV"]
+      },
+      {
+        "icon": "💻",
+        "title": "Desarrollo Web Full-Stack",
+        "tags": ["HTML5 & CSS3 Avanzado", "JavaScript (ES6+)", "Node.js & Express", "Python & FastAPI", "Java (POO)", "SQL & MySQL", "Firebase & Supabase", "APIs RESTful"]
+      },
+      {
+        "icon": "☁️",
+        "title": "Cloud & DevOps",
+        "tags": ["Google Cloud Platform (Serverless)", "AWS (EC2, S3, Lambda)", "DevOps CI/CD", "Google Serverless", "Almacenamiento en la Nube", "n8n Automatizaciones"]
+      },
+      {
+        "icon": "🤖",
+        "title": "Inteligencia Artificial",
+        "tags": ["Introducción a la IA", "Automatización con IA", "Chatbots Inteligentes", "Producción Musical con IA"]
+      },
+      {
+        "icon": "🔐",
+        "title": "Seguridad & Backend",
+        "tags": ["Row Level Security (RLS)", "Supabase Auth", "CORS Security Headers", "JWT & Passport.js", "Hardening Ubuntu"]
+      },
+      {
+        "icon": "📊",
+        "title": "Trading & Finanzas",
+        "tags": ["Bots Python Trading", "API Binance", "Análisis Financiero", "VPS Deployment 24/7", "Contabilidad SENA (4.5)"]
+      },
+      {
+        "icon": "🚀",
+        "title": "CEO & Liderazgo",
+        "tags": ["Curso para Ser CEO", "Visión Estratégica", "Gestión de Operaciones", "Auditoría de Inventarios", "Marketing Digital"]
+      }
+    ],
+    "soft": [
+      "Liderazgo Operativo", "Comunicación Efectiva", "Pensamiento Analítico",
+      "Resolución de Problemas", "Gestión del Tiempo", "Trabajo en Equipo",
+      "Aprendizaje Continuo", "Atención al Detalle", "Adaptabilidad Tecnológica",
+      "Pensamiento Estratégico", "Visión de Negocio", "Autodidacta"
+    ]
+  },
+  "education": {
+    "academic": [
+      {
+        "icon": "🎓",
+        "title": "Técnico en Sistemas Informáticos",
+        "institution": "CENSA — Montería, Córdoba",
+        "period": "2024 — Septiembre 2025",
+        "desc": "Formación integral en sistemas informáticos, armado de equipos, redes y soporte técnico."
+      },
+      {
+        "icon": "📜",
+        "title": "Calidad de Desarrollador de Software",
+        "institution": "SENA",
+        "period": "2023",
+        "desc": "Procesos y estándares para garantizar proyectos tecnológicos de alto nivel."
+      },
+      {
+        "icon": "📚",
+        "title": "Bachiller Académico",
+        "institution": "I.E. Dolores Garrido de Gonzáles",
+        "period": "2023",
+        "desc": "Bachillerato académico completado."
+      }
+    ],
+    "courses": [
+      {
+        "title": "Backend con Node.js: Autenticación con Passport.js y JWT",
+        "institution": "Platzi",
+        "date": "Jun 2026",
+        "hours": 17,
+        "icon": "🔐",
+        "new": true
+      },
+      {
+        "title": "Python Avanzado para Arquitectura de Proyectos y PyPI",
+        "institution": "Platzi",
+        "date": "Jun 2026",
+        "hours": 10,
+        "icon": "🐍",
+        "new": true
+      },
+      {
+        "title": "Fundamentos de Python",
+        "institution": "Platzi",
+        "date": "Jun 2026",
+        "hours": 16,
+        "icon": "🐍",
+        "new": true
+      },
+      {
+        "title": "Introducción a la Inteligencia Artificial",
+        "institution": "Platzi",
+        "date": "Jun 2026",
+        "hours": 4,
+        "icon": "🤖",
+        "new": true
+      },
+      {
+        "title": "Curso para Ser CEO",
+        "institution": "Platzi",
+        "date": "Jun 2026",
+        "hours": 13,
+        "icon": "🚀",
+        "new": true
+      },
+      {
+        "title": "Firebase para Web",
+        "institution": "Platzi",
+        "date": "Jun 2026",
+        "hours": 21,
+        "icon": "🔥",
+        "new": true
+      },
+      {
+        "title": "Automatizaciones Low-Code con n8n",
+        "institution": "Platzi",
+        "date": "Jun 2026",
+        "hours": 7,
+        "icon": "⚡",
+        "new": true
+      },
+      {
+        "title": "Profesional de DevOps",
+        "institution": "Platzi",
+        "date": "Jun 2026",
+        "hours": 16,
+        "icon": "🔄",
+        "new": true
+      },
+      {
+        "title": "Google Serverless",
+        "institution": "Platzi",
+        "date": "Jun 2026",
+        "hours": 11,
+        "icon": "☁️",
+        "new": true
+      },
+      {
+        "title": "Almacenamiento en la Nube con Google Cloud Platform",
+        "institution": "Platzi",
+        "date": "Jun 2026",
+        "hours": 8,
+        "icon": "☁️",
+        "new": true
+      },
+      {
+        "title": "Cloud Computing con AWS",
+        "institution": "Platzi",
+        "date": "Jun 2026",
+        "hours": 16,
+        "icon": "☁️",
+        "new": true
+      },
+      {
+        "title": "Fundamentos de Computación e Informática",
+        "institution": "Platzi",
+        "date": "Jun 2026",
+        "hours": 9,
+        "icon": "💻",
+        "new": true
+      },
+      {
+        "title": "Git y GitHub",
+        "institution": "Platzi",
+        "date": "Jun 2026",
+        "icon": "🔀",
+        "new": true
+      },
+      {
+        "title": "Administración de Servidores Linux",
+        "institution": "Platzi",
+        "date": "Jun 2026",
+        "icon": "🐧",
+        "new": true
+      },
+      {
+        "title": "Introducción a la Terminal y Línea de Comandos",
+        "institution": "Platzi",
+        "date": "Jun 2026",
+        "icon": "⌨️",
+        "new": true
+      },
+      {
+        "title": "Java Programming (POO)",
+        "institution": "Platzi",
+        "date": "Feb 2026",
+        "icon": "☕"
+      },
+      {
+        "title": "Node.js Development",
+        "institution": "Platzi",
+        "date": "Feb 2026",
+        "icon": "🟢"
+      },
+      {
+        "title": "SQL y MySQL",
+        "institution": "Platzi",
+        "date": "Feb 2026",
+        "icon": "🗄️"
+      },
+      {
+        "title": "Document Object Model (DOM)",
+        "institution": "Platzi",
+        "date": "Feb 2026",
+        "icon": "📄"
+      }
+    ],
+    "sena": [
+      { "title": "Contabilidad: Reconocimiento de Recursos Financieros", "institution": "SENA", "date": "Dic 2022", "note": "Calificación 4.5/5.0" },
+      { "title": "Calidad de Desarrollador de Software", "institution": "SENA", "date": "2023" },
+      { "title": "Aplicaciones Móviles", "institution": "SENA", "date": "2024" },
+      { "title": "Telemática y Redes de Datos", "date": "2024" }
+    ]
+  },
+  "certificates": [
+    { "file": "7fc8594f6c85d5f1ac36c472ba71887e.jpg", "title": "Prácticas Cabarcas Sarmiento", "subtitle": "Cabarcas Sarmiento S.A.S - 2025" },
+    { "file": "7e65251466521884b6153da9d3788497.jpg", "title": "Diploma CENSA", "subtitle": "Técnico en Sistemas - 2025" },
+    { "file": "af10330e535bb57f5d254b25cb6171a9.jpg", "title": "Acta CENSA", "subtitle": "Grado - 2025" },
+    { "file": "9b8d18e230107a711866305bae97d1c2.jpg", "title": "Calidad de Software", "subtitle": "SENA - 2023" },
+    { "file": "a68edce649166e21490d0be675e80e69.jpg", "title": "Certificado Calidad", "subtitle": "SENA - 2023" },
+    { "file": "627e547c72a7fe5e96ab99cf83d552b2.jpg", "title": "Java Programming", "subtitle": "Platzi - Feb 2026" },
+    { "file": "b8d053e2c28ff1abab1166b75e1e3409.jpg", "title": "Node.js Development", "subtitle": "Platzi - Feb 2026" },
+    { "file": "c27167ce89a74d7e947dd3409421d60f.jpg", "title": "SQL y MySQL", "subtitle": "Platzi - Feb 2026" },
+    { "file": "553fdee8d2eaac4750c96303878bf572.jpg", "title": "Document Object Model", "subtitle": "Platzi - Feb 2026" },
+    { "file": "1dcbe4ca424a63a0b8522ebe3bb28f70.jpg", "title": "Aplicaciones Móviles", "subtitle": "SENA - 2024" },
+    { "file": "8ce533d43fe56486fcf8d42f2652c2fa.jpg", "title": "Telemática y Redes", "subtitle": "2024" },
+    { "file": "219362405160e152689ff79d20f908d0.jpg", "title": "Certificado Cabarcas", "subtitle": "2025" },
+    { "file": "2c32bde6db38b8e4d470400669f91ae2.jpg", "title": "Contabilidad SENA", "subtitle": "Aprobación - Dic 2022" },
+    { "file": "daca52cfb77d513a3c65fc983f1d0e90.jpg", "title": "Actas Contabilidad SENA", "subtitle": "Notas 4.5 - Dic 2022" },
+    { "file": "7d82fde1af5a9735f2904b5bf21875cf.jpg", "title": "Certificado Tienda", "subtitle": "Altos del Noval" },
+    { "file": "0646fb57bce253556a839e7b08b4f22c.png", "title": "Fundamentos de Python", "subtitle": "Platzi - Jun 2026", "new": true },
+    { "file": "6c15c63f010cf5ee5a110ede48fd2571.png", "title": "Python Avanzado", "subtitle": "Platzi - Jun 2026", "new": true },
+    { "file": "a7c978fb954209e9f8ac7ab2c40d4333.png", "title": "Introducción a la IA", "subtitle": "Platzi - Jun 2026", "new": true },
+    { "file": "ea5dea529c1595fb0474e613a43fd393.png", "title": "Curso para Ser CEO", "subtitle": "Platzi - Jun 2026", "new": true },
+    { "file": "Curso de Backend con Node.js Autenticación con Passport.js y JWT.png", "title": "Backend con Node.js (JWT)", "subtitle": "Platzi - Jun 2026", "new": true },
+    { "file": "bc3ced3202ffa7a976f6a26bfea7e32d.png", "title": "Firebase para Web", "subtitle": "Platzi - Jun 2026", "new": true },
+    { "file": "8430d7d61de863c06d2e5616bb9a3d8e.png", "title": "Automatizaciones con n8n", "subtitle": "Platzi - Jun 2026", "new": true },
+    { "file": "cf9bb9daddfa9bd0dbab45b918938b8b.png", "title": "DevOps Profesional", "subtitle": "Platzi - Jun 2026", "new": true },
+    { "file": "da13a386a180bd5e1943f2ba2f0e827a.png", "title": "Google Serverless", "subtitle": "Platzi - Jun 2026", "new": true },
+    { "file": "1e7b538e7b7072d1443161e2be4f320a.png", "title": "Almacenamiento GCP", "subtitle": "Platzi - Jun 2026", "new": true },
+    { "file": "Curso Práctico de Cloud Computing con AWS.png", "title": "Cloud Computing AWS", "subtitle": "Platzi - Jun 2026", "new": true },
+    { "file": "Curso de Fundamentos de Computación e Informática.png", "title": "Fundamentos Computación", "subtitle": "Platzi - Jun 2026", "new": true },
+    { "file": "1da4db914e2e9c457db474f5291d53c9.png", "title": "Git y GitHub", "subtitle": "Platzi - Jun 2026", "new": true },
+    { "file": "45a8d0a2afe6a8a72e65fc63c4c5cde6.png", "title": "Git y GitHub Avanzado", "subtitle": "Platzi - Jun 2026", "new": true },
+    { "file": "62fef12167cc958d5420daa52f86e2fd.png", "title": "Administración Servidores Linux", "subtitle": "Platzi - Jun 2026", "new": true },
+    { "file": "e1da1dccc7fec29f6650dee848d27f49.jpg", "title": "Diploma", "subtitle": "Complementario" },
+    { "file": "c7d4e29772c5dce315fdc28f0189af6e.jpg", "title": "Ética y Valores", "subtitle": "Formación" },
+    { "file": "378ca03cbf3ae5c1dc4b566a29b3feb5.jpg", "title": "Medio Ambiente", "subtitle": "Formación" },
+    { "file": "d870e09bee57d28edbbea573b0e25083.jpg", "title": "Acta de Grado", "subtitle": "Complementaria" },
+    { "file": "24a30591d52bb2f728811db45901657a.jpg", "title": "Certificado", "subtitle": "Adicional" },
+    { "file": "af05a4d09e806b9ed91636c90bcf70d1.jpg", "title": "Foto Perfil", "subtitle": "Esteban López", "hidden": true }
+  ],
+  "chatbot": {
+    "greeting": "¡Hola! 👋 Soy el asistente virtual de Esteban. Pregúntame sobre su experiencia, habilidades, certificaciones, proyectos o cualquier cosa de su perfil profesional.",
+    "responses": {
+      "experiencia": "Esteban tiene 5 experiencias clave: 1) Desarrollador Web & Admin Servidores (2026-actual), 2) MoviVIP Network - Fundador (2026-actual), 3) Cabarcas Sarmiento - Prácticas (2025), 4) Tienda Altos del Noval - Asesor Ventas (2023-2025), 5) Creador de Contenido @STUDIOOTAKUFF (2024-actual).",
+      "educacion": "Esteban tiene 30+ certificaciones: Técnico en Sistemas (CENSA), 19 cursos Platzi (incluyendo 15 completados en Jun 2026), SENA (Calidad Software, Apps Móviles, Contabilidad 4.5, Telemática), y más.",
+      "nuevos cursos": "En Junio 2026 completó 15 cursos Platzi: Backend Node.js JWT, Python Avanzado, Fundamentos Python, Introducción IA, CEO, Firebase, n8n, DevOps, Google Serverless, GCP Storage, AWS, Computación, Git/GitHub, Linux, Terminal.",
+      "habilidades": "Hardware (60+ PCs), Redes (Ubuntu, V2ray), Full-Stack (HTML, CSS, JS, Node, Python, Java, SQL), Cloud (GCP, AWS, Firebase, Serverless), IA, DevOps, Trading Bots, Audio, y Gestión Comercial.",
+      "cloud": "Experiencia multi-cloud: Google Cloud Platform (Serverless, Storage), AWS (EC2, S3, Lambda), Firebase, VPS propio con Ubuntu.",
+      "proyectos": "13 proyectos web: Trading Bot, MoviVIP, Inmobiliaria, MacroViral FF, Mundo Otaku, Edu-Clic, Dinámica Juvenil, Eliminador IA, EML Studio, Casa Avivamiento, Generación Benjamín, Servicios, Terrenos.",
+      "contacto": "Email: love8012e@gmail.com | Tel: 3017400553 | WhatsApp: wa.me/573117008185 | LinkedIn: linkedin.com/in/esteban-manuel-lópez-rivero-3b5887370"
+    }
+  }
+}

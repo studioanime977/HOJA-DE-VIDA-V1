@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<style>
+  @page { margin: 0; size: A4; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; color: #2d3748; background: #f7fafc; }
+  .page { width: 210mm; min-height: 297mm; margin: 0 auto; background: #fff; display: flex; position: relative; overflow: hidden; }
+  .sidebar { width: 33%; background: linear-gradient(180deg, #1a365d 0%, #2b6cb0 40%, #2c5282 100%); padding: 32px 20px; color: #fff; position: relative; }
+  .sidebar::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,0,0,0.15)); }
+  .main { width: 67%; padding: 32px 28px; background: #fff; }
+  .photo-wrap { width: 110px; height: 110px; border-radius: 50%; margin: 0 auto 20px; border: 3px solid rgba(255,255,255,0.6); overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+  .photo-wrap img { width: 100%; height: 100%; object-fit: cover; }
+  .sidebar h2 { font-size: 13px; font-weight: 700; letter-spacing: 1.5px; margin: 20px 0 10px; padding-bottom: 5px; border-bottom: 2px solid rgba(255,255,255,0.2); text-transform: uppercase; }
+  .sidebar h2:first-of-type { margin-top: 0; }
+  .sidebar .info-item { font-size: 10.5px; margin: 6px 0; line-height: 1.4; opacity: 0.9; display: flex; align-items: flex-start; gap: 8px; }
+  .sidebar .info-icon { display: inline-flex; width: 16px; justify-content: center; flex-shrink: 0; }
+  .skill-cat { margin: 8px 0; }
+  .skill-cat .cat-title { font-size: 10px; font-weight: 600; opacity: 0.8; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 3px; }
+  .skill-cat .cat-tags { font-size: 9px; opacity: 0.75; line-height: 1.4; }
+  .soft-skill { font-size: 9.5px; margin: 3px 0; opacity: 0.8; padding-left: 12px; position: relative; }
+  .soft-skill::before { content: '\2022'; position: absolute; left: 2px; opacity: 0.6; }
+  .main .name { font-size: 26px; font-weight: 800; color: #1a365d; letter-spacing: -0.5px; line-height: 1.1; }
+  .main .title { font-size: 11px; font-weight: 600; color: #2b6cb0; text-transform: uppercase; letter-spacing: 1px; margin: 4px 0 16px; padding-bottom: 12px; border-bottom: 2px solid #e2e8f0; }
+  .main h3 { font-size: 13px; font-weight: 700; color: #1a365d; text-transform: uppercase; letter-spacing: 1px; margin: 18px 0 8px; padding-bottom: 4px; border-bottom: 2px solid #bee3f8; display: flex; align-items: center; gap: 8px; }
+  .main h3 .num { font-size: 10px; color: #2b6cb0; font-weight: 400; }
+  .main p { font-size: 10px; line-height: 1.5; color: #4a5568; text-align: justify; }
+  .exp-item { margin: 12px 0; padding-left: 10px; border-left: 3px solid #bee3f8; }
+  .exp-item .exp-header { display: flex; justify-content: space-between; align-items: baseline; }
+  .exp-item .exp-role { font-size: 11px; font-weight: 700; color: #2d3748; }
+  .exp-item .exp-date { font-size: 9px; color: #a0aec0; font-weight: 500; }
+  .exp-item .exp-company { font-size: 10px; color: #2b6cb0; font-weight: 600; margin: 1px 0 4px; }
+  .exp-item ul { list-style: none; padding: 0; }
+  .exp-item ul li { font-size: 9.5px; color: #4a5568; line-height: 1.4; margin: 2px 0; padding-left: 12px; position: relative; }
+  .exp-item ul li::before { content: '\2022'; position: absolute; left: 0; color: #2b6cb0; font-weight: bold; }
+  .edu-item { margin: 8px 0; display: flex; justify-content: space-between; }
+  .edu-item .edu-left { font-size: 10.5px; font-weight: 600; color: #2d3748; }
+  .edu-item .edu-right { font-size: 9px; color: #a0aec0; }
+  .edu-item .edu-sub { font-size: 9.5px; color: #4a5568; margin-top: 1px; }
+  .course-badge { display: inline-block; font-size: 8px; padding: 2px 8px; border-radius: 10px; background: #ebf8ff; color: #2b6cb0; font-weight: 600; }
+  .project-item { font-size: 9.5px; color: #4a5568; margin: 3px 0; padding-left: 12px; position: relative; }
+  .project-item::before { content: '\2022'; position: absolute; left: 0; color: #2b6cb0; }
+  .certs-page { page-break-before: always; padding: 20px; text-align: center; }
+  .certs-page h2 { font-size: 14px; color: #1a365d; margin-bottom: 4px; }
+  .certs-page p { font-size: 10px; color: #718096; margin-bottom: 10px; }
+  .certs-page img { max-width: 100%; max-height: 250mm; }
+</style>
+</head>
+<body>
+<div class="page" id="print-area">
+  <div class="sidebar" id="sidebarContent"></div>
+  <div class="main" id="mainContent"></div>
+</div>
+<script>
+const d = window._cvData;
+if (!d) { document.body.innerHTML = '<p style="padding:40px;text-align:center">Error: datos no cargados</p>'; } else {
+  const p = d.personal;
+  // Sidebar
+  document.getElementById('sidebarContent').innerHTML = `
+    <div class="photo-wrap"><img src="${p.photo}" alt="Foto"></div>
+    <h2>Contacto</h2>
+    <div class="info-item"><span class="info-icon">\u260E</span> ${p.phone}</div>
+    <div class="info-item"><span class="info-icon">\u2709</span> ${p.email}</div>
+    <div class="info-item"><span class="info-icon">\u231A</span> ${p.location}</div>
+    <div class="info-item"><span class="info-icon">\u25C8</span> linkedin.com/in/esteban</div>
+    <div class="info-item"><span class="info-icon">\u2665</span> github.com/studioanime977</div>
+    <h2>Habilidades</h2>
+    ${d.skills.categories.map(c => `<div class="skill-cat"><div class="cat-title">${c.title}</div><div class="cat-tags">${c.tags.join(' \u00B7 ')}</div></div>`).join('')}
+    <h2>Competencias</h2>
+    ${d.skills.soft.map(s => `<div class="soft-skill">${s}</div>`).join('')}
+  `;
+  // Main
+  const newC = d.education.courses.filter(c => c.new).length;
+  const totalH = d.education.courses.reduce((a,c) => a + (c.hours||0), 0);
+  document.getElementById('mainContent').innerHTML = `
+    <div class="name">${p.name.toUpperCase()}</div>
+    <div class="title">${p.title}</div>
+    <h3>Perfil Profesional</h3>
+    <p>${d.profile}</p>
+    <h3>Experiencia <span class="num">(${d.experience.length})</span></h3>
+    ${d.experience.map(e => `
+      <div class="exp-item">
+        <div class="exp-header"><span class="exp-role">${e.role}</span><span class="exp-date">${e.period}</span></div>
+        <div class="exp-company">${e.company}</div>
+        <ul>${e.highlights.map(h => `<li>${h}</li>`).join('')}</ul>
+      </div>
+    `).join('')}
+    <h3>Formacion</h3>
+    ${d.education.academic.map(a => `
+      <div class="edu-item"><span class="edu-left">${a.institution}</span><span class="edu-right">${a.period}</span></div>
+      <div class="edu-sub" style="margin-bottom:6px">${a.title}</div>
+    `).join('')}
+    <div style="margin:10px 0 4px"><span class="course-badge">${newC} NUEVOS</span> <strong style="font-size:11px">${d.education.courses.length} cursos Platzi</strong> <span style="font-size:9px;color:#718096">${totalH}+ horas</span></div>
+    <div style="font-size:9px;color:#4a5568;line-height:1.5">${d.education.courses.map(c => c.title).join(' \u00B7 ')}</div>
+    <h3>Proyectos <span class="num">(${d.projects.length})</span></h3>
+    ${d.projects.map(p => `<div class="project-item">${p.name}</div>`).join('')}
+  `;
+}
+</script>
+</body>
+</html>
